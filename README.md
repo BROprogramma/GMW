@@ -28,6 +28,6 @@ Ga naar de onderstaande link om te beginnen met de consultatie.
   
 [1]: https://github.com/BROprogramma
 [2]: https://github.com/join
-[3] https://github.com/BROprogramma/grondwatermonitoringput/blob/master/Catalogus%20Grondwatermonitoringsput.pdf
+[3]: https://github.com/BROprogramma/grondwatermonitoringput/blob/master/Catalogus%20Grondwatermonitoringsput.pdf
 [4]: https://github.com/BROprogramma/grondwatermonitoringput/issues
 
