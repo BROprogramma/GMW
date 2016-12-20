@@ -2,7 +2,7 @@
 Repository voor open consultatie van de BRO gegevenscatalogus Grondwatermonitoringput.
 
 # Toelichting BRO consultatie
-De gegevenscatalogus die in deze repository is gepubliceerd is niet de officiële BRO gegevenscatalogus. De BRO gegevenscatalogus Grondwatermonitoringput is nog niet gepubliceerd. In het kader van de open consultatie zal hier een consultatieversie worden geplaatst.
+ De BRO gegevenscatalogus Grondwatermonitoringput is nog niet gepubliceerd. Zodra de catalogus gepubliceerd is wordt hier de link geplaatst.
 
 # Consultatie toelichting
 
@@ -17,7 +17,7 @@ Ga naar de onderstaande link om te beginnen met de consultatie.
 
 [Review Grondwatermonitoringput][3]
 
-1. Download het PDF document. **Tip:** Klik op het PDF document en klik dan op Download. U kunt dan het document bekijken in uw eigen PDF reader. Dat is handiger dan de Github viewer.
+1. Download BRO gegevenscatalogus Grondwatermonitoringput. Zodra de catalogus gepubliceerd is wordt hier de link geplaatst.
 2. Review het document.
 3. Om een nieuw issue aan te maken: 
   1. Controleer eerst of het issue al gemeld is: [bestaande issues Grondwatermonitoringput][4]
@@ -28,6 +28,5 @@ Ga naar de onderstaande link om te beginnen met de consultatie.
   
 [1]: https://github.com/BROprogramma
 [2]: https://github.com/join
-[3]: https://github.com/BROprogramma/grondwatermonitoringput/blob/master/Catalogus%20Grondwatermonitoringsput.pdf
 [4]: https://github.com/BROprogramma/grondwatermonitoringput/issues
 
