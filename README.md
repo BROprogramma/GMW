@@ -1,23 +1,29 @@
 # grondwatermonitoringput
 Repository voor open consultatie van de BRO gegevenscatalogus Grondwatermonitoringput.
 
-# Toelichting BRO consultatie
- De BRO gegevenscatalogus Grondwatermonitoringput is gepubliceerd op de BROinfo website. [Klik hier om de catalogus te downloaden][3]
+# Consultatie toelichting: How to
 
-# Consultatie toelichting
+De Basisregistratie Ondergrond is in ontwikkeling. Via deze site kan er actief meegedacht worden en op de documentatie worden gereageerd. Vanaf december 2016 is er via deze site  een consultatie van twee gegevenscatalogi van de BRO: Geotechnisch Sondeeronderzoek en Grondwatermonitoringput. Voor attendering van stakeholders is er een emailnotificatie.
 
-De Basisregistratie Ondergrond is in ontwikkeling. Via deze site kan er actief meegedacht worden en op de documentatie worden gereageerd. Alle consultaties van BRO gegevenscatalogi vindt u onder de [BROprogramma organization][1] op Github.  Vanaf december 2016 is er via het repository waar u zich nu bevindt een consultatie van de BRO gegevenscatalogus Grondwatermonitoringput. Voor attendering van stakeholders is er een emailnotificatie.
+De gegevenscatalogus BRO Grondwatermonitoringput is benaderbaar via: [Grondwatermonitoringput][3].
+
+Voor de consultatie van de gegevenscatalogus BRO Geotechnisch Sondeeronderzoek is er een [aparte pagina][1].
 
 Opmerkingen en vragen moeten in het Github platform middels issues worden geplaatst. 
 
+Bij het aanmaken van het issue dienen de volgende gegevens te worden opgenomen:
+
+- Duidelijke aanwijzing van de plek in het document waar de issue betrekking op heeft (paragraaf, bladzijde).
+- Samenvatting: korte samenvattende titel van de melding.
+- Beschrijving: een duidelijke beschrijving van wat er onjuist of onvolledig is opgenomen.
+- Oplossingsrichting: een voorstel voor concrete oplossing van de melding in de documentatie.
+
+Zie [voorbeeld melding][5].
+
+U kunt ook [alle gemelde issues][4] bekijken.
 **Let op:** om issues te plaatsen, moet u een Github gebruikersaccount hebben. [Klik hier om een account te maken][2]. 
 
-# Consultatie: how to
-Ga naar de onderstaande link om te beginnen met de consultatie. 
-
-[Review Grondwatermonitoringput][3]
-
-1. Download BRO gegevenscatalogus Grondwatermonitoringput. Zodra de catalogus gepubliceerd is wordt hier de link geplaatst.
+1. Download de BRO gegevenscatalogus Grondwatermonitoringput. [Klik hier om de catalogus te downloaden][3]. 
 2. Review het document.
 3. Om een nieuw issue aan te maken: 
   1. Controleer eerst of het issue al gemeld is: [bestaande issues Grondwatermonitoringput][4]
@@ -26,8 +32,9 @@ Ga naar de onderstaande link om te beginnen met de consultatie.
   1. Geef een beschrijving van het issue met liefst een suggestie voor een oplossing.
   1. Klik op **Submit new issue** om het issue op te slaan. 
   
-[1]: https://github.com/BROprogramma
+[1]: https://github.com/BROprogramma/geotechnischsondeeronderzoek
 [2]: https://github.com/join
 [3]: https://www.broinfo.nl/sites/www.broinfo.nl/files/BROinfo_20161018%20Catalogus%20Grondwatermonitoringput%20v07.pdf
 [4]: https://github.com/BROprogramma/grondwatermonitoringput/issues
+[5]: https://github.com/BROprogramma/grondwatermonitoringput/issues/1
 
