@@ -3,7 +3,7 @@ Repository voor open consultatie van de BRO gegevenscatalogus Grondwatermonitori
 
 # Consultatie toelichting: How to
 
-De Basisregistratie Ondergrond is in ontwikkeling. Via deze site kan er actief meegedacht worden en op de documentatie worden gereageerd. Vanaf december 2016 is er via deze site  een consultatie van twee gegevenscatalogi van de BRO: Geotechnisch Sondeeronderzoek en Grondwatermonitoringput. Voor attendering van stakeholders is er een emailnotificatie.
+De Basisregistratie Ondergrond is in ontwikkeling. Via deze site kan er actief meegedacht worden en op de documentatie worden gereageerd. Vanaf december 2016 is er via deze site  een consultatie van een aantal gegevenscatalogi van de BRO. Voor attendering van stakeholders is er een emailnotificatie.
 
 De gegevenscatalogus BRO Grondwatermonitoringput is benaderbaar via: 
 - [BRO gegevenscatalogus Grondwatermonitoringput][3]
