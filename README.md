@@ -10,7 +10,7 @@ De gegevenscatalogus BRO Grondwatermonitoringput is benaderbaar via:
 
 Voor de consultatie van de overige BRO gegevenscatalogi zijn er aparte pagina's:
 - [Consultatie Geotechnisch Sondeeronderzoek][1]
-- [Consultatie Booronderzoek][]
+- [Consultatie Booronderzoek][6]
 
 Opmerkingen en vragen moeten in het Github platform middels issues worden geplaatst. 
 
