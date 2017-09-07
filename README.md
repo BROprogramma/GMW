@@ -1,5 +1,5 @@
-# grondwatermonitoringput
-Repository voor open consultatie van de BRO gegevenscatalogus Grondwatermonitoringput (Groundwater monitoring well/GMW).
+# Grondwatermonitoringput (Groundwater monitoring well/GMW)
+Repository voor open consultatie van de BRO gegevenscatalogus Grondwatermonitoringput.
 
 # Consultatie toelichting: How to
 
