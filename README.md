@@ -1,4 +1,4 @@
-# Grondwatermonitoringput (Groundwater monitoring well/GMW)
+# [Grondwatermonitoringput (Groundwater monitoring well/GMW)](https://broprogramma.github.io/GMW/)
 Repository voor open consultatie van de BRO gegevenscatalogus Grondwatermonitoringput.
 
 # Consultatie toelichting: How to
