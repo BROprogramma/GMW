@@ -37,7 +37,7 @@ U kunt ook [alle gemelde issues][4] bekijken.
   
 [1]: https://github.com/BROprogramma/geotechnischsondeeronderzoek
 [2]: https://github.com/join
-[3]: https://www.broinfo.nl/sites/www.broinfo.nl/files/BROinfo_20161018%20Catalogus%20Grondwatermonitoringput%20v07.pdf
+[3]: https://bro.pleio.nl/file/view/55288182/catalogus-grondwatermonitoringput
 [4]: https://github.com/BROprogramma/grondwatermonitoringput/issues
 [5]: https://github.com/BROprogramma/grondwatermonitoringput/issues/1
 [6]: https://github.com/BROprogramma/booronderzoek
