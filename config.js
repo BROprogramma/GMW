@@ -2,7 +2,7 @@ var respecConfig = {
   specStatus: "GN-WV",
   specType: "IM",
   //canonicalURI: "WV",
-  publishDate: "2016-10-18",
+ // publishDate: "2016-10-18",
   editors: [
     {
       name: "TNO Geologische Dienst Nederland",
