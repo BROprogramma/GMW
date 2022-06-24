@@ -15,7 +15,7 @@
    <body>
       <p>Conceptual model/GMW conceptueel MIM/20190910</p>
       <p>Imvertor: 1.66.0</p>
-      <p>Model release: Conceptualmodel-GMWconceptueelMIM-1.1-1-20190910-20220624-084933</p>
+      <p>Model release: Conceptualmodel-GMWconceptueelMIM-1.1-1-20190910-20220624-092327</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -1183,7 +1183,7 @@
                            </tr>
                         </tbody>
                      </table>
-                     </section><a class="anchor" id="detail_d59860e4193"></a><section id="detail_d59860e4193">
+                     </section><a class="anchor" id="detail_d59772e5095"></a><section id="detail_d59772e5095">
                      <h4>  aangeleverde locatie</h4>
                      <table style="width: 100%;">
                         <colgroup style="width: 30%;"></colgroup>
@@ -1221,7 +1221,7 @@
                            </tr>
                         </tbody>
                      </table>
-                  </section><a class="anchor" id="detail_d59860e4359"></a><section id="detail_d59860e4359">
+                  </section><a class="anchor" id="detail_d59772e5261"></a><section id="detail_d59772e5261">
                      <h4>  aangeleverde verticale positie</h4>
                      <table style="width: 100%;">
                         <colgroup style="width: 30%;"></colgroup>
@@ -1258,7 +1258,7 @@
                            </tr>
                         </tbody>
                      </table>
-                  </section><a class="anchor" id="detail_d59860e4525"></a><section id="detail_d59860e4525">
+                  </section><a class="anchor" id="detail_d59772e5427"></a><section id="detail_d59772e5427">
                      <h4>  gestandaardiseerde locatie</h4>
                      <table style="width: 100%;">
                         <colgroup style="width: 30%;"></colgroup>
@@ -1296,7 +1296,7 @@
                            </tr>
                         </tbody>
                      </table>
-                  </section><a class="anchor" id="detail_d59860e4691"></a><section id="detail_d59860e4691">
+                  </section><a class="anchor" id="detail_d59772e5593"></a><section id="detail_d59772e5593">
                      <h4>  registratiegeschiedenis</h4>
                      <table style="width: 100%;">
                         <colgroup style="width: 30%;"></colgroup>
@@ -1333,7 +1333,7 @@
                            </tr>
                         </tbody>
                      </table>
-                  </section><a class="anchor" id="detail_d59860e4857"></a><section id="detail_d59860e4857">
+                  </section><a class="anchor" id="detail_d59772e5759"></a><section id="detail_d59772e5759">
                      <h4>  putgeschiedenis</h4>
                      <table style="width: 100%;">
                         <colgroup style="width: 30%;"></colgroup>
@@ -2206,7 +2206,7 @@
                            </tr>
                         </tbody>
                      </table>
-                     </section><a class="anchor" id="detail_d59860e7807"></a><section id="detail_d59860e7807">
+                     </section><a class="anchor" id="detail_d59772e10738"></a><section id="detail_d59772e10738">
                      <h4>  tussentijdse gebeurtenis</h4>
                      <table style="width: 100%;">
                         <colgroup style="width: 30%;"></colgroup>
@@ -6754,7 +6754,7 @@
                      <td>
                         
                         <p>Meting d.m.v. tachymetrie, ook wel als landmeting of Total Station aangeduid, vanaf
-                           een referentiepunt dat geen NAP-peilmerk is, afwijking kleiner dan 10 centimeter.</p>
+                           een referentiepunt dat een NAP-peilmerk is, afwijking kleiner dan 10 centimeter.</p>
                         </td>
                   </tr>
                   <tr>
@@ -7112,28 +7112,6 @@
                         </td>
                   </tr>
                   <tr>
-                     <td>inmetenMaaiveld</td>
-                     <td>✔</td>
-                     <td>✔</td>
-                     <td>
-                        
-                        <p>Wanneer gegevens uit een meetronde niet passen onder de overige 11 gebeurtenissen
-                           dan blijft deze gebeurtenis over als “rest optie” wanneer alleen de maaiveldpositie
-                           opnieuw is gemeten.</p>
-                        </td>
-                  </tr>
-                  <tr>
-                     <td>inmetenPosities</td>
-                     <td>✔</td>
-                     <td>✔</td>
-                     <td>
-                        
-                        <p>Wanneer gegevens uit een meetronde niet passen onder de overige 11 gebeurtenissen
-                           dan blijft deze gebeurtenis over als “rest optie” wanneer de hoogte bovenkantbuis
-                           opnieuw is gemeten en optioneel ook de maaiveldpositie.</p>
-                        </td>
-                  </tr>
-                  <tr>
                      <td>maaiveldVerlegd</td>
                      <td>✔</td>
                      <td>✔</td>
@@ -7144,6 +7122,16 @@
                         </td>
                   </tr>
                   <tr>
+                     <td>nieuweBepalingMaaiveld</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p>De maaiveldpositie bij de put is mogelijk veranderd door een natuurlijk proces en
+                           is daarom opnieuw vastgesteld.</p>
+                        </td>
+                  </tr>
+                  <tr>
                      <td>maaiveldVeranderdNatuurlijkProces</td>
                      <td>✔</td>
                      <td>✔</td>
@@ -7151,6 +7139,16 @@
                         
                         <p>De maaiveldpositie bij de put is mogelijk veranderd door een natuurlijk proces en
                            is daarom opnieuw vastgesteld.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                     <td>nieuweBepalingPosities</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p>De posities van de put en het maaiveld zijn mogelijk veranderd door een natuurlijk
+                           proces en zijn daarom opnieuw vastgesteld.</p>
                         </td>
                   </tr>
                   <tr>
@@ -7181,16 +7179,6 @@
                      <td>
                         
                         <p>De onderhoudende instantie van de grondwater­monitoring­put is gewijzigd.</p>
-                        </td>
-                  </tr>
-                  <tr>
-                     <td>positiesVeranderdNatuurlijkProces</td>
-                     <td>✔</td>
-                     <td>✔</td>
-                     <td>
-                        
-                        <p>De posities van de put en het maaiveld zijn mogelijk veranderd door een natuurlijk
-                           proces en zijn daarom opnieuw vastgesteld.</p>
                         </td>
                   </tr>
                </tbody>
