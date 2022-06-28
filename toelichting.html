@@ -82,8 +82,8 @@
 
 		<section id="Putgeschiedenis">
 			<h4>Putgeschiedenis</h4>
-			<p>De putgeschiedenis geeft aan wanneer de put is ingericht, wanneer die is opgeruimd en welke gebeurtenissen er tussentijds hebben plaatsgevonden. Er zijn elf gebeurtenissen geïdentificeerd die van belang zijn voor het registratieobject en dat zijn:</p>
-			<ul>
+			<p>De putgeschiedenis geeft aan wanneer de put is ingericht, wanneer die is opgeruimd en welke gebeurtenissen er tussentijds hebben plaatsgevonden. Er zijn 13 gebeurtenissen geïdentificeerd die van belang zijn voor het registratieobject en dat zijn:</p>
+			<ol>
 				<li>Het eigendom van de put is op een andere organisatie overgegaan.</li>
 				<li>Het uitvoeren van het onderhoud van de put is op een andere organisatie overgegaan.</li>
 				<li>In een bestaande monitoringbuis is een nieuw stijgbuisdeel geplaatst (<a href="#Inplaatsen van een stijgbuisdeel">figuur 5</a>).</li>
@@ -103,19 +103,38 @@
 						<figcaption>Verandering van maaiveldpositie door direct ingrijpen van de mens.</figcaption>
 					</figure>
 				</li>
+			</ol>
+			
+			<p>In gebieden waar de positie van het maaiveld, door indirect ingrijpen van de mens of als direct gevolg van natuurlijke processen onderhevig is aan veranderingen, is het van belang te weten wat de maaiveldveranderingen zijn en in hoeverre de put met deze maaiveldveranderingen meebeweegt. Daling komt het meest voor en de oorzaak van daling is divers. Men kan denken aan natuurlijke zetting, veenoxidatie, zetting als gevolg van de verlaging van het polderpeil en compactie van gesteente op grote diepte als gevolg van delfstofwinning. Stijging is uitzonderlijk en meestal een gevolg van wateropname door veen.</p>
+			
+			<ol start="10">
 				<li>De positie van het maaiveld is opnieuw bepaald, omdat de put in een gebied ligt waar de positie van het maaiveld aan verandering onderhevig is; het is echter niet nodig de posities van de buizen opnieuw te bepalen omdat de put is verankerd (<a href="#Maaiveld daalt put stabiel">figuur 8</a>).
 					<figure id="Maaiveld daalt put stabiel">
 						<img src="./media/Fig07_maaiveld_daalt_put_stabiel.png" alt="Maaiveld daalt put stabiel" height="500"/>
-						<figcaption>Het maaiveld in het gebied daalt, maar de positie van de put t.o.v. NAP verandert niet.</figcaption>
+						<figcaption>Het maaiveld in het gebied daalt, maar de positie van de put t.o.v. NAP verandert niet. Het attribuut 'maaiveld stabiel' heeft als waarde 'nee', het attribuut 'putstabiliteit' heeft de waarde 'stabielNAP'.</figcaption>
 					</figure>
 				</li>
 				<li>De posities van het maaiveld en de posities van de buizen zijn opnieuw bepaald, omdat de put in een gebied ligt waar de positie van het maaiveld veranderlijk is en de put meebeweegt (<a href="#Maaiveld daalt put daalt">figuur 9</a>).
 					<figure id="Maaiveld daalt put daalt">
 						<img src="./media/Fig08_maaiveld_daalt_put_daalt.png" alt="Maaiveld daalt put daalt" height="500"/>
-						<figcaption>Het maaiveld in het gebied daalt en de positie van de put t.o.v. NAP daalt mee.</figcaption>
+						<figcaption>Het maaiveld in het gebied daalt en de positie van de put t.o.v. NAP daalt mee. Het attribuut 'maaiveld stabiel' heeft als waarde 'nee', het attribuut 'putstabiliteit' heeft de waarde 'instabiel'.</figcaption>
 					</figure>
 				</li>
-			</ul>
+				<li>Een bronhouder doet met regelmaat meetrondes. De bronhouder wil alle gegevens uit een meetronde aanleveren aan de BRO. Wanneer gegevens uit een meetronde niet passen onder de overige gebeurtenissen dan blijft deze gebeurtenis over als 'rest optie' wanneer alleen de maaiveldpositie opnieuw is gemeten. De verwachting is dat voornamelijk de volgende twee gevallen hieronder vallen:
+					<ol>
+						<li>De bronhouder wil altijd de laatste meetwaarde van de maaiveldpositie in de BRO hebben zelfs als deze gelijk is aan de vorige waarde.</li>
+						<li>Een meetwaarde van de maaiveldpositie binnen de meetfout valt ten opzichte van de vorige aangeleverde waarde. Maar de bronhouder wil nog steeds de laatste waarde aanleveren.</li>
+					</ol>				
+				Deze gebeurtenis is alleen te gebruiken wanneer gegevens uit een meetronde niet onder de bestaande gebeurtenis nieuwe bepaling maaiveld zijn aan te leveren.
+				</li>
+				<li>Een bronhouder doet met regelmaat meetrondes. De bronhouder wil alle gegevens uit een meetronde aanleveren aan de BRO. Wanneer gegevens uit een meetronde niet passen onder de overige gebeurtenissen dan blijft deze gebeurtenis over als "rest optie" wanneer de hoogte bovenkantbuis opnieuw is gemeten en optioneel ook de maaiveldpositie. De verwachting is dat voornamelijk de volgende twee gevallen hieronder vallen:
+					<ol>
+						<li>De bronhouder wil altijd de laatste meetwaarde in de BRO hebben zelfs als deze gelijk is aan de vorige waarde.</li>
+						<li>Een meetwaarde valt binnen de meetfout valt opzichte van de vorige aangeleverde waarde. Maar de bronhouder wil nog steeds de laatste waarde aanleveren.</li>
+					</ol>
+				Daarmee is deze gebeurtenis alleen een alternatief wanneer gegevens uit een meetronde niet met de bestaande gebeurtenis nieuwe bepaling posities kan worden aangeleverd.					
+				</li>
+			</ol>
 	</section>
 
 </section>
