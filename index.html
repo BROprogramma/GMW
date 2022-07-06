@@ -43,18 +43,31 @@
 	<!-- hoofdstuk 2 -->
 	<section id='algemene-kenmerken-en-begrippen' data-include='https://docs.geostandaarden.nl/bro/gen/algemene-kenmerken-en-begrippen.html' class='generic informative'></section>
 	
-	<!-- hoofdstuk 3 -->		
-	<section id="Grondwatermonitoringput algemene inleiding" class='generic informative'>  
-	    <h2>Grondwatermonitoringput algemene inleiding</h2>
-	    <p>Te bezien of dit hoofdstuk voor GMW relevant is!</p>
+	<!-- hoofdstuk 3 -->
+	<section id="Grondwatermonitoringput">
+		<h2>Grondwatermonitoringput</h2>
+		<!-- sectie Grondwatermonitoring en sectie Domein grondwatermonitoring in de BRO-->
+		<section data-include='https://github.com/BROprogramma/generiek/raw/gh-pages/gm/data/GM_domein.html'></section>
+		<!-- Note; Instead of the above 'main URL', the following 'redirect URL' can probably also be used (the above URL seems to redirect to this alternative URL); 'https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/data/GM_domein.html'.
+		I used the 'main URL' because for a PNG image within this data-include page, the 'redirect URL' didn't seem to work. -->
+		<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/GM_domein.html'. -->
+		
+		<!-- sectie De Grondwatermonitoringput en sectie Belangrijkste entiteiten -->
+		<section data-include='./data/GMW_en_belangrijkste_entiteiten.html'></section>
+		<!-- Note, I suppose a relative path can be used, since this is also done for FRD. Specifically;
+		this relative path is used on FRD GitHub.io doc page; "./data/FRD-cat.respec.html", which redirects to; 'https://broprogramma.github.io/FRD/data/FRD-cat.respec.html' -->
+		
+		<!-- sectie samenhang en consistentie registratieobjecten in grondwatermonitoringdomein -->
+		<section data-include='https://github.com/BROprogramma/generiek/raw/gh-pages/gm/data/Samenhang_RO_GM_domein.html'></section>
+		<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/Samenhang_RO_GM_domein.html'. -->
+		
+		<!-- sectie INSPIRE-thema Geology -->
+		<section data-include='https://github.com/BROprogramma/generiek/raw/gh-pages/gm/data/INSPIRE_Geology.html'></section>
+		<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/INSPIRE_Geology.html'. -->
 	</section>
-
-	<!-- hoofdstuk 4 -->
-	  <section id='Grondwatermonitoringput_toelichting' data-include='https://raw.githubusercontent.com/BROprogramma/GMW/gh-pages/toelichting.html'>
-	  </section>
 	
 	<!-- introductie gegevensdefinitie generiek -->
-	<!-- hoofdstuk 5 -->
+	<!-- hoofdstuk 4 -->
 	<section id="intro-gegevensdefinitie" class='generic informative'>
 		<h2>Opbouw van de gegevensdefinitie</h2>
 		<section id="intro-cat-inleiding" data-include="https://docs.geostandaarden.nl/bro/gen/intro-cat-inleiding.html"></section>
@@ -87,7 +100,7 @@
 	</section>
 
 	<!-- Model -->
-	<!-- hoofdstuk 6 en Hoofdstuk 7 -->	
+	<!-- hoofdstuk 5 en Hoofdstuk 6 -->	
 	<div data-include="data/GMW-cat.respec.html" data-include-replace=true></div>
 	
 </body>
