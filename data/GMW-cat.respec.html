@@ -921,8 +921,7 @@
                      <th>Definitie</th>
                      <td>
                         
-                        <p>De voor de gemiddelde gebruiker gemakkelijk herkenbare aanduiding van de put die geen
-                           NITG-code heeft.</p>
+                        <p>De voor de gemiddelde gebruiker gemakkelijk herkenbare aanduiding van de put.</p>
                         </td>
                   </tr>
                   <tr>
@@ -931,7 +930,7 @@
                   </tr>
                   <tr>
                      <th>Kardinaliteit</th>
-                     <td>0..1</td>
+                     <td>1</td>
                   </tr>
                   <tr>
                      <th>Domein</th>
@@ -952,27 +951,29 @@
                      <td>CCCNNCNNNNNN</td>
                   </tr>
                   <tr>
-                     <th>Regels</th>
-                     <td>
-                        
-                        <p>Het attribuut is aanwezig wanneer de waarde van het attribuut <em>NITG-code</em> ontbreekt.<br clear="none">
-                           Het attribuut mag niet aanwezig zijn in alle andere gevallen.</p>
-                        </td>
-                  </tr>
-                  <tr>
                      <th>Materiële geschiedenis</th>
                      <td>Nee</td>
+                  </tr>
+                  <tr>
+                     <th>Is afgeleid</th>
+                     <td>Ja</td>
                   </tr>
                   <tr>
                      <th>Toelichting</th>
                      <td>
                         
                         <p>De putcode wordt samengesteld uit de drie letters die het type registratieobject aangeven
-                           (GMW), dan volgt het nummer van het kaartblad waarop de locatie ligt gevolgd door
-                           de letter die het kaartbladonderdeel specificeert, en dan een volgnummer. De gebruikte
-                           kaartbladindeling is die van de Topografische Kaart van Nederland 1:25.000, versie
-                           juni 2016. De code wordt door de basisregistratie ondergrond gegenereerd op basis
-                           van het bij inname aangeleverde kaartbladnummer (NNC).</p>
+                           (GMW), dan volgt het 2-cijferig nummer van het kaartblad waarop de locatie ligt gevolgd
+                           door de letter die het kaartbladonderdeel specificeert, en dan een 6-cijferig volgnummer.<br clear="none">
+                           De gebruikte kaartbladindeling is die van de Topografische Kaart van Nederland 1:25.000,
+                           versie juni 2016. Eventuele toekomstige wijzigingen van de kaartbladindeling, zijn
+                           niet van toepassing op de wijze van afleiden van putcodes.<br clear="none">
+                           De putcode wordt door de basisregistratie ondergrond gegenereerd, waarbij het kaartbladnummer
+                           wordt bepaald op basis van de bij inname aangeleverde locatie.<br clear="none">
+                           Het volgnummer wordt als volgt opgebouwd. Wanneer de put geregistreerd was in de registratie
+                           DINO: de laatste vier cijfers van de NITG-code, voorafgegaan door twee voorloopnullen.
+                           Voor nieuwe putten: een 6-cijferig nummer, groter dan 100.000 om te onderscheiden
+                           van omgezette NITG-codes.</p>
                         </td>
                   </tr>
                </tbody>
@@ -1162,7 +1163,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d59866e5095"></a><section id="detail_d59866e5095">
+            </section><a class="anchor" id="detail_d62668e5077"></a><section id="detail_d62668e5077">
             <h4>  aangeleverde locatie</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
@@ -1200,7 +1201,7 @@
                   </tr>
                </tbody>
             </table>
-         </section><a class="anchor" id="detail_d59866e5262"></a><section id="detail_d59866e5262">
+         </section><a class="anchor" id="detail_d62668e5244"></a><section id="detail_d62668e5244">
             <h4>  aangeleverde verticale positie</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
@@ -1237,7 +1238,7 @@
                   </tr>
                </tbody>
             </table>
-         </section><a class="anchor" id="detail_d59866e5429"></a><section id="detail_d59866e5429">
+         </section><a class="anchor" id="detail_d62668e5411"></a><section id="detail_d62668e5411">
             <h4>  gestandaardiseerde locatie</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
@@ -1275,7 +1276,7 @@
                   </tr>
                </tbody>
             </table>
-         </section><a class="anchor" id="detail_d59866e5596"></a><section id="detail_d59866e5596">
+         </section><a class="anchor" id="detail_d62668e5578"></a><section id="detail_d62668e5578">
             <h4>  registratiegeschiedenis</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
@@ -1312,7 +1313,7 @@
                   </tr>
                </tbody>
             </table>
-         </section><a class="anchor" id="detail_d59866e5763"></a><section id="detail_d59866e5763">
+         </section><a class="anchor" id="detail_d62668e5745"></a><section id="detail_d62668e5745">
             <h4>  putgeschiedenis</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
@@ -2185,7 +2186,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d59866e10810"></a><section id="detail_d59866e10810">
+            </section><a class="anchor" id="detail_d62668e10792"></a><section id="detail_d62668e10792">
             <h4>  tussentijdse gebeurtenis</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
@@ -7145,9 +7146,9 @@
                <td>✔</td>
                <td>
                   
-                  <p>De maaiveldpositie bij de put is tijdens een meetronde opnieuw gemeten en is daarom
-                     opnieuw vastgesteld. De posities van de put zelf zijn ongewijzigd omdat deze niet
-                     opnieuw zijn gemeten.</p>
+                  <p>De maaiveldpositie bij de put is tijdens een meetronde opnieuw gemeten (nagemeten)
+                     en is daarom opnieuw vastgesteld. De posities van de put zelf zijn ongewijzigd omdat
+                     deze niet opnieuw zijn gemeten.</p>
                   </td>
             </tr>
             <tr>
@@ -7157,7 +7158,7 @@
                <td>
                   
                   <p>De posities van de bovenkant van de buizen en optioneel de positie van het maaiveld
-                     zijn tijdens een meetronde opnieuw gemeten en zijn daarom opnieuw vastgesteld.</p>
+                     zijn tijdens een meetronde opnieuw gemeten (nagemeten) en zijn daarom opnieuw vastgesteld.</p>
                   </td>
             </tr>
             <tr>
