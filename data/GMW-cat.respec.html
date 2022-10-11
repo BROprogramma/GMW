@@ -883,7 +883,8 @@
                      <td>
                         
                         <p>Het attribuut is aanwezig wanneer de put geregistreerd was in de registratie DINO.<br clear="none">
-                           Het attribuut mag niet aanwezig zijn in alle andere gevallen.</p>
+                           Het attribuut mag niet aanwezig zijn in alle andere gevallen.<br clear="none">
+                           De eerste letter van de waarde van het attribuut moet gelijk zijn aan B.</p>
                         </td>
                   </tr>
                   <tr>
@@ -921,7 +922,8 @@
                      <th>Definitie</th>
                      <td>
                         
-                        <p>De voor de gemiddelde gebruiker gemakkelijk herkenbare aanduiding van de put.</p>
+                        <p>De voor de gemiddelde gebruiker gemakkelijk herkenbare aanduiding van de put die geen
+                           NITG-code heeft.</p>
                         </td>
                   </tr>
                   <tr>
@@ -930,7 +932,7 @@
                   </tr>
                   <tr>
                      <th>Kardinaliteit</th>
-                     <td>1</td>
+                     <td>0..1</td>
                   </tr>
                   <tr>
                      <th>Domein</th>
@@ -948,31 +950,30 @@
                   </tr>
                   <tr>
                      <th>&nbsp;&nbsp;Opbouw</th>
-                     <td>CCCNNCNNNNNN</td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p>Het attribuut is aanwezig wanneer de waarde van het attribuut NITG-code ontbreekt.<br clear="none">
+                           Het attribuut mag niet aanwezig zijn in alle andere gevallen.</p>
+                        </td>
                   </tr>
                   <tr>
                      <th>Materiële geschiedenis</th>
                      <td>Nee</td>
                   </tr>
                   <tr>
-                     <th>Is afgeleid</th>
-                     <td>Ja</td>
-                  </tr>
-                  <tr>
                      <th>Toelichting</th>
                      <td>
                         
                         <p>De putcode wordt samengesteld uit de drie letters die het type registratieobject aangeven
-                           (GMW), dan volgt het 2-cijferig nummer van het kaartblad waarop de locatie ligt gevolgd
-                           door de letter die het kaartbladonderdeel specificeert, en dan een 6-cijferig volgnummer.<br clear="none">
-                           Het kaartbladnummer wordt bepaald op basis van de bij inname aangeleverde locatie.
-                           De gebruikte kaartbladindeling is die van de Topografische Kaart van Nederland 1:25.000,
-                           versie juni 2016. Eventuele toekomstige wijzigingen van de kaartbladindeling, zijn
-                           niet van toepassing op de wijze van afleiden van putcodes.<br clear="none">
-                           Het volgnummer wordt als volgt opgebouwd. Wanneer de put geregistreerd was in de registratie
-                           DINO: de laatste vier cijfers van de NITG-code, voorafgegaan door twee voorloopnullen.
-                           Voor nieuwe putten: een 6-cijferig nummer, groter dan 100.000 om te onderscheiden
-                           van omgezette NITG-codes.</p>
+                           (GMW), dan volgt het nummer van het kaartblad waarop de locatie ligt gevolgd door
+                           de letter die het kaartbladonderdeel specificeert, en dan een volgnummer. De gebruikte
+                           kaartbladindeling is die van de Topografische Kaart van Nederland 1:25.000, versie
+                           juni 2016. De code wordt door de basisregistratie ondergrond gegenereerd op basis
+                           van het bij inname aangeleverde kaartbladnummer (NNC).</p>
                         </td>
                   </tr>
                </tbody>
@@ -1162,7 +1163,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d64430e5324"></a><section id="detail_d64430e5324">
+            </section><a class="anchor" id="detail_d64390e5296"></a><section id="detail_d64390e5296">
             <h4>  aangeleverde locatie</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
@@ -1200,7 +1201,7 @@
                   </tr>
                </tbody>
             </table>
-         </section><a class="anchor" id="detail_d64430e5509"></a><section id="detail_d64430e5509">
+         </section><a class="anchor" id="detail_d64390e5481"></a><section id="detail_d64390e5481">
             <h4>  aangeleverde verticale positie</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
@@ -1237,7 +1238,7 @@
                   </tr>
                </tbody>
             </table>
-         </section><a class="anchor" id="detail_d64430e5694"></a><section id="detail_d64430e5694">
+         </section><a class="anchor" id="detail_d64390e5666"></a><section id="detail_d64390e5666">
             <h4>  gestandaardiseerde locatie</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
@@ -1275,7 +1276,7 @@
                   </tr>
                </tbody>
             </table>
-         </section><a class="anchor" id="detail_d64430e5879"></a><section id="detail_d64430e5879">
+         </section><a class="anchor" id="detail_d64390e5851"></a><section id="detail_d64390e5851">
             <h4>  registratiegeschiedenis</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
@@ -1312,7 +1313,7 @@
                   </tr>
                </tbody>
             </table>
-         </section><a class="anchor" id="detail_d64430e6064"></a><section id="detail_d64430e6064">
+         </section><a class="anchor" id="detail_d64390e6036"></a><section id="detail_d64390e6036">
             <h4>  putgeschiedenis</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
@@ -2185,7 +2186,7 @@
                   </tr>
                </tbody>
             </table>
-            </section><a class="anchor" id="detail_d64430e11273"></a><section id="detail_d64430e11273">
+            </section><a class="anchor" id="detail_d64390e11245"></a><section id="detail_d64390e11245">
             <h4>  tussentijdse gebeurtenis</h4>
             <table style="width: 100%;">
                <colgroup style="width: 30%;"></colgroup>
