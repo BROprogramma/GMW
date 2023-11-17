@@ -2,29 +2,119 @@
 <html lang="nl">
 
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="content-type">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel='shortcut icon' type='image/x-icon' href='https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico' />
-  <link rel="stylesheet" type="text/css" href="https://docs.geostandaarden.nl/bro/gen/localstyle.css" />
-  <title>BRO Gegevenscatalogus Grondwatermonitoringput</title>
-  <script class='remove' src='https://tools.geostandaarden.nl/respec/builds/respec-geonovum.js' async></script>
-  <script class="remove" src="config.js"></script>
-</head>
+  	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<link rel='shortcut icon' type='image/x-icon' href='https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico' />
+  	<link rel="stylesheet" type="text/css" href='https://docs.geostandaarden.nl/bro/gen/localstyle.css'/>
+  	<title>BRO Gegevenscatalogus Grondwatermonitoringput</title>
+	<script class='remove' src='https://tools.geostandaarden.nl/respec/builds/respec-geonovum.js' async></script>
+  	<script class="remove" src="config.js"></script>
+</head>	
 
 <body>
 
-		<!--samenvatting-->
-		<section id='abstract'>
-			<p>Dit document beschrijft de definitie van de grondwatermonitoringput, met een algemene toelichting.</p>
+	<!--samenvatting-->
+	<section id='abstract'>
+		<p>Dit document beschrijft de definitie van de grondwatermonitoringput, met een algemene toelichting. </p>
+	</section>
+
+	<!-- status document -->
+	<section id='sotd'></section>
+
+	<!-- inleiding -->
+	<section id='inleiding' class='generic informative'>
+		<h2>Inleiding</h2>
+			<section id='doel-en-doelgroep' data-include='https://docs.geostandaarden.nl/bro/gen/doel-en-doelgroep.html'></section>
+			<section id='totstandkoming' data-include='https://docs.geostandaarden.nl/bro/gen/totstandkoming.html'></section>
+			<section id='beheer' data-include='https://docs.geostandaarden.nl/bro/gen/beheer.html'></section>
+			<section id="leeswijzer">
+				<h3>Leeswijzer</h3>
+					<p><a href ="#inleiding">Hoofdstuk 1</a> geeft het doel en de doelgroep van een catalogus.</p>
+					<p><a href ="#algemene-kenmerken-en-begrippen">Hoofdstuk 2</a> behandelt enkele algemene aspecten van het BRO-systeem en begrippen van algemene aard.</p>
+					<p><a href ="#Grondwatermonitoring">Hoofdstuk 3</a> plaatst het object in de gegevenssystematiek van de basisregistratie ondergrond en vertelt wat de benadering is geweest bij het opstellen van de gegevensdefinitie.</p>
+					<p><a href ="#Grondwatermonitoringput">Hoofdstuk 4</a> is de toelichting op de gegevensdefinitie van het registratieobject die in de ministeriële regeling is opgenomen.</p>
+					<p><a href ="#intro-gegevensdefinitie">Hoofdstuk 5</a> vertelt hoe de gegevensdefinitie is opgebouwd en welke aspecten van de gegevens daarin worden beschreven.</p>
+					<p><a href ="#gegevensdefinitie">Hoofdstuk 6</a> geeft de inhoud weer van het eerste artikel van de ministeriële regeling en dat is het deel waarin de definitie is opgenomen van het registratieobject, van de delen waaruit het is opgebouwd, de entiteiten, en van de eigenschappen van die delen, de attributen.</p>
+					<p><a href ="#uitbreidbare-waardelijsten">Hoofdstuk 7</a> geeft de inhoud weer van het tweede artikel van de ministeriële regeling en dat is het deel waarin uitbreidbare waardelijsten staan waarnaar in hoofdstuk 6 verwezen wordt. </p>
+			</section>
+	</section>
+ 
+	<!-- Algemene kenmerken en bergippen -->
+	<!-- hoofdstuk 2 -->
+	<section id='algemene-kenmerken-en-begrippen' data-include='https://docs.geostandaarden.nl/bro/gen/algemene-kenmerken-en-begrippen.html' class='generic informative'></section>
+	
+	<!-- 3. Grondwatermonitoring; positie GMW binnen gegevenssystematiek BRO (niet normatief c.q. niet juridisch deel) -->
+	<section id="Grondwatermonitoring" class='generic informative'>
+		<h2>Grondwatermonitoring</h2>
+		<!-- 3.1 Inleiding -->
+		<section id="Grondwatermonitoring.Inleiding" data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/data/Grondwatermonitoring.html'></section>
+		<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/Domein grondwatermonitoring in de BRO.html'. -->
+		<!-- Note; Instead of the 'main URL' (https://github.com/BROprogramma/generiek/raw/gh-pages/gm/data/Grondwatermonitoring.html), the above 'redirect URL' is used (the main URL seems to redirect to this alternative 'https://raw.githubusercontent.com/...' URL).
+		Initially used the 'main URL' because for a PNG image within this data-include page, the 'redirect URL' didn't seem to work.
+		However, for this html document it seems that only the 'redirect URL' works and not the 'main URL'. Weird... -->
+		
+		<!-- 3.2 Registratieobjecten binnen het domein grondwatermonitoring -->
+		<section id="Grondwatermonitoring.Registratieobjecten" data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/data/Domein grondwatermonitoring in de BRO.html'></section>
+		<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/Domein grondwatermonitoring in de BRO.html'. -->
+		
+		<!-- 3.3 Samenhang en consistentie tussen verschillende registratieobjecten in het Grondwaterdomein -->
+		<!-- <section id="samenhang ROs in grondwater" class='generic informative' data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/data/Samenhang_RO_GM_domein.html'></section> -->
+		<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/Samenhang_RO_GM_domein.html'. -->
+	</section>
+	
+	<!-- hoofdstuk 4 Grondwatermonitoringput (normatieve/juridische deel) -->
+	<section id='Grondwatermonitoringput'>
+		<h2>Grondwatermonitoringput</h2>
+		<!-- 4.1 Inleiding -->
+		<section id='GMW inleiding' data-include='./data/GMW normatief, inleiding.html'></section>
+		<!-- Note, I suppose a relative path can be used, since this is also done for FRD. Specifically;
+		this relative path is used on FRD GitHub.io doc page; "./data/FRD-cat.respec.html", which redirects to; 'https://broprogramma.github.io/FRD/data/FRD-cat.respec.html' -->
+		
+		<!-- 4.2 Belangrijkste entiteiten -->
+		<section id='Belangrijkste entiteiten' data-include='./data/Belangrijkste entiteiten.html'></section>
+		
+		<!-- 4.3 INSPIRE (INSPIRE-thema Geology) -->
+		<section id="INSPIRE" data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/data/INSPIRE_Geology.html'></section>
+		<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/INSPIRE_Geology.html'. -->
+	</section>
+	
+	<!-- introductie gegevensdefinitie generiek -->
+	<!-- hoofdstuk 5 -->
+	<section id="intro-gegevensdefinitie" class='generic informative'>
+		<h2>Opbouw van de gegevensdefinitie</h2>
+		<section id="intro-cat-inleiding" data-include="https://docs.geostandaarden.nl/bro/gen/intro-cat-inleiding.html"></section>
+		<section id="domeinen">
+			<h3>Domeinen</h3>
+			<!-- should heading/chaptername be removed from domeinen-intro.html? -->
+			<div id="domeinen-intro" data-include="https://docs.geostandaarden.nl/bro/gen/domeinen-intro.html"></div>
+			<section id="aantal" data-include="https://docs.geostandaarden.nl/bro/gen/aantal.html"></section>
+			<section id="code" data-include="https://docs.geostandaarden.nl/bro/gen/code.html"></section>
+			<section id="gemeten waarden">
+				<h4>Gemeten waarden</h4>
+				<div id="gemeten-waarden-intro" data-include="https://docs.geostandaarden.nl/bro/gen/gemeten-waarden-intro.html"></div>
+				<section id="meetwaarde" data-include="https://docs.geostandaarden.nl/bro/gen/meetwaarde.html"></section>
+				<div id="inname-gemeten-waarden" data-include="https://docs.geostandaarden.nl/bro/gen/inname-gemeten-waarden.html"></div> 
+			</section>
+			<section id="nummer" data-include="https://docs.geostandaarden.nl/bro/gen/nummer.html"></section>
+			<section id="tekst" data-include="https://docs.geostandaarden.nl/bro/gen/tekst.html"></section>
+			<section id="tijdstip" data-include="https://docs.geostandaarden.nl/bro/gen/datumtijd.html"></section>
+			<section id="waardelijsten">
+				<h4>Waardelijsten</h4>
+				<div id="waardelijst-intro" data-include="https://docs.geostandaarden.nl/bro/gen/waardelijst.html"></div> 
+				<section id="waardelijst-niet-uitbreidbaar" data-include="https://docs.geostandaarden.nl/bro/gen/enumeratie.html"></section>
+				<section id="waardelijst-uitbreidbaar" data-include="https://docs.geostandaarden.nl/bro/gen/codelijst.html"></section>
+			</section>
+			<section id="coordinatenpaar" data-include="https://docs.geostandaarden.nl/bro/gen/coordinatenpaar.html"></section>
+			<section id="organisatie" data-include="https://docs.geostandaarden.nl/bro/gen/organisatie.html"></section>
 		</section>
+		<section id="domeinmodel" data-include="https://docs.geostandaarden.nl/bro/gen/domeinmodel-gen.html"></section>
+		<section id="verplichte-gegevens-waarden" data-include="https://docs.geostandaarden.nl/bro/gen/verplichte-gegevens-waarden.html"></section>
+	</section>
 
-		<!-- status document -->
-		<section id='sotd'/>
-
-		<!-- Model -->
-		<!-- hoofdstuk 6 en Hoofdstuk 7 -->
-		<div data-include="data/GMW-cat.respec.html" data-include-replace=true></div>
-
+	<!-- Model -->
+	<!-- hoofdstuk 6 en Hoofdstuk 7 -->
+	<div data-include="data/GMW-cat.respec.html" data-include-replace=true></div>
+	
 </body>
 
 </html>
