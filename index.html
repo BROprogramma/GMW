@@ -17,6 +17,8 @@
 
 		<!-- status document -->
 		<section id='sotd'></section>
+		<!-- Note, using <section id='sotd'/> would result in table of content not showing up.
+		It turns out that it is very important to use explicit opening and closing XML element tags, at least with regards to section.-->
 
 		<!-- inleiding -->
 		<section id='inleiding' class='generic informative'>
@@ -35,45 +37,44 @@
 						<p><a href ="#uitbreidbare-waardelijsten">Hoofdstuk 7</a> geeft de inhoud weer van het tweede artikel van de ministeriële regeling en dat is het deel waarin uitbreidbare waardelijsten staan waarnaar in hoofdstuk 6 verwezen wordt.</p>
 				</section>
 		</section>
- 
-	<!-- Algemene kenmerken en bergippen -->
-	<!-- hoofdstuk 2 -->
-	<section id='algemene-kenmerken-en-begrippen' data-include='https://docs.geostandaarden.nl/bro/gen/algemene-kenmerken-en-begrippen.html' class='generic informative'></section>
-	
-	<!-- 3. Grondwatermonitoring; positie GMW binnen gegevenssystematiek BRO (niet normatief c.q. niet juridisch deel) -->
-	<section id="Grondwatermonitoring" class='generic informative'>
-		<h2>Grondwatermonitoring</h2>
-		<!-- 3.1 Inleiding -->
-		<section id="Grondwatermonitoring.Inleiding" data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/data/Grondwatermonitoring.html'></section>
-		<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/Domein grondwatermonitoring in de BRO.html'. -->
-		<!-- Note; Instead of the 'main URL' (https://github.com/BROprogramma/generiek/raw/gh-pages/gm/data/Grondwatermonitoring.html), the above 'redirect URL' is used (the main URL seems to redirect to this alternative 'https://raw.githubusercontent.com/...' URL).
-		Initially used the 'main URL' because for a PNG image within this data-include page, the 'redirect URL' didn't seem to work.
-		However, for this html document it seems that only the 'redirect URL' works and not the 'main URL'. Weird... -->
-		
-		<!-- 3.2 Registratieobjecten binnen het domein grondwatermonitoring -->
-		<section id="Grondwatermonitoring.Registratieobjecten" data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/data/Domein grondwatermonitoring in de BRO.html'></section>
-		<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/Domein grondwatermonitoring in de BRO.html'. -->
-		
-		<!-- 3.3 Samenhang en consistentie tussen verschillende registratieobjecten in het Grondwaterdomein -->
-		<!-- <section id="samenhang ROs in grondwater" class='generic informative' data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/data/Samenhang_RO_GM_domein.html'></section> -->
-		<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/Samenhang_RO_GM_domein.html'. -->
-	</section>
-	
-	<!-- hoofdstuk 4 Grondwatermonitoringput (normatieve/juridische deel) -->
-	<section id='Grondwatermonitoringput'>
-		<h2>Grondwatermonitoringput</h2>
-		<!-- 4.1 Inleiding -->
-		<section id='GMW inleiding' data-include='./data/GMW normatief, inleiding.html'></section>
-		<!-- Note, I suppose a relative path can be used, since this is also done for FRD. Specifically;
-		this relative path is used on FRD GitHub.io doc page; "./data/FRD-cat.respec.html", which redirects to; 'https://broprogramma.github.io/FRD/data/FRD-cat.respec.html' -->
-		
-		<!-- 4.2 Belangrijkste entiteiten -->
-		<section id='Belangrijkste entiteiten' data-include='./data/Belangrijkste entiteiten.html'></section>
-		
+
+		<!-- Algemene kenmerken en bergippen -->
+		<!-- hoofdstuk 2 -->
+		<section id='algemene-kenmerken-en-begrippen' data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/algemene-kenmerken-en-begrippen.html' class='generic informative'></section>
+		<!-- NOTE, temporarily changed the data-include from 'https://docs.geostandaarden.nl/bro/gen/algemene-kenmerken-en-begrippen.html' to 'https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/algemene-kenmerken-en-begrippen.html', in order to check the changes to Chapter 2 that have not yet been published to Geonovum. -->
+
+		<!-- 3. Grondwatermonitoring; positie GMW binnen gegevenssystematiek BRO (niet normatief c.q. niet juridisch deel) -->
+		<section id="Grondwatermonitoring" class='generic informative'>
+			<h2>Grondwatermonitoring</h2>
+			<!-- 3.1 Inleiding -->
+			<section id="Grondwatermonitoring.Inleiding" data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/data/Grondwatermonitoring.html'></section>
+			<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/Domein grondwatermonitoring in de BRO.html'. -->
+			<!-- Note; Instead of the 'main URL' (https://github.com/BROprogramma/generiek/raw/gh-pages/gm/data/Grondwatermonitoring.html), the above 'redirect URL' is used (the main URL seems to redirect to this alternative 'https://raw.githubusercontent.com/...' URL).
+			Initially used the 'main URL' because for a PNG image within this data-include page, the 'redirect URL' didn't seem to work.
+			However, for this html document it seems that only the 'redirect URL' works and not the 'main URL'. Weird... -->
+			
+			<!-- 3.2 Registratieobjecten binnen het domein grondwatermonitoring -->
+			<section id="Grondwatermonitoring.Registratieobjecten" data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/data/Domein grondwatermonitoring in de BRO.html'></section>
+			<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/Domein grondwatermonitoring in de BRO.html'. -->
+			
+			<!-- 3.3 Samenhang en consistentie tussen verschillende registratieobjecten in het Grondwaterdomein -->
+			<!-- <section id="samenhang ROs in grondwater" class='generic informative' data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/data/Samenhang_RO_GM_domein.html'></section> -->
+			<!-- (expected) link to location on docs.geostandaarden; 'https://docs.geostandaarden.nl/bro/gen/gm/data/Samenhang_RO_GM_domein.html'. -->
+		</section>
+
+		<!-- hoofdstuk 4 Grondwatermonitoringput (normatieve/juridische deel) -->
+		<section id='Grondwatermonitoringput'>
+			<h2>Grondwatermonitoringput</h2>
+			<!-- 4.1 Inleiding -->
+			<section id='GMW inleiding' data-include='./data/GMW normatief, inleiding.html'></section>
+
+			<!-- 4.2 Belangrijkste entiteiten -->
+			<section id='Belangrijkste entiteiten' data-include='./data/Belangrijkste entiteiten.html'></section>
+
 			<!-- 4.3 INSPIRE (INSPIRE-thema Geology) -->
 			<section id="INSPIRE" data-include='./data/INSPIRE.html'></section>
-	</section>
-	
+		</section>
+
 		<!-- introductie gegevensdefinitie generiek -->
 		<!-- hoofdstuk 5 -->
 		<section id="intro-gegevensdefinitie" class='generic informative'>
