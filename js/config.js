@@ -27,7 +27,7 @@ let respecConfig = {
   //licence: "cc0",                 // Public Domain Dedication
   licence: "cc-by",                 // Attribution, met bronvermelding
   //-- shortName is verplicht! (komt in de URL: kies logische afkorting)--------------
-  shortName: "sld",
+  shortName: "gmw",
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
   //publishDate: "2023-06-09",
@@ -42,10 +42,6 @@ let respecConfig = {
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   editors:
     [
-     {  name: "SIKB",
-        company: "SIKB",
-        companyURL: "https://www.sikb.nl",
-      }, 
       { name: "Geonovum",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
@@ -56,18 +52,13 @@ let respecConfig = {
   authors:
     [
       {
-        name: "SIKB",
-        company: "SIKB",
-        companyURL: "https://www.sikb.nl",
-      },
-      {
         name: "Geonovum",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
       }
      ],
   //neem hier de URL van de github repository op waar het respec document in staat
-  github: "https://github.com/BROprogramma/SLD",
+  github: "https://github.com/BROprogramma/GMW",
   // Create PDF and link to file in header (optional):
   //alternateFormats: [{label: "pdf", uri: "template.pdf",},],
 };
