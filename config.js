@@ -1,8 +1,8 @@
 var respecConfig = {
-  specStatus: "GN-WV",
+  specStatus: "GN-CV",
   specType: "IM",
   //canonicalURI: "WV",
- // publishDate: "2016-10-18",
+ publishDate: "2023-12-01",
   maxTocLevel: 4,
  logos: [{
     src: 'https://docs.geostandaarden.nl/bro/gen/logo_minbzk.png',
@@ -14,11 +14,17 @@ var respecConfig = {
   }],
   editors: [
     {
-      name: "TNO Geologische Dienst Nederland",
-      url: "https://www.tno.nl/nl/",
+      name: "Geonovum",
+      url: "https://www.geonovum.nl",
     },
   ],
-  shortName: "bro-gmw",
+  authors: [
+    {
+      name: "Geonovum",
+      url: "https://www.geonovum.nl",
+    },
+  ],
+  shortName: "gmw",
   pubDomain: "bro",
   github: "https://github.com/BROprogramma/GMW",
   //previousPublishDate: "2017-01-01",
