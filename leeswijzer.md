@@ -1,4 +1,5 @@
-# Leeswijzer
+[h2 is vereist vanwege ReSpec]: #
+<h2>Leeswijzer</h2>
 
 [Hoofdstuk 1](#inleiding) geeft het doel en de doelgroep van een catalogus.  
 [Hoofdstuk 2](#algemene-kenmerken-en-begrippen) behandelt enkele algemene aspecten van het BRO-systeem en begrippen van algemene aard.  
