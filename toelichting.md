@@ -1,5 +1,5 @@
 [h2 is vereist vanwege ReSpec]: #
-<h2>Grondwatermonitoringput</h2>
+<h2>Grondwatermonitoringput (NIEUW!)</h2>
 
 # Inleiding
 De catalogus voor de grondwatermonitoringput beschrijft de gegevens die in de registratie ondergrond zijn opgenomen van putten die in het publieke domein worden gebruikt voor het monitoren van de hoeveelheid grondwater en de kwaliteit ervan.
