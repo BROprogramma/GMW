@@ -1,3 +1,5 @@
+# Leeswijzer
+
 [Hoofdstuk 1](#inleiding) geeft het doel en de doelgroep van een catalogus.
 [Hoofdstuk 2](#algemene-kenmerken-en-begrippen) behandelt enkele algemene aspecten van het BRO-systeem en begrippen van algemene aard.
 [Hoofdstuk 3](#Grondwatermonitoring) plaatst het object in de gegevenssystematiek van de basisregistratie ondergrond en vertelt wat de benadering is geweest bij het opstellen van de gegevensdefinitie.
