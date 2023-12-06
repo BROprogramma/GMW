@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 	<head>
 		<meta content="text/html; charset=utf-8" http-equiv="content-type">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="https://cdn.jsdelivr.net/gh/digitalbazaar/respec-mermaid@1.0.1/dist/main.js" class="remove"></script>
+		<script src="js/bro-config.js" class="remove"></script>
+		<script src="js/config.js" class="remove"></script>
+		<script class="remove"> respecConfig = {...organisationConfig, ...respecConfig}</script>
+		<script>document.title = respecConfig.title</script>
+		<title>BRO Gegevenscatalogus Grondwatermonitoringput</title>
 		<link rel='shortcut icon' type='image/x-icon' href='https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico' />
 		<link rel="stylesheet" type="text/css" href='https://docs.geostandaarden.nl/bro/gen/localstyle.css'/>
-		<title>BRO Gegevenscatalogus Grondwatermonitoringput</title>
-		<script class='remove' src='https://tools.geostandaarden.nl/respec/builds/respec-geonovum.js' async></script>
-		<script class="remove" src="config.js"></script>
+		<script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove" async></script>
+		<!-- <script class='remove' src='https://tools.geostandaarden.nl/respec/builds/respec-geonovum.js' async></script> -->
+		<!-- <script class="remove" src="config.js"></script> -->
 	</head>
+	
 	<body>
 		<!--samenvatting-->
-		<section id='abstract'>
-			<p>Dit document beschrijft de definitie van de grondwatermonitoringput, met een algemene toelichting.</p>
-		</section>
+		<section id="abstract" data-include-format="markdown" data-include='samenvatting.md'></section>
 
 		<!-- status document -->
 		<section id='sotd'></section>
@@ -23,7 +29,7 @@
 		<!-- Hoofdstuk 1. Inleiding -->
 		<section id='inleiding' class='generic informative'>
 			<h2>Inleiding</h2>
-				<section id="leeswijzer" data-include="leeswijzer.md" data-format="markdown"></section>
+				<section id="leeswijzer" data-include="leeswijzer.md" data-include-format="markdown"></section>
 				<section id='doel-en-doelgroep' data-include='https://docs.geostandaarden.nl/bro/gen/doel-en-doelgroep.html'></section>
 				<section id='totstandkoming' data-include='https://docs.geostandaarden.nl/bro/gen/totstandkoming.html'></section>
 				<section id='beheer' data-include='https://docs.geostandaarden.nl/bro/gen/beheer.html'></section>
@@ -40,7 +46,7 @@
 		<section
 			id="Grondwatermonitoring"
 			data-include='https://raw.githubusercontent.com/BROprogramma/generiek/gh-pages/gm/Grondwatermonitoring.md'
-			data-format="markdown"
+			data-include-format="markdown"
 			class='generic informative'>
 			<!--
 			NOTE, JV, 06-12-2023: In the final GMW catalogue the data-include must be changed into 'https://docs.geostandaarden.nl/bro/gen/gm/Grondwatermonitoring.md.
@@ -51,7 +57,7 @@
 		<section
 			id='Grondwatermonitoringput'
 			data-include='toelichting.md'
-			data-format="markdown">
+			data-include-format="markdown">
 
 <!--			<h2>Grondwatermonitoringput</h2>
 
