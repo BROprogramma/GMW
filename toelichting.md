@@ -21,9 +21,15 @@ Een grondwatermonitoringput is in de basisregistratie ondergrond opgenomen wanne
 ## Put met voorgeschiedenis
 De grondwatermonitoringput is een registratieobject met materiële geschiedenis. Voordat de put in de registratie ondergrond is opgenomen kan hij al een zekere geschiedenis achter de rug hebben. Een dergelijke grondwatermonitoringput wordt een put met voorgeschiedenis genoemd.
 
-Er gelden bijzondere regels voor een put met voorgeschiedenis.
+De geschiedenis van een grondwater-monitoringput is een reeks van gebeurtenissen die elkaar netjes moeten opvolgen in de tijd. In principe geldt de eis dat de precieze datum van een gebeurtenis moet worden vastgelegd, maar die eis kan niet met terugwerkende kracht gelden voor putten die al voor de invoering van de BRO bestonden. Wanneer een gebeurtenis in het verleden ligt, moet de basisregistratie er rekening mee houden dat de datum niet precies is vastgelegd en bijvoorbeeld alleen het jaar bekend is. Het deel van de geschiedenis die dateert van voor de registratie, de voorgeschiedenis, mag daarom een zekere onvolledigheid kennen.
+In de terminologie van de gegevensdefinitie heeft een put met voorgeschiedenis als bijzonderheid dat de datums in Putgeschiedenis het domein OnvolledigeDatum kunnen hebben.
 
-De bijzondere regels hebben betrekking op de opbouw van de materiële geschiedenis. De geschiedenis van een grondwater-monitoringput is een reeks van gebeurtenissen die elkaar netjes moeten opvolgen in de tijd. In principe geldt de eis dat de precieze datum van een gebeurtenis moet worden vastgelegd, maar die eis kan niet met terugwerkende kracht gelden voor putten die al voor de invoering van de BRO bestonden. Wanneer een gebeurtenis in het verleden ligt, moet de basisregistratie er rekening mee houden dat de datum niet precies is vastgelegd en bijvoorbeeld alleen het jaar bekend is. Het deel van de geschiedenis die dateert van voor de registratie, de voorgeschiedenis, mag daarom een zekere onvolledigheid kennen.
+In een eerdere versie van de GMW catalogus waren bijzondere regels opgenomen voor een put met voorgeschiedenis. Sturend daarbij was een bijzonder recht dat een dataleverancier gedurende beperkte tijd kon hebben om putten met voorgeschiedenis aan te bieden. Dat recht was gekoppeld aan conversietrajecten die doorlopen moeten worden om putten met al bestaande geschiedenis aan te leveren. Wanneer een dataleverancier dit recht had én wou uitoefenen bij zijn levering, diende hij dit kenbaar te maken door het optionele transactiegegeven 'onder voorrecht' (underPrivilege) aan te leveren met waarde 'ja'.
+
+Om het registreren van putten waarvan niet alle data bekend zijn te stimuleren, is na de initiële implementatie gekozen om alle dataleveranciers het recht toe te kennen om putten met voorgeschiedenis aan te mogen bieden.
+Aansluitend is vervolgens gekozen om ook de regels voor het aanleveren van een put met voorgeschiedenis te vereenvoudigen. De bijzondere regels die specificeerden wanneer een OnvolledigeDatum gebruikt mog worden voor de datums van de Putgeschiedenis, zijn komen te verallen. Verder is het afgeleide attribuut 'met voorgeschiedenis', waarnaar werd gerefereerd in deze bijzondere regels, verwijdered uit de gegevensdefinitie.
+
+Met het verwijderen van het attribuut 'met voorgeschiedenis' en de bijzondere regels die daaraan refereerden, is ook de functionele waarde van het transactiegegeven 'onder voorrecht' (underPrivilege) komen te vervallen. Dit transactiegegeven was immers exclusief voor GMW van toepassing.
 
 # Belangrijkste entiteiten
 
