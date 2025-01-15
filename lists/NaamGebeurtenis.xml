@@ -10,7 +10,7 @@
 		<Waarde>buisdeelIngeplaatst</Waarde>
 		<IMBRO>v</IMBRO>
 		<IMBROA>v</IMBROA>
-		<Omschrijving>Het repareren van &amp;#233;&amp;#233;n of meer monitoringbuizen door het inplaatsen van een stijgbuisdeel met een kleinere diameter.</Omschrijving>
+		<Omschrijving>Het repareren van één of meer monitoringbuizen door het inplaatsen van een stijgbuisdeel met een kleinere diameter.</Omschrijving>
 	</NaamGebeurtenis>
 	<NaamGebeurtenis>
 		<Waarde>buisIngekort</Waarde>
@@ -28,7 +28,7 @@
 		<Waarde>buisstatusVeranderd</Waarde>
 		<IMBRO>v</IMBRO>
 		<IMBROA>v</IMBROA>
-		<Omschrijving>Van &amp;#233;&amp;#233;n of meer buizen in een grondwatermonitoringput is vastgesteld dat de (fysieke) status veranderd is.</Omschrijving>
+		<Omschrijving>Van één of meer buizen in een grondwatermonitoringput is vastgesteld dat de (fysieke) status veranderd is.</Omschrijving>
 	</NaamGebeurtenis>
 	<NaamGebeurtenis>
 		<Waarde>eigenaarVeranderd</Waarde>
@@ -40,7 +40,7 @@
 		<Waarde>elektrodestatusVeranderd</Waarde>
 		<IMBRO>v</IMBRO>
 		<IMBROA>v</IMBROA>
-		<Omschrijving>Van &amp;#233;&amp;#233;n of meer elektrodes is vastgesteld dat de (fysieke) status veranderd is.</Omschrijving>
+		<Omschrijving>Van één of meer elektrodes is vastgesteld dat de (fysieke) status veranderd is.</Omschrijving>
 	</NaamGebeurtenis>
 	<NaamGebeurtenis>
 		<Waarde>maaiveldVerlegd</Waarde>
