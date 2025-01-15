@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Putstabiliteit>
+		<Waarde>instabiel</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put beweegt in gelijke of ongelijke mate mee met het maaiveld.</Omschrijving>
+	</Putstabiliteit>
+	<Putstabiliteit>
+		<Waarde>stabielNAP</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put beweegt niet mee met een veranderend maaiveld.</Omschrijving>
+	</Putstabiliteit>
+	<Putstabiliteit>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Of en hoe de put beweegt met een verandering van de maaiveldpositie is onbekend.</Omschrijving>
+	</Putstabiliteit>
+</domeintabel>

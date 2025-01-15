@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AanvulmateriaalBuis>
+		<Waarde>bentoniet</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Als aanvulmateriaal is bentoniet gebruikt.</Omschrijving>
+	</AanvulmateriaalBuis>
+	<AanvulmateriaalBuis>
+		<Waarde>bentonietFiltergrind</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Als aanvulmateriaal is bentoniet en filtergrind gebruikt.</Omschrijving>
+	</AanvulmateriaalBuis>
+	<AanvulmateriaalBuis>
+		<Waarde>boorgatmateriaal</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Als aanvulmateriaal is opgeboord materiaal gebruikt.</Omschrijving>
+	</AanvulmateriaalBuis>
+	<AanvulmateriaalBuis>
+		<Waarde>filtergrind</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Als aanvulmateriaal is filtergrind gebruikt.</Omschrijving>
+	</AanvulmateriaalBuis>
+	<AanvulmateriaalBuis>
+		<Waarde>grind</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Als aanvulmateriaal is grind gebruikt, waarbij onbekend is welk type grind het betreft.</Omschrijving>
+	</AanvulmateriaalBuis>
+	<AanvulmateriaalBuis>
+		<Waarde>grout</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Als aanvulmateriaal is grout gebruikt.</Omschrijving>
+	</AanvulmateriaalBuis>
+	<AanvulmateriaalBuis>
+		<Waarde>volgensGerelateerdeVerkenning</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het aanvulmateriaal is vastgelegd in het booronderzoek van de gerelateerde verkenning(en).</Omschrijving>
+	</AanvulmateriaalBuis>
+	<AanvulmateriaalBuis>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend welk type aanvulmateriaal is gebruikt.</Omschrijving>
+	</AanvulmateriaalBuis>
+</domeintabel>

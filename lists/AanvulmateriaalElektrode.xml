@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AanvulmateriaalElektrode>
+		<Waarde>filtergrind</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Als aanvulmateriaal is filtergrind gebruikt.</Omschrijving>
+	</AanvulmateriaalElektrode>
+	<AanvulmateriaalElektrode>
+		<Waarde>klei</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Als aanvulmateriaal is klei gebruikt.</Omschrijving>
+	</AanvulmateriaalElektrode>
+	<AanvulmateriaalElektrode>
+		<Waarde>volgensGerelateerdeVerkenning</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het aanvulmateriaal is vastgelegd in het booronderzoek van de gerelateerde verkenning(en).</Omschrijving>
+	</AanvulmateriaalElektrode>
+	<AanvulmateriaalElektrode>
+		<Waarde>zand</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Als aanvulmateriaal is zand gebruikt.</Omschrijving>
+	</AanvulmateriaalElektrode>
+	<AanvulmateriaalElektrode>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend welk type aanvulmateriaal is gebruikt.</Omschrijving>
+	</AanvulmateriaalElektrode>
+</domeintabel>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Lijm>
+		<Waarde>geen</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis is niet verlijmd.</Omschrijving>
+	</Lijm>
+	<Lijm>
+		<Waarde>ongespecificeerd</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis is verlijmd, maar de gebruikte lijmsoort is niet gespecificeerd.</Omschrijving>
+	</Lijm>
+	<Lijm>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend of de buis verlijmd is.</Omschrijving>
+	</Lijm>
+</domeintabel>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Filterbescherming>
+		<Waarde>dubbelwandigFilterMetFilterkous</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het filter is dubbelwandig uitgevoerd, al dan niet opgevuld met filtergrind, en voorzien van een filterkous.</Omschrijving>
+	</Filterbescherming>
+	<Filterbescherming>
+		<Waarde>dubbelwandigFilterZonderFilterkous</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het filter is dubbelwandig uitgevoerd, al dan niet opgevuld met filtergrind, en niet voorzien van een filterkous.</Omschrijving>
+	</Filterbescherming>
+	<Filterbescherming>
+		<Waarde>filterkousZonderOpvulling</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het filter is voorzien van een filterkous, zonder filtergrind tussen filter en filterkous.</Omschrijving>
+	</Filterbescherming>
+	<Filterbescherming>
+		<Waarde>filterkousMetOpvulling</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het filter is voorzien van een filterkous, met filtergrind tussen filter en filterkous.</Omschrijving>
+	</Filterbescherming>
+	<Filterbescherming>
+		<Waarde>geen</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Er is geen filterbescherming toegepast.</Omschrijving>
+	</Filterbescherming>
+	<Filterbescherming>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend of filterbescherming is toegepast.</Omschrijving>
+	</Filterbescherming>
+</domeintabel>

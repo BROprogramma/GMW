@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Buismateriaal>
+		<Waarde>beton</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit beton.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>gres</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit gres.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>hout</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit hout.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>ijzer</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit ijzer.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>koper</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit koper.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>messing</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit messing.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>pe</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit polyethyleen, waarbij onbekend is of het high density of low density polyethyleen betreft.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>peHighDensity</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit high density polyethyleen.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>peLowDensity</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit low density polyethyleen.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>peHighDensityPvc</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit high density polyethyleen en pvc.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>pePvc</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit polyethyleen en pvc, waarbij onbekend is of het high density of low density polyethyleen betreft.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>pvc</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit polyvinylchloride.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>staal</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit staal, waarbij onbekend is welk type staal het betreft.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>staalGegalvaniseerd</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit gegalvaniseerd staal.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>staalRoestvrij</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit roestvrij staal.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>teflon</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit teflon.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>asbest</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit asbest.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>houtStaal</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit hout en staal.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>koperStaal</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit koper en staal.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend uit welk type materiaal de buis bestaat.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
+		<Waarde>pvcStaal</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit pvc en staal.</Omschrijving>
+	</Buismateriaal>
+</domeintabel>
