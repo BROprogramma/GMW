@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+           xmlns:dlogger="http://www.armatiek.nl/functions/dlogger-proxy"
+           xmlns:gml="http://www.opengis.net/gml/3.2"
+           xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
+           xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.broservices.nl/xsd/gmwcommon/1.0"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="1.0.0-1">
+   <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0"
+              schemaLocation="brocommon.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gml/3.2"
+              schemaLocation="gml-profile.xsd"/>
+   <!-- <xs:import namespace="http://www.broservices.nl/xsd/gmwcommon/1.0"
+              schemaLocation="https://schema.broservices.nl/xsd/gmwcommon/1.2/gmwcommon.xsd"/>
+   <xs:import namespace="http://www.broservices.nl/xsd/brocommon//3.0"
+              schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
+   <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0"
+              schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
+   <xs:import namespace="http://www.broservices.nl/xsd/dsgmw-messages/1.0"
+              schemaLocation="https://schema.broservices.nl/xsd/dsgmw/1.1/dsgmw-messages.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gml/3.2"
+              schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
+              -->
+   <xs:element name="GeotechnicalCPTSurvey"
+               type="gmwcom:GeotechnicalCPTSurveyType"
+               substitutionGroup="gml:AbstractFeature"/>
+   <xs:complexType name="GeotechnicalCPTSurveyType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GeotechnicalCPTSurveyPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="gmwcom:GeotechnicalCPTSurvey"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+
+   <xs:complexType name="AbstractRegistrationObjectType" abstract="true">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="broId"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="brocom:RegistrationObjectCodeType">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Unieke aanduiding van een registratieobject in de basisregistratie ondergrond.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="AbstractRegistrationObjectPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="brocom:AbstractRegistrationObject"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:element name="GroundwaterMonitoringWell"
+               type="gmwcom:GroundwaterMonitoringWellType"/>
+   <xs:complexType name="GroundwaterMonitoringWellType">
+      <xs:complexContent>
+         <xs:extension base="brocom:AbstractRegistrationObjectType">
+            <xs:sequence>
+               <xs:element name="constructionStandard"
+                           type="gmwcom:ConstructionStandardPropertyType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="deliveredLocation"
+                           nillable="false"
+                           type="gmwcom:DeliveredLocationType"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="deliveredVerticalPosition"
+                           nillable="false"
+                           type="gmwcom:DeliveredVerticalPositionType"/>
+               <xs:element name="deliveryContext"
+                           type="gmwcom:DeliveryContextPropertyType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="geometricDataPubliclyAvailable"
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="groundLevelStable"
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="initialFunction"
+                           type="gmwcom:InitialFunctionPropertyType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="isAbroad"
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="maintenanceResponsibleParty"
+                           type="brocom:ChamberOfCommerceNumberType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="unbounded"
+                           name="monitoringTube"
+                           nillable="false"
+                           type="gmwcom:MonitoringTubeType"/>
+               <xs:element name="nitgCode"
+                           type="xs:string"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="numberOfMonitoringTubes"
+                           type="xs:integer"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="owner" minOccurs="1" maxOccurs="1" nillable="true">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:extension base="brocom:ChamberOfCommerceNumberType">
+                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                        </xs:extension>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="registrationHistory"
+                           nillable="false"
+                           type="brocom:RegistrationHistoryType"/>
+               <xs:element name="removed"
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="standardizedLocation"
+                           nillable="false"
+                           type="brocom:StandardizedLocationType"/>
+               <xs:element name="wellCode"
+                           type="gmwcom:WellCodeType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="wellHeadProtector"
+                           type="gmwcom:WellHeadProtectorTypePropertyType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="wellHistory"
+                           nillable="false"
+                           type="gmwcom:WellHistoryType"/>
+               <xs:element name="wellStability"
+                           type="gmwcom:WellStabilityPropertyType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="relatedSurvey"
+                           type="gmwcom:SurveyPropertyType"
+                           minOccurs="0"
+                           maxOccurs="unbounded"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GroundwaterMonitoringWellPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="gmwcom:GroundwaterMonitoringWell"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:element name="AbstractRegistrationObject"
+               type="brocom:AbstractRegistrationObjectType"
+               abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het geheel van gegevens dat betrekking heeft op een registratieobject en dat in de registratie ondergrond is opgenomen.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="AbstractRegistrationObject" abstract="true">
+      <xs:complexContent>
+         <xs:extension base="brocom:AbstractRegistrationObjectType">
+            <xs:sequence>
+               <xs:element name="deliveryAccountableParty"
+                           type="brocom:OrganizationType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die het bestuursorgaan, dat bronhouder is van de gegevens in de basisregistratie ondergrond, als onderneming in het Handelsregister heeft.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="deliveryResponsibleParty"
+                           type="brocom:OrganizationType"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: TODO
+Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven. Het wordt alleen uitgeleverd aan de dataleverancier en de bronhouder.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="objectIdAccountableParty"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="xs:string">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
+Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de bronhouder of dataleverancier te vergemakkelijken.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="qualityRegime"
+                           type="brocom:QualityRegimeType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De aanduiding van de kwaliteitseis waaraan de gegevens van het object voldoen.
+Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="RegistrationObjectPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="brocom:AbstractRegistrationObject"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:element name="BoreholeResearch"
+               type="gmwcom:BoreholeResearchType"
+               substitutionGroup="gml:AbstractFeature"/>
+   <xs:complexType name="BoreholeResearchType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="BoreholeResearchPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="gmwcom:BoreholeResearch"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+      <xs:element name="Diameter"
+               type="gmwcom:DiameterType"
+               substitutionGroup="gml:AbstractFeature"/>
+   <xs:complexType name="DiameterType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="grootste_diameter_bovenkant_buis" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:restriction base="gml:MeasureType">
+                           <xs:attribute name="uom" type="gml:UomIdentifier" use="required"/>
+                        </xs:restriction>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="kleinste_diameter_bovenkant_buis" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:restriction base="gml:MeasureType">
+                           <xs:attribute name="uom" type="gml:UomIdentifier" use="required"/>
+                        </xs:restriction>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="DiameterPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="gmwcom:Diameter"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:complexType name="RegistrationHistoryType">
+      <xs:sequence>
+         <xs:element name="corrected"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De aanduiding die aangeeft of er een correctie in de gegevens van het object in de registratie ondergrond heeft plaatsgevonden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="deregistered"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De aanduiding die aangeeft of de gegevens van het object door de registerbeheerder uit de registratie ondergrond zijn verwijderd.
+Explanation: Wanneer de registerbeheerder een object uit registratie heeft genomen, zijn de gegevens niet langer beschikbaar voor andere afnemers dan bronhouder en dataleverancier. De registerbeheerder zal een object alleen bij hoge uitzondering uit registratie nemen. Aan die beslissing gaat een proces van zorgvuldige afweging vooraf en dat komt tot uitdrukking in de regel dat een object slechts een keer uit registratie kan worden genomen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="deregistrationTime"
+                     type="xs:dateTime"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum en het tijdstip waarop het object uit de registratie ondergrond is verwijderd.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="latestAdditionTime"
+                     type="xs:dateTime"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum en het tijdstip waarop de laatste aanvulling op gegevens in de registratie ondergrond is doorgevoerd.
+Explanation: Het gegeven is alleen aanwezig wanneer na de start van de registratie van de mijnbouwwetvergunning aanvullende gegevens zijn vastgelegd.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="latestCorrectionTime"
+                     type="xs:dateTime"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum en het tijdstip waarop de laatste correctie in de gegevens van het object is doorgevoerd.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="objectRegistrationTime"
+                     type="xs:dateTime"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum en het tijdstip waarop er voor het eerst gegevens van het object in de registratie ondergrond zijn opgenomen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="registrationCompletionTime"
+                     type="xs:dateTime"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum en het tijdstip waarop alle gegevens van het object in de registratie ondergrond zijn opgenomen en er geen nieuwe gegevens meer ter registratie kunnen worden aangeboden.
+Explanation: Het gegeven is alleen aanwezig als alle aan te leveren gegevens zijn geregistreerd. Na dit tijdstip kunnen geen nieuwe gegevens meer ter registratie worden aangeboden. Wel kunnen fouten in de registratie worden verbeterd.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="registrationStatus"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="brocom:RegistrationStatusType">
+            <xs:annotation>
+               <xs:appinfo>
+                  <CodeListName>RegistrationStatus</CodeListName>
+                  <CodeListURI>urn:bro:RegistrationStatus</CodeListURI>
+               </xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De actuele fase van registratie waarin het object zich bevindt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="reregistered"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum en het tijdstip waarop het object in de registratie ondergrond is opgenomen, nadat het eerder uit registratie was genomen.
+Explanation: De registerbeheerder kan een object eenmalig uit registratie nemen, en die actie kan hij eenmalig ongedaan maken. Ook hiervoor geldt dat akkoord van de bronhouder vereist is.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="reregistrationTime"
+                     type="xs:dateTime"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum en het tijdstip waarop het object in de registratie ondergrond is opgenomen, nadat het uit registratie was genomen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="underReview"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De aanduiding die aangeeft of het object door de registerbeheerder in onderzoek is genomen.
+Explanation: Wanneer een object in onderzoek is genomen betekent dit dat er bij de registerbeheerder gerede twijfel bestaat over de juistheid van de geregistreerde gegevens en dat er een onderzoek is gestart om vast te stellen wat de juiste gegevens zijn. Normaliter gaat hieraan een melding van derden vooraf.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="underReviewTime"
+                     type="xs:dateTime"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum en het tijdstip waarop de registerbeheerder het object in onderzoek heeft genomen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="DeliveredLocationType">
+      <xs:sequence>
+         <xs:element name="coordinates"
+                     type="gml:PointPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="CRS"
+                     type="gmwcom:CRSPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="horizontalPositioningMethod"
+                     type="gmwcom:HorizontalPositioningMethodPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="DeliveredVerticalPositionType">
+      <xs:sequence>
+         <xs:element name="groundLevelPosition"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="brocom:MeasureNillableType">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="groundLevelPositioningMethod"
+                     type="gmwcom:GroundLevelPositioningMethodPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="localVerticalReferencePoint"
+                     type="gmwcom:LocalVerticalReferencePointPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="offset"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="verticalDatum"
+                     type="gmwcom:VerticalDatumPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ElectrodeType">
+      <xs:sequence>
+         <xs:element name="electrodeNumber"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="electrodePackingMaterial"
+                     type="gmwcom:ElectrodePackingMaterialPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="electrodePosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="electrodeStatus"
+                     type="gmwcom:ElectrodeStatusPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="GeoOhmCableType">
+      <xs:sequence>
+         <xs:element name="cableNumber"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element minOccurs="2"
+                     maxOccurs="unbounded"
+                     name="electrode"
+                     nillable="false"
+                     type="gmwcom:ElectrodeType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="InsertedPartType">
+      <xs:sequence>
+         <xs:element name="insertedPartDiameter"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="insertedPartLength"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="insertedPartMaterial"
+                     type="gmwcom:TubeMaterialPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="IntermediateEventType">
+      <xs:sequence>
+         <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="eventName"
+                     type="gmwcom:EventNamePropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="MaterialUsedType">
+      <xs:sequence>
+         <xs:element name="glue"
+                     type="gmwcom:GluePropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeMaterial"
+                     type="gmwcom:TubeMaterialPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubePackingMaterial"
+                     type="gmwcom:TubePackingMaterialPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="MonitoringTubeType">
+      <xs:sequence>
+         <xs:element name="artesianWellCapPresent"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element minOccurs="0"
+                     maxOccurs="unbounded"
+                     name="geoOhmCable"
+                     nillable="false"
+                     type="gmwcom:GeoOhmCableType"/>
+         <xs:element minOccurs="0"
+                     maxOccurs="1"
+                     name="insertedPart"
+                     nillable="false"
+                     type="gmwcom:InsertedPartType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="materialUsed"
+                     nillable="false"
+                     type="gmwcom:MaterialUsedType"/>
+         <xs:element name="numberOfGeoOhmCables"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="plainTubePart"
+                     nillable="false"
+                     type="gmwcom:PlainTubePartType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="screen"
+                     nillable="false"
+                     type="gmwcom:ScreenType"/>
+         <xs:element minOccurs="0"
+                     maxOccurs="1"
+                     name="sedimentSump"
+                     nillable="false"
+                     type="gmwcom:SedimentSumpType"/>
+         <xs:element name="sedimentSumpPresent"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeInUse"
+                     type="brocom:IndicationYesNoUnknownType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeNumber"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubePartInserted"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeStatus"
+                     type="gmwcom:TubeStatusPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeTopDiameter"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="brocom:MeasureNillableType">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="tubeTopPosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeTopPositioningMethod"
+                     type="gmwcom:TubeTopPositioningMethodPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeType"
+                     type="gmwcom:TubeTypePropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="variableDiameter"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PlainTubePartType">
+      <xs:sequence>
+         <xs:element name="plainTubePartLength"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ScreenType">
+      <xs:sequence>
+         <xs:element name="screenBottomPosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="screenLength"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="screenProtection"
+                     type="gmwcom:ScreenProtectionPropertyType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="screenTopPosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="sockMaterial"
+                     type="gmwcom:SockMaterialPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="SedimentSumpType">
+      <xs:sequence>
+         <xs:element name="sedimentSumpLength"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="StandardizedLocationType">
+      <xs:sequence>
+         <xs:element name="coordinateTransformation"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="brocom:CoordinateTransformationType">
+            <xs:annotation>
+               <xs:appinfo>
+                  <CodeListName>CoordinateTransformation</CodeListName>
+                  <CodeListURI>urn:bro:CoordinateTransformation</CodeListURI>
+               </xs:appinfo>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De methode die de basisregistratie ondergrond heeft gebruikt voor het omzetten van de aangeleverde coördinaten.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="location"
+                     type="gml:PointPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De coördinaten in het standaard referentiestelsel.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="WellHistoryType">
+      <xs:sequence>
+         <xs:element minOccurs="0"
+                     maxOccurs="unbounded"
+                     name="intermediateEvent"
+                     nillable="false"
+                     type="gmwcom:IntermediateEventType"/>
+         <xs:element name="wellConstructionDate"
+                     type="xs:date"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="wellRemovalDate"
+                     type="xs:date"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="WellCodeType">
+      <xs:restriction base="xs:string"/>
+   </xs:simpleType>
+   <xs:element name="ConstructionStandard" type="gmwcom:ConstructionStandardType"/>
+   <xs:complexType name="ConstructionStandardType"/>
+   <xs:complexType name="ConstructionStandardPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:ConstructionStandard"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="CoordinateTransformation"
+               type="gmwcom:CoordinateTransformationType"/>
+   <xs:complexType name="CoordinateTransformationType"/>
+   <xs:complexType name="CoordinateTransformationPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:CoordinateTransformation"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="CRS" type="gmwcom:CRSType"/>
+   <xs:complexType name="CRSType"/>
+   <xs:complexType name="CRSPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:CRS"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="DeliveryContext" type="gmwcom:DeliveryContextType"/>
+   <xs:complexType name="DeliveryContextType"/>
+   <xs:complexType name="DeliveryContextPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:DeliveryContext"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="ElectrodePackingMaterial"
+               type="gmwcom:ElectrodePackingMaterialType"/>
+   <xs:complexType name="ElectrodePackingMaterialType"/>
+   <xs:complexType name="ElectrodePackingMaterialPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:ElectrodePackingMaterial"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="ElectrodeStatus" type="gmwcom:ElectrodeStatusType"/>
+   <xs:complexType name="ElectrodeStatusType"/>
+   <xs:complexType name="ElectrodeStatusPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:ElectrodeStatus"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="EventName" type="gmwcom:EventNameType"/>
+   <xs:complexType name="EventNameType"/>
+   <xs:complexType name="EventNamePropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:EventName"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Glue" type="gmwcom:GlueType"/>
+   <xs:complexType name="GlueType"/>
+   <xs:complexType name="GluePropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:Glue"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="GroundLevelPositioningMethod"
+               type="gmwcom:GroundLevelPositioningMethodType"/>
+   <xs:complexType name="GroundLevelPositioningMethodType"/>
+   <xs:complexType name="GroundLevelPositioningMethodPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:GroundLevelPositioningMethod"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="HorizontalPositioningMethod"
+               type="gmwcom:HorizontalPositioningMethodType"/>
+   <xs:complexType name="HorizontalPositioningMethodType"/>
+   <xs:complexType name="HorizontalPositioningMethodPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:HorizontalPositioningMethod"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="InitialFunction" type="gmwcom:InitialFunctionType"/>
+   <xs:complexType name="InitialFunctionType"/>
+   <xs:complexType name="InitialFunctionPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:InitialFunction"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="LocalVerticalReferencePoint"
+               type="gmwcom:LocalVerticalReferencePointType"/>
+   <xs:complexType name="LocalVerticalReferencePointType"/>
+   <xs:complexType name="LocalVerticalReferencePointPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:LocalVerticalReferencePoint"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="RegistrationStatus" type="gmwcom:RegistrationStatusType"/>
+   <xs:complexType name="RegistrationStatusType"/>
+   <xs:complexType name="RegistrationStatusPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:RegistrationStatus"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="ScreenProtection" type="gmwcom:ScreenProtectionType"/>
+   <xs:complexType name="ScreenProtectionType"/>
+   <xs:complexType name="ScreenProtectionPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:ScreenProtection"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="SockMaterial" type="gmwcom:SockMaterialType"/>
+   <xs:complexType name="SockMaterialType"/>
+   <xs:complexType name="SockMaterialPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:SockMaterial"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="TubeMaterial" type="gmwcom:TubeMaterialType"/>
+   <xs:complexType name="TubeMaterialType"/>
+   <xs:complexType name="TubeMaterialPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:TubeMaterial"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="TubePackingMaterial" type="gmwcom:TubePackingMaterialType"/>
+   <xs:complexType name="TubePackingMaterialType"/>
+   <xs:complexType name="TubePackingMaterialPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:TubePackingMaterial"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="TubeStatus" type="gmwcom:TubeStatusType"/>
+   <xs:complexType name="TubeStatusType"/>
+   <xs:complexType name="TubeStatusPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:TubeStatus"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="TubeTopPositioningMethod"
+               type="gmwcom:TubeTopPositioningMethodType"/>
+   <xs:complexType name="TubeTopPositioningMethodType"/>
+   <xs:complexType name="TubeTopPositioningMethodPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:TubeTopPositioningMethod"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="TubeType" type="gmwcom:TubeTypeType"/>
+   <xs:complexType name="TubeTypeType"/>
+   <xs:complexType name="TubeTypePropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:TubeType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="VerticalDatum" type="gmwcom:VerticalDatumType"/>
+   <xs:complexType name="VerticalDatumType"/>
+   <xs:complexType name="VerticalDatumPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:VerticalDatum"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="WellHeadProtectorType" type="gmwcom:WellHeadProtectorTypeType"/>
+   <xs:complexType name="WellHeadProtectorTypeType"/>
+   <xs:complexType name="WellHeadProtectorTypePropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:WellHeadProtectorType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="WellStability" type="gmwcom:WellStabilityType"/>
+   <xs:complexType name="WellStabilityType"/>
+   <xs:complexType name="WellStabilityPropertyType">
+      <xs:sequence>
+         <xs:element ref="gmwcom:WellStability"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Survey" type="gmwcom:SurveyType"/>
+   <xs:complexType name="SurveyType">
+      <xs:choice minOccurs="1" maxOccurs="1">
+         <xs:element ref="gmwcom:BoreholeResearch"/>
+         <xs:element ref="gmwcom:GeotechnicalCPTSurvey"/>
+      </xs:choice>
+   </xs:complexType>
+   <xs:complexType name="SurveyPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="gmwcom:Survey"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+</xs:schema>

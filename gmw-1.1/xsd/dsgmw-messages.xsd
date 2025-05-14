@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+           xmlns:dlogger="http://www.armatiek.nl/functions/dlogger-proxy"
+           xmlns:dsgmw="http://www.broservices.nl/xsd/dsgmw/1.1"
+           xmlns:gml="http://www.opengis.net/gml/3.2"
+           xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
+           xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.0"
+           xmlns:imf="http://www.imvertor.org/xsl/functions"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.broservices.nl/xsd/dsgmw/1.1"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="1.1.0-1">
+   <xs:annotation>
+      <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
+         <gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:import namespace="http://www.broservices.nl/xsd/gmwcommon/1.0"
+              schemaLocation="gmwcommon.xsd"/>
+   <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0"
+              schemaLocation="brocommon.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gml/3.2"
+              schemaLocation="gml-profile.xsd"/>
+   <!-- <xs:import namespace="http://www.broservices.nl/xsd/gmwcommon/1.0"
+              schemaLocation="https://schema.broservices.nl/xsd/gmwcommon/1.2/gmwcommon.xsd"/>
+   <xs:import namespace="http://www.broservices.nl/xsd/brocommon//3.0"
+              schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
+   <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0"
+              schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
+   <xs:import namespace="http://www.broservices.nl/xsd/dsgmw-messages/1.0"
+              schemaLocation="https://schema.broservices.nl/xsd/dsgmw/1.1/dsgmw-messages.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gml/3.2"
+              schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
+              -->
+              
+    <xs:element name="parseFault" type="brocom:ParseFaultType"/>
+   <xs:element name="dispatchDataRequest"
+               type="dsgmw:DispatchDataRequestType">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het DispatchDataRequest is een specialisatie van de abstract klasse DispatchDataRequest in de package brocommon, waaraan het een element dataToBeDelivered toevoegt.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="DispatchDataRequestType">
+      <xs:complexContent>
+         <xs:extension base="brocom:DispatchDataRequestType">
+            <xs:sequence>
+               <xs:element name="dataToBeDelivered"
+                           type="dsgmw:DataToBeDeliveredType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding welke gegevens over het registratieobject worden opgevraagd: alleen de actuele gegevens (present object data) of de actuele gegevens en de volledige materiële geschiedenis (past and present object data).</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="DispatchDataRequestPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="dsgmw:dispatchDataRequest"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:element name="DispatchCharacteristicsRequest"
+               type="dsgmw:DispatchCharacteristicsRequestType"
+               substitutionGroup="gml:AbstractFeature">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het DispatchCharacteristicsRequest is een specialisatie van de abstract klasse DispatchDataRequest in de package brocommon, waaraan het een element dataToBeDelivered toevoegt.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="DispatchCharacteristicsRequestType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="dataToBeDelivered"
+                           type="dsgmw:DataToBeDeliveredType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding welke gegevens over het registratieobject worden opgevraagd: alleen de actuele gegevens (present object data) of de actuele gegevens en de volledige materiële geschiedenis (past and present object data).</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="DispatchCharacteristicsRequestPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="dsgmw:DispatchCharacteristicsRequest"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:element name="DispatchDataResponse"
+               type="dsgmw:DispatchDataResponseType"
+               substitutionGroup="brocom:DispatchResponse">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht DispatchDataResponse is een specialisatie van de abstract klasse DispatchResponse uit de package brocommon, waaraan het een dispatchDocument toevoegt. Met dit bericht worden, als response op een DispatchDataRequest, de gegevens over een specifiek bodemonderzoek registratieobject verzonden naar de aanvrager.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="DispatchDataResponseType">
+      <xs:complexContent>
+         <xs:extension base="brocom:DispatchResponseType">
+            <xs:sequence>
+               <xs:element name="dispatchDocument"
+                           type="brocom:RegistrationObjectCodeType"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het element dispatchDocument bevat de gegevens van een bodemonderzoek registratieobject. Vanwege het polymorfe karakter is het type óf een BRODO uit de package brocom, óf een SLDODP, óf een SLDO uit de package dssad. Deze drie types hebben allen als gemeenschappelijke vader het type AbstractRegistrationObject uit de package brocom.
+Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met het in het dispatchDataRequest opgegegeven broId. Het gegeven is aanwezig en van het type BROD_DO als het registratieobject met de opgegeven broId uit registratie is genomen. Het gegeven is aanwezig en van het type SLDODP als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer tevens bronhouder en/of dataleverancier is van het registratieobject. Het gegeven is aanwezig en van het type SLD_O als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer niet bronhouder of dataleverancier is van het registratieobject.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="DispatchDataResponsePropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="dsgmw:DispatchDataResponse"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:element name="DispatchCharacteristicsResponse"
+               type="dsgmw:DispatchCharacteristicsResponseType"
+               substitutionGroup="gml:AbstractFeature">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht DispatchDataResponse is een specialisatie van de abstract klasse DispatchResponse uit de package brocommon, waaraan het een dispatchDocument toevoegt. Met dit bericht worden, als response op een DispatchDataRequest, de gegevens over een specifiek bodemonderzoek registratieobject verzonden naar de aanvrager.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="DispatchCharacteristicsResponseType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="numberOfDocuments"
+                           type="xs:integer"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het element dispatchDocument bevat de gegevens van een bodemonderzoek registratieobject. Vanwege het polymorfe karakter is het type óf een BRODO uit de package brocom, óf een SLDODP, óf een SLDO uit de package dssad. Deze drie types hebben allen als gemeenschappelijke vader het type AbstractRegistrationObject uit de package brocom.
+Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met het in het dispatchDataRequest opgegegeven broId. Het gegeven is aanwezig en van het type BROD_DO als het registratieobject met de opgegeven broId uit registratie is genomen. Het gegeven is aanwezig en van het type SLDODP als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer tevens bronhouder en/of dataleverancier is van het registratieobject. Het gegeven is aanwezig en van het type SLD_O als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer niet bronhouder of dataleverancier is van het registratieobject.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
+                           name="dispatchDocument"
+                           nillable="false"
+                           type="brocom:AbstractRegistrationObjectPropertyType"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="DispatchCharacteristicsResponsePropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="dsgmw:DispatchCharacteristicsResponse"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:element name="Fault"
+               type="dsgmw:FaultType"
+               substitutionGroup="gml:AbstractFeature"/>
+   <xs:complexType name="FaultType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="detail" minOccurs="0" maxOccurs="1" type="xs:string"/>
+               <xs:element name="faultcode" minOccurs="1" maxOccurs="1" type="xs:string"/>
+               <xs:element name="faultstring" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="FaultPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="dsgmw:Fault"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:element name="GMW_CriteriaSet"
+               type="dsgmw:GMW_CriteriaSetType"
+               substitutionGroup="gml:AbstractFeature"/>
+   <xs:complexType name="GMW_CriteriaSetType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="area"
+                           type="brocom:AreaType"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De geografische begrenzing waarbinnen de locatie van een booronderzoek ligt.
+Explanation: Een gebied bestaat uit een omsluitende rechthoek of een omsluitende cirkel.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="constructionPeriod"
+                           type="xs:date"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="constructionStandard"
+                           type="gmwcom:ConstructionStandardPropertyType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="correctionPeriod"
+                           type="xs:date"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het datuminterval waarbinnen het laatste correctietijdstip van het booronderzoek ligt.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="deliveryAccountableParty"
+                           type="brocom:ChamberOfCommerceNumberType"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: TODO</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="geoOhmCablePresent"
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="initialFunction"
+                           type="gmwcom:InitialFunctionPropertyType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="maximumTubeTopDiameter"
+                           nillable="false"
+                           type="gmwcom:DiameterPropertyType"/>
+               <xs:element name="minimumNumberOfTubes"
+                           type="xs:integer"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="minimumTubeTopDiameter"
+                           nillable="false"
+                           type="gmwcom:DiameterPropertyType"/>
+               <xs:element name="owner"
+                           type="brocom:ChamberOfCommerceNumberType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="qualityRegime"
+                           type="brocom:QualityRegimeType"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: TODO</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="registrationPeriod"
+                           type="xs:date"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het datuminterval waarbinnen de datum van het tijdstip registratie object van het booronderzoek ligt</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="removalPeriod" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="removed" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="screenPositionRange"
+                           nillable="false"
+                           type="dsgmw:VerticalPositionRangeType"/>
+               <xs:element name="tubeStatus"
+                           type="gmwcom:TubeStatusPropertyType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="underReview"
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: TODO</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="wellHeadProtector"
+                           type="gmwcom:WellHeadProtectorTypePropertyType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="withPrehistory"
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GMW_CriteriaSetPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="dsgmw:GMW_CriteriaSet"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:complexType name="EventType">
+      <xs:sequence>
+         <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="identificationDecision"
+                     type="xs:integer"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="name"
+                     type="gmwcom:EventNamePropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="sourceDocument"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="xs:string">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument dat ten gevolge van een gebeurtenis in de werkelijkheid is aangeleverd en heeft geleid tot de registratie van deze gebeurtenis. Dit gegeven wordt alleen uitgeleverd als de waarde van het attribuut dataToBeDelivered in het dispatchDataRequest gelijk is aan 'actueelHistorisch'.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="LocationHistoryType">
+      <xs:sequence>
+         <xs:element name="closureDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="unbounded"
+                     name="event"
+                     nillable="false"
+                     type="dsgmw:EventType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="VerticalPositionRangeType">
+      <xs:sequence>
+         <xs:element name="endDepth" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De einddiepte van het bereik waarbinnen de einddiepte van de boring ligt.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="gml:MeasureType">
+                     <xs:attribute name="uom" type="gml:UomIdentifier" use="required" fixed="m"/>
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="startDepth" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De begindiepte van het bereik waarbinnen de einddiepte van de boring ligt.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="gml:MeasureType">
+                     <xs:attribute name="uom" type="gml:UomIdentifier" use="required" fixed="m"/>
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="DataToBeDeliveredType">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Een domein in de vorm van een keuzelijst met een limitatieve opsomming van toegestane waarden voor het duiden welke gegevens over het registratieobject worden opgevraagd. Uitbreiding van de keuzelijst is niet mogelijk.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="actueel"/>
+         <xs:enumeration value="actueelHistorisch"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>
