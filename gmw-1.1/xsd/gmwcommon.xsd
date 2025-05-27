@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
-           xmlns:dlogger="http://www.armatiek.nl/functions/dlogger-proxy"
            xmlns:gml="http://www.opengis.net/gml/3.2"
            xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
-           xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.0"
+           xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.broservices.nl/xsd/gmwcommon/1.0"
+           targetNamespace="http://www.broservices.nl/xsd/gmwcommon/1.1"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
            version="1.0.0-1">
@@ -13,7 +12,7 @@
               schemaLocation="brocommon.xsd"/>
    <xs:import namespace="http://www.opengis.net/gml/3.2"
               schemaLocation="gml-profile.xsd"/>
-   <!-- <xs:import namespace="http://www.broservices.nl/xsd/gmwcommon/1.0"
+   <!-- <xs:import namespace="http://www.broservices.nl/xsd/gmwcommon/1.1"
               schemaLocation="https://schema.broservices.nl/xsd/gmwcommon/1.2/gmwcommon.xsd"/>
    <xs:import namespace="http://www.broservices.nl/xsd/brocommon//3.0"
               schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
