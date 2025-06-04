@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope 
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <dispatchDataRequest
+                xmlns="http://www.broservices.nl/xsd/dsgmw/1.1"
+                xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1" 
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.broservices.nl/xsd/dsgmw/1.1 ../../XSD/dsgmw-messages.xsd">
+            <!--Disclaimer: dit voorbeeldbericht is gemaakt voor versie 1.1 van de gmw en valideert tegen de XSD van de uitgifteservice.
+                Het is niet gevalideerd door de uitgifteservice en de inhoud is fictief en vaktechnisch/inhoudelijk niet voorbeeldig.
+                xsi:schemaLocation="http://www.broservices.nl/xsd/dsgmw/1.0 https://schema.broservices.nl/xsd/dsgmw/1.0/dsgmw-messages.xsd"/>
+            -->
+            <gmwcom:requestReference>gmw uitgifte 1</gmwcom:requestReference>
+            <gmwcom:broId>gmw123456789012</gmwcom:broId>
+            <dataToBeDelivered>actueel</dataToBeDelivered>            
+        </dispatchDataRequest>
+    </soap:Body>
+</soap:Envelope>

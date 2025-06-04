@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope 
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+      <dsgmw:dispatchCharacteristicsRequest
+                xmlns="http://www.broservices.nl/xsd/dsgmw/1.1"
+                xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1" 
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.broservices.nl/xsd/dsgmw/1.1 ../../XSD/dsgmw-messages.xsd">
+         <dsgmw:requestReference>?</dsgmw:requestReference>
+         <dsgmw:criteria>
+            <!--Optional:-->
+            <brocom:area>
+               <!--You have a CHOICE of the next 2 items at this level-->
+               <brocom:enclosingCircle srsName="urn:ogc:def:crs:EPSG::4258">
+                  <brocom:center>52.155172900 5.387203660</brocom:center>
+                  <brocom:radius uom="km">1</brocom:radius>
+               </brocom:enclosingCircle>
+            </brocom:area>
+          </dsgmw:criteria>
+      </dsgmw:dispatchCharacteristicsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
