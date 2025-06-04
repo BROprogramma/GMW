@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<insertRequest
+    xmlns="http://www.broservices.nl/xsd/isgmw/1.1"
+    xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw/1.1 https://schema.broservices.nl/xsd/isgmw/1.1/isgmw-messages.xsd">
+    
+    <gmwcom:requestReference>verzoek_1c</gmwcom:requestReference>
+    <gmwcom:deliveryAccountableParty>789654123</gmwcom:deliveryAccountableParty>
+    <gmwcom:qualityRegime>IMBRO</gmwcom:qualityRegime>
+    <sourceDocument>
+        <gmwcom:GMW_ElectrodeStatus>
+                <!-- Fictieve voorbeelddata, moet inhoudelijk juist ingevuld worden -->
+            <gmwcom:numberOfElectrodesChanged>1</gmwcom:numberOfElectrodesChanged>
+            <gmwcom:broId>gmw000000012345</gmwcom:broId>
+            <gmwcom:deliveryContext>nieuw</gmwcom:deliveryContext>
+            <gmwcom:eventDate>2024-02-06</gmwcom:eventDate>
+        </gmwcom:GMW_ElectrodeStatus>
+    </sourceDocument>
+</insertRequest>

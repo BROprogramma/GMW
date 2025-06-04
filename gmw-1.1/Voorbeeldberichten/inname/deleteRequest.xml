@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deleteRequest
+    xmlns="http://www.broservices.nl/xsd/isgmw/1.1" 
+    xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw/1.1 ../../XSD/isgmw-messages.xsd">
+    <!--Disclaimer: dit voorbeeldbericht is gemaakt voor versie 1.0 van de gmw en valideert tegen de XSD van de innameservice.
+        Het is niet gevalideerd door de innameservice en de inhoud is fictief en vaktechnisch/inhoudelijk niet voorbeeldig.
+        xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw-internal/1.1 https://schema.broservices.nl/xsd/isgmw-internal/1.1/isgmw-internal-messages.xsd"/>
+    -->
+    <gmwcom:requestReference>verzoek_1c</gmwcom:requestReference>
+    <!-- optioneel: KVK nummer van de bronhouder, nodig indien de uploader niet de bronhouder is -->
+    <gmwcom:deliveryAccountableParty>789654123</gmwcom:deliveryAccountableParty>
+    <!-- broId required -->
+    <gmwcom:broId>gmw000000012345</gmwcom:broId>
+    <gmwcom:qualityRegime>IMBRO</gmwcom:qualityRegime>
+    <correctionReason codeSpace="urn:bro:gmw:CorrectionReason">eigenCorrectie</correctionReason>  
+    <sourceDocument>
+        <gmwcom:gmw_SoilLocationFinalisation>
+            <gmwcom:eventDate>2024-02-06</gmwcom:eventDate>
+        </gmwcom:gmw_SoilLocationFinalisation>
+    </sourceDocument>
+</deleteRequest>

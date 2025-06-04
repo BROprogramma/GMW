@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registrationRequest 
+		xmlns="http://www.broservices.nl/xsd/isgmw/1.1" 
+		xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcom/1.1" 
+		xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+		xmlns:gml="http://www.opengis.net/gml/3.2" 
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw-internal/1.1 ../../XSD/isgmw-internal-messages.xsd">
+	<!-- Disclaimer: dit voorbeeldbericht valideert tegen de validatieservice van de acceptatie omgeving van het bronhouderportaal, maar de gegevens zijn fictief en waarschijnlijk niet correct.-->
+	<brocom:requestReference>register - GMW_Construction - 018. IMBRO - groundwaterMonitoringWell.maintenanceResponsibleParty</brocom:requestReference>
+	<brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
+	<brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+	<sourceDocument>
+		<GMW_Construction>
+			<objectIdAccountableParty>B07F0076</objectIdAccountableParty>
+			<deliveryContext codeSpace="urn:bro:gmw:DeliveryContext">publiekeTaak</deliveryContext>
+			<constructionStandard codeSpace="urn:bro:gmw:ConstructionStandard">RWSgwmon</constructionStandard>
+
+			<brocom:researchOperator>
+				<brocom:chamberOfCommerceNumber>27376655</brocom:chamberOfCommerceNumber>
+			</brocom:researchOperator>
+
+			<initialFunction codeSpace="urn:bro:gmw:InitialFunction">stand</initialFunction>
+			<numberOfMonitoringTubes>1</numberOfMonitoringTubes>
+			<groundLevelStable>ja</groundLevelStable>
+			<owner>27376655</owner>
+			<maintenanceResponsibleParty>27376655</maintenanceResponsibleParty>
+			<wellStability codeSpace="urn:bro:gmw:WellStability">onbekend</wellStability>
+			<wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">geen</wellHeadProtector>
+
+			<wellConstructionDate>
+				<brocom:date>2015-02-08</brocom:date>
+			</wellConstructionDate>
+
+			<deliveredLocation>
+				<gmwcom:location gml:id="id-f072811a-323d-40f4-8ebc-7fb0df43c660" srsName="urn:ogc:def:crs:EPSG::28992">
+					<gml:pos>134750.0 477800.0</gml:pos>
+				</gmwcom:location>
+				<gmwcom:horizontalPositioningMethod codeSpace="urn:bro:gmw:HorizontalPositioningMethod">DGPS50tot200cm</gmwcom:horizontalPositioningMethod>
+			</deliveredLocation>
+
+			<deliveredVerticalPosition>
+				<gmwcom:localVerticalReferencePoint codeSpace="urn:bro:gmw:LocalVerticalReferencePoint">NAP</gmwcom:localVerticalReferencePoint>
+				<gmwcom:offset uom="m">0</gmwcom:offset>
+				<gmwcom:verticalDatum codeSpace="urn:bro:gmw:VerticalDatum">NAP</gmwcom:verticalDatum>
+				<gmwcom:groundLevelPosition uom="m">3.18</gmwcom:groundLevelPosition>
+				<gmwcom:groundLevelPositioningMethod codeSpace="urn:bro:gmw:GroundLevelPositioningMethod">RTKGPS10tot20cm</gmwcom:groundLevelPositioningMethod>
+			</deliveredVerticalPosition>
+
+			<monitoringTube>
+				<tubeNumber>1</tubeNumber>
+				<tubeType codeSpace="urn:bro:gmw:TubeType">standaardbuis</tubeType>
+				<artesianWellCapPresent>nee</artesianWellCapPresent>
+				<sedimentSumpPresent>ja</sedimentSumpPresent>
+				<numberOfGeoOhmCables>1</numberOfGeoOhmCables>
+				<tubeTopDiameter uom="mm">32</tubeTopDiameter>
+				<variableDiameter>nee</variableDiameter>
+				<tubeStatus codeSpace="urn:bro:gmw:TubeStatus">gebruiksklaar</tubeStatus>
+				<tubeTopPosition uom="m">3.42</tubeTopPosition>
+				<tubeTopPositioningMethod codeSpace="urn:bro:gmw:TubeTopPositioningMethod">RTKGPS10tot20cm</tubeTopPositioningMethod>
+
+				<materialUsed>
+					<gmwcom:tubePackingMaterial codeSpace="urn:bro:gmw:TubePackingMaterial">bentoniet</gmwcom:tubePackingMaterial>
+					<gmwcom:tubeMaterial codeSpace="urn:bro:gmw:TubeMaterial">peHighDensity</gmwcom:tubeMaterial>
+					<gmwcom:glue codeSpace="urn:bro:gmw:Glue">geen</gmwcom:glue>
+				</materialUsed>
+
+				<screen>
+					<screenLength uom="m">1</screenLength>
+					<sockMaterial codeSpace="urn:bro:gmw:SockMaterial">geen</sockMaterial>
+				</screen>
+
+				<plainTubePart>
+					<gmwcom:plainTubePartLength uom="m">6.64</gmwcom:plainTubePartLength>
+				</plainTubePart>
+
+				<sedimentSump>
+					<gmwcom:sedimentSumpLength uom="m">0.5</gmwcom:sedimentSumpLength>
+				</sedimentSump>
+
+				<geoOhmCable>
+					<cableNumber>1</cableNumber>
+
+					<electrode>
+						<gmwcom:electrodeNumber>1</gmwcom:electrodeNumber>
+						<gmwcom:electrodePackingMaterial codeSpace="urn:bro:gmw:ElectrodePackingMaterial">zand</gmwcom:electrodePackingMaterial>
+						<gmwcom:electrodeStatus codeSpace="urn:bro:gmw:ElectrodeStatus">gebruiksklaar</gmwcom:electrodeStatus>
+						<gmwcom:electrodePosition uom="m">-2.63</gmwcom:electrodePosition>
+					</electrode>
+
+					<electrode>
+						<gmwcom:electrodeNumber>2</gmwcom:electrodeNumber>
+						<gmwcom:electrodePackingMaterial codeSpace="urn:bro:gmw:ElectrodePackingMaterial">zand</gmwcom:electrodePackingMaterial>
+						<gmwcom:electrodeStatus codeSpace="urn:bro:gmw:ElectrodeStatus">gebruiksklaar</gmwcom:electrodeStatus>
+						<gmwcom:electrodePosition uom="m">-3.98</gmwcom:electrodePosition>
+					</electrode>
+				</geoOhmCable>
+			</monitoringTube>
+		</GMW_Construction>
+	</sourceDocument>
+</registrationRequest>
