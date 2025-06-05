@@ -16,13 +16,10 @@
     <sourceDocument>
         <GMW_Construction>
             <objectIdAccountableParty>B07F0076</objectIdAccountableParty>
+            <!-- NITGCode is alleen aanwezig wanneer de grondwatermonitoringput voor opname in de BRO geregistreerd was in de registratie DINO.-->
+            <nitgCode>B07F0076</nitgCode>
             <deliveryContext codeSpace="urn:bro:gmw:DeliveryContext">publiekeTaak</deliveryContext>
             <constructionStandard codeSpace="urn:bro:gmw:ConstructionStandard">RWSgwmon</constructionStandard>
-
-            <brocom:researchOperator>
-                <brocom:chamberOfCommerceNumber>27376655</brocom:chamberOfCommerceNumber>
-            </brocom:researchOperator>
-
             <initialFunction codeSpace="urn:bro:gmw:InitialFunction">stand</initialFunction>
             <numberOfMonitoringTubes>1</numberOfMonitoringTubes>
             <groundLevelStable>ja</groundLevelStable>
