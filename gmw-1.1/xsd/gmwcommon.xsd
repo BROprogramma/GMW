@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
            xmlns:gml="http://www.opengis.net/gml/3.2"
-           xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
            xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1"
+           xmlns:isgmw="http://www.broservices.nl/xsd/isgmw/1.1"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="http://www.broservices.nl/xsd/gmwcommon/1.1"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
            version="1.0.0-1">
+
    <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0"
               schemaLocation="brocommon.xsd"/>
+
    <xs:import namespace="http://www.opengis.net/gml/3.2"
               schemaLocation="gml-profile.xsd"/>
+
+   <xs:import namespace="http://www.broservices.nl/xsd/isgmw/1.1"
+              schemaLocation="isgmw-messages.xsd"/>
+
    <!-- <xs:import namespace="http://www.broservices.nl/xsd/gmwcommon/1.1"
               schemaLocation="https://schema.broservices.nl/xsd/gmwcommon/1.2/gmwcommon.xsd"/>
    <xs:import namespace="http://www.broservices.nl/xsd/brocommon//3.0"
@@ -480,13 +486,73 @@ Explanation: Wanneer een object in onderzoek is genomen betekent dit dat er bij 
    </xs:complexType>
    <xs:complexType name="IntermediateEventType">
       <xs:sequence>
-         <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
-         <xs:element name="eventName"
-                     type="gmwcom:EventNamePropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="GMW_ElectrodeStatusType"
+                     nillable="false"
+                     type="isgmw:GMW_ElectrodeStatusPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="groundLevel"
+                     nillable="false"
+                     type="isgmw:GMW_GroundLevelPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="groundLevelMeasuring"
+                     nillable="false"
+                     type="isgmw:GMW_GroundLevelMeasuringPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="insertion"
+                     nillable="false"
+                     type="isgmw:GMW_InsertionPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="lengthening"
+                     nillable="false"
+                     type="isgmw:GMW_LengtheningPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="maintainer"
+                     nillable="false"
+                     type="isgmw:GMW_MaintainerPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="owner"
+                     nillable="false"
+                     type="isgmw:GMW_OwnerPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="positions"
+                     nillable="false"
+                     type="isgmw:GMW_PositionsPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="positionsMeasuring"
+                     nillable="false"
+                     type="isgmw:GMW_PositionsMeasuringPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="shift"
+                     nillable="false"
+                     type="isgmw:GMW_ShiftPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="shortening"
+                     nillable="false"
+                     type="isgmw:GMW_ShorteningPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="tubeStatus"
+                     nillable="false"
+                     type="isgmw:GMW_TubeStatusPropertyType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="wellHeadProtector"
+                     nillable="false"
+                     type="isgmw:GMW_WellHeadProtectorPropertyType"/>
       </xs:sequence>
-        </xs:complexType>
+   </xs:complexType>
    <xs:complexType name="MaterialUsedType">
       <xs:sequence>
          <xs:element name="glue"
