@@ -37,8 +37,7 @@
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-
-   <xs:complexType name="AbstractRegistrationObjectType" abstract="true">
+ <xs:complexType name="AbstractRegistrationObjectType" abstract="true">
       <xs:complexContent>
          <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
@@ -223,7 +222,7 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
    </xs:complexType>
    <xs:complexType name="RegistrationObjectPropertyType">
       <xs:sequence minOccurs="0">
-         <xs:element ref="brocom:AbstractRegistrationObject"/>
+         <xs:element ref="brocom:RegistrationObject"/>
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
@@ -232,7 +231,14 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
                substitutionGroup="gml:AbstractFeature"/>
    <xs:complexType name="BoreholeResearchType">
       <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType"/>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="broId"
+                           type="brocom:RegistrationObjectCodeType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+            </xs:sequence>
+         </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="BoreholeResearchPropertyType">
@@ -241,31 +247,21 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-      <xs:element name="Diameter"
+   <xs:element name="Diameter"
                type="gmwcom:DiameterType"
                substitutionGroup="gml:AbstractFeature"/>
    <xs:complexType name="DiameterType">
       <xs:complexContent>
          <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="grootste_diameter_bovenkant_buis" minOccurs="1" maxOccurs="1">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:restriction base="gml:MeasureType">
-                           <xs:attribute name="uom" type="gml:UomIdentifier" use="required"/>
-                        </xs:restriction>
-                     </xs:simpleContent>
-                  </xs:complexType>
-               </xs:element>
-               <xs:element name="kleinste_diameter_bovenkant_buis" minOccurs="1" maxOccurs="1">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:restriction base="gml:MeasureType">
-                           <xs:attribute name="uom" type="gml:UomIdentifier" use="required"/>
-                        </xs:restriction>
-                     </xs:simpleContent>
-                  </xs:complexType>
-               </xs:element>
+               <xs:element name="largestTubeTopDiameter"
+                           type="brocom:MeasureNillableType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="smallestTubeTopDiameter"
+                           type="brocom:MeasureNillableType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -490,7 +486,7 @@ Explanation: Wanneer een object in onderzoek is genomen betekent dit dat er bij 
                      minOccurs="1"
                      maxOccurs="1"/>
       </xs:sequence>
-   </xs:complexType>
+        </xs:complexType>
    <xs:complexType name="MaterialUsedType">
       <xs:sequence>
          <xs:element name="glue"
