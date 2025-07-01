@@ -70,28 +70,13 @@
             <!-- 1 or more repetitions: -->
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2021-11-29</brocom:date>
-                                <brocom:yearMonth>2021-11</brocom:yearMonth>
-                                <brocom:year>2021</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
                 <brocom:date>2021-11-29</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">beschermconstructieVeranderd</name>
-              <!-- Optional: not for sourceDocument GMW_
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2022-01-05</brocom:date>
-                                <brocom:yearMonth>2022-01</brocom:yearMonth>
-                                <brocom:year>2022-01</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
-                <brocom:date>2022-01-05</brocom:date>
+              <brocom:date>2022-01-05</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">buisdeelIngeplaatst</name>
               <!-- Optional: present with sourceDocument GMW_ -->
@@ -99,183 +84,75 @@
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2022-06-01</brocom:date>
-                                <brocom:yearMonth>2022-06</brocom:yearMonth>
-                                <brocom:year>2022</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
-                <brocom:date>2022-06-01</brocom:date>
+              <brocom:date>2022-06-01</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">buisIngekort</name>
-              <!-- Optional: not for sourceDocument GMW_
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2025-10-17</brocom:date>
-                                <brocom:yearMonth>2025-10</brocom:yearMonth>
-                                <brocom:year>2025</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
                 <brocom:date>2025-10-17</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">buisOpgelengd</name>
-              <!-- Optional: not for sourceDocument GMW_L
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2025-11-05</brocom:date>
-                                <brocom:yearMonth>2025-11</brocom:yearMonth>
-                                <brocom:year>2025</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
                 <brocom:date>2025-11-05</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">buisstatusVeranderd</name>
-              <!-- Optional: not for sourceDocument GMW_
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2022-06-01</brocom:date>
-                                <brocom:yearMonth>2022-06</brocom:yearMonth>
-                                <brocom:year>2022</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
                 <brocom:date>2022-06-01</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">eigenaarVeranderd</name>
-              <!-- Optional: not for sourceDocument GMW_
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2025-10-17</brocom:date>
-                                <brocom:yearMonth>2025-10</brocom:yearMonth>
-                                <brocom:year>2025</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
                 <brocom:date>2025-10-17</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">elektrodestatusVeranderd</name>
-              <!-- Optional: not for sourceDocument GMW_L
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2025-11-05</brocom:date>
-                                <brocom:yearMonth>2025-11</brocom:yearMonth>
-                                <brocom:year>2025</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
                 <brocom:date>2025-11-05</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">maaiveldVerlegd</name>
-              <!-- Optional: not for sourceDocument GMW_
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2025-10-17</brocom:date>
-                                <brocom:yearMonth>2025-10</brocom:yearMonth>
-                                <brocom:year>2025</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
                 <brocom:date>2025-10-17</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">nieuweBepalingMaaiveld</name>
-              <!-- Optional: not for sourceDocument GMW_L
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2025-11-05</brocom:date>
-                                <brocom:yearMonth>2025-11</brocom:yearMonth>
-                                <brocom:year>2025</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
                 <brocom:date>2025-11-05</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">nieuweBepalingPosities</name>
-              <!-- Optional: not for sourceDocument GMW_
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2025-10-17</brocom:date>
-                                <brocom:yearMonth>2025-10</brocom:yearMonth>
-                                <brocom:year>2025</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
                 <brocom:date>2025-10-17</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">nieuweInmetingMaaiveld</name>
-              <!-- Optional: not for sourceDocument GMW_L
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2025-11-05</brocom:date>
-                                <brocom:yearMonth>2025-11</brocom:yearMonth>
-                                <brocom:year>2025</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
-                <brocom:date>2025-11-05</brocom:date>
+                              <brocom:date>2025-11-05</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">nieuweInmetingPosities</name>
-              <!-- Optional: not for sourceDocument GMW_E
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2025-10-17</brocom:date>
-                                <brocom:yearMonth>2025-10</brocom:yearMonth>
-                                <brocom:year>2025</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
                 <brocom:date>2025-10-17</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">onderhouderVeranderd</name>
-              <!-- Optional: not for sourceDocument GMW_L
-                            <identifier>?</identifier>
-                            -->
             </event>
             <event>
               <date>
-                <!-- You have a CHOICE of the next 4 items at this level
-                                <brocom:date>2025-11-05</brocom:date>
-                                <brocom:yearMonth>2025-11</brocom:yearMonth>
-                                <brocom:year>2025</brocom:year>
-                                <brocom:voidReason>onbekend</brocom:voidReason>
-                                -->
                 <brocom:date>2025-11-05</brocom:date>
               </date>
               <name codeSpace="urn:bro:gmw:EventName">verkenningenAchterafRegistreren</name>
-              <!-- Optional: not for sourceDocument GMW_
-                            <identifier>?</identifier>
-                            -->
             </event>
           </constructionHistory>
           <location>
@@ -289,7 +166,6 @@
             <!-- Optional: -->
             <gmwcommon:horizontalPositioningMethod codeSpace="urn:bro:gmw:HorizontalPositioningMethod">DGPS50tot200cm</gmwcommon:horizontalPositioningMethod>
             <!-- Optional: not present in dispatchDocument GMW_PPO_xxx or GMW_PO_xxx
-                        <gmwcommon:horizontalPositioningOperator>...</gmwcommon:horizontalPositioningOperator>
                         -->
           </horizontalPositioning>
           <standardizedLocation>
@@ -309,12 +185,6 @@
             <gmwcommon:originalOffset uom="m">86.123</gmwcommon:originalOffset>
             <gmwcommon:originalVerticalReferencePoint codeSpace="urn:bro:gmw:OriginalVerticalReferencePoint">maaiveld</gmwcommon:originalVerticalReferencePoint>
           </deliveredVerticalPosition>
-          <!-- 1 or more repetitions -->
-          <explorationProductionLicence>
-            <gmwcommon:ExplorationProductionLicence gml:id="id_0006">
-              <gmwcommon:broId>EPL123456789012</gmwcommon:broId>
-            </gmwcommon:ExplorationProductionLicence>
-          </explorationProductionLicence>
         </GMW_PPO_DP_001>
       </dispatchDocument>
     </dispatchDataResponse>
