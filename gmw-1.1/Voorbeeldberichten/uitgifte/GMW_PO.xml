@@ -9,7 +9,7 @@
             xmlns:gmwcommon="http://www.broservices.nl/xsd/gmwcommon/1.1" 
             xmlns:gml="http://www.opengis.net/gml/3.2" 
             xmlns="http://www.broservices.nl/xsd/dsgmw/1.1"
-                xsi:schemaLocation="http://www.broservices.nl/xsd/dsgmw/1.1 https://raw.githubusercontent.com/BROprogramma/GMW/.../dsgmw-messages.xsd">
+                     xsi:schemaLocation="http://www.broservices.nl/xsd/dsgmw/1.1 ../../XSD/dsgmw-messages.xsd">
             <!--Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de innameservice.
                 Het is niet gevalideert door de innameservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
                 xsi:schemaLocation="http://www.broservices.nl/xsd/dsGMW/1.0 https://schema.broservices.nl/xsd/dsGMW/1.0/dsgmw-messages.xsd">
