@@ -476,7 +476,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            maxOccurs="unbounded"
                            name="monitoringTube"
                            nillable="false"
-                           type="isgmw:MonitoringTubePositionsMeasusringType"/>
+                           type="isgmw:MonitoringTubePositionsMeasuringType"/>
                <xs:element name="numberOfMonitoringTubes"
                            type="xs:integer"
                            minOccurs="1"
@@ -1212,7 +1212,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
-   <xs:complexType name="MonitoringTubePositionsMeasusringType">
+   <xs:complexType name="MonitoringTubePositionsMeasuringType">
       <xs:sequence>
          <xs:element name="tubeNumber"
                      type="xs:integer"
