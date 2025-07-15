@@ -33,34 +33,36 @@
               -->
               
     <xs:element name="parseFault" type="brocom:ParseFaultType"/>
-   <xs:element name="dispatchDataRequest"
-               type="dsgmw:DispatchDataRequestType">
-      <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het DispatchDataRequest is een specialisatie van de abstract klasse DispatchDataRequest in de package brocommon, waaraan het een element dataToBeDelivered toevoegt.</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="DispatchDataRequestType">
+      <xs:complexType name="DispatchDataResponseType">
       <xs:complexContent>
-         <xs:extension base="brocom:DispatchDataRequestType">
+         <xs:extension base="brocom:DispatchResponseType">
             <xs:sequence>
-               <xs:element name="dataToBeDelivered"
-                           type="dsgmw:DataToBeDeliveredType"
-                           minOccurs="1"
+               <xs:element name="dispatchDocument"
+                           type="brocom:RegistrationObjectCodeType"
+                           minOccurs="0"
                            maxOccurs="1">
                   <xs:annotation>
-                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding welke gegevens over het registratieobject worden opgevraagd: alleen de actuele gegevens (present object data) of de actuele gegevens en de volledige materiële geschiedenis (past and present object data).</xs:documentation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het element dispatchDocument bevat de gegevens van een bodemonderzoek registratieobject. Vanwege het polymorfe karakter is het type óf een BRODO uit de package brocom, óf een SLDODP, óf een SLDO uit de package dssad. Deze drie types hebben allen als gemeenschappelijke vader het type AbstractRegistrationObject uit de package brocom.
+Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met het in het dispatchDataRequest opgegegeven broId. Het gegeven is aanwezig en van het type BROD_DO als het registratieobject met de opgegeven broId uit registratie is genomen. Het gegeven is aanwezig en van het type SLDODP als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer tevens bronhouder en/of dataleverancier is van het registratieobject. Het gegeven is aanwezig en van het type SLD_O als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer niet bronhouder of dataleverancier is van het registratieobject.</xs:documentation>
                   </xs:annotation>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="DispatchDataRequestPropertyType">
+   <xs:complexType name="DispatchDataResponsePropertyType">
       <xs:sequence minOccurs="0">
-         <xs:element ref="dsgmw:dispatchDataRequest"/>
+         <xs:element ref="dsgmw:DispatchDataResponse"/>
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
+      <xs:element name="DispatchDataResponse"
+               type="dsgmw:DispatchDataResponseType"
+               substitutionGroup="brocom:DispatchResponse">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht DispatchDataResponse is een specialisatie van de abstract klasse DispatchResponse uit de package brocommon, waaraan het een dispatchDocument toevoegt. Met dit bericht worden, als response op een DispatchDataRequest, de gegevens over een specifiek bodemonderzoek registratieobject verzonden naar de aanvrager.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
    <xs:element name="DispatchCharacteristicsRequest"
                type="dsgmw:DispatchCharacteristicsRequestType"
                substitutionGroup="gml:AbstractFeature">
@@ -90,33 +92,31 @@
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-   <xs:element name="DispatchDataResponse"
-               type="dsgmw:DispatchDataResponseType"
-               substitutionGroup="brocom:DispatchResponse">
+      <xs:element name="dispatchDataRequest"
+               type="dsgmw:DispatchDataRequestType">
       <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht DispatchDataResponse is een specialisatie van de abstract klasse DispatchResponse uit de package brocommon, waaraan het een dispatchDocument toevoegt. Met dit bericht worden, als response op een DispatchDataRequest, de gegevens over een specifiek bodemonderzoek registratieobject verzonden naar de aanvrager.</xs:documentation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het DispatchDataRequest is een specialisatie van de abstract klasse DispatchDataRequest in de package brocommon, waaraan het een element dataToBeDelivered toevoegt.</xs:documentation>
       </xs:annotation>
    </xs:element>
-   <xs:complexType name="DispatchDataResponseType">
+   <xs:complexType name="DispatchDataRequestType">
       <xs:complexContent>
-         <xs:extension base="brocom:DispatchResponseType">
+         <xs:extension base="brocom:DispatchDataRequestType">
             <xs:sequence>
-               <xs:element name="dispatchDocument"
-                           type="brocom:RegistrationObjectCodeType"
-                           minOccurs="0"
+               <xs:element name="dataToBeDelivered"
+                           type="dsgmw:DataToBeDeliveredType"
+                           minOccurs="1"
                            maxOccurs="1">
                   <xs:annotation>
-                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het element dispatchDocument bevat de gegevens van een bodemonderzoek registratieobject. Vanwege het polymorfe karakter is het type óf een BRODO uit de package brocom, óf een SLDODP, óf een SLDO uit de package dssad. Deze drie types hebben allen als gemeenschappelijke vader het type AbstractRegistrationObject uit de package brocom.
-Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met het in het dispatchDataRequest opgegegeven broId. Het gegeven is aanwezig en van het type BROD_DO als het registratieobject met de opgegeven broId uit registratie is genomen. Het gegeven is aanwezig en van het type SLDODP als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer tevens bronhouder en/of dataleverancier is van het registratieobject. Het gegeven is aanwezig en van het type SLD_O als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer niet bronhouder of dataleverancier is van het registratieobject.</xs:documentation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding welke gegevens over het registratieobject worden opgevraagd: alleen de actuele gegevens (present object data) of de actuele gegevens en de volledige materiële geschiedenis (past and present object data).</xs:documentation>
                   </xs:annotation>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="DispatchDataResponsePropertyType">
+   <xs:complexType name="DispatchDataRequestPropertyType">
       <xs:sequence minOccurs="0">
-         <xs:element ref="dsgmw:DispatchDataResponse"/>
+         <xs:element ref="dsgmw:dispatchDataRequest"/>
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
@@ -294,38 +294,7 @@ Explanation: Een gebied bestaat uit een omsluitende rechthoek of een omsluitende
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-   <xs:complexType name="EventType">
-      <xs:sequence>
-         <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1"/>
-         <xs:element name="identificationDecision"
-                     type="xs:integer"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="name"
-                     type="gmwcom:EventNamePropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="sourceDocument"
-                     minOccurs="0"
-                     maxOccurs="1"
-                     type="xs:string">
-            <xs:annotation>
-               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument dat ten gevolge van een gebeurtenis in de werkelijkheid is aangeleverd en heeft geleid tot de registratie van deze gebeurtenis. Dit gegeven wordt alleen uitgeleverd als de waarde van het attribuut dataToBeDelivered in het dispatchDataRequest gelijk is aan 'actueelHistorisch'.</xs:documentation>
-            </xs:annotation>
-         </xs:element>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="LocationHistoryType">
-      <xs:sequence>
-         <xs:element name="closureDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
-         <xs:element minOccurs="1"
-                     maxOccurs="unbounded"
-                     name="event"
-                     nillable="false"
-                     type="dsgmw:EventType"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="VerticalPositionRangeType">
+<xs:complexType name="VerticalPositionRangeType">
       <xs:sequence>
          <xs:element name="endDepth" minOccurs="1" maxOccurs="1">
             <xs:annotation>
@@ -351,6 +320,302 @@ Explanation: Een gebied bestaat uit een omsluitende rechthoek of een omsluitende
                </xs:simpleContent>
             </xs:complexType>
          </xs:element>
+      </xs:sequence>
+</xs:complexType>
+   <xs:complexType name="StatusOverviewType">
+      <xs:sequence>
+         <xs:element name="tubeStatus"
+                     type="gmwcom:TubeStatusPropertyType"
+                     minOccurs="1"
+                     maxOccurs="4"/>
+      </xs:sequence>
+</xs:complexType>
+   <xs:complexType name="DiameterRangeType">
+      <xs:sequence>
+         <xs:element name="largestTubeTopDiameter"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="smallestTubeTopDiameter"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ScreenPositionRangeType">
+      <xs:sequence>
+         <xs:element name="deepestScreenTopPosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="shallowestScreenTopPosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+<xs:complexType name="MonitoringTubeType">
+      <xs:sequence>
+         <xs:element name="artesianWellCapPresent"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element minOccurs="0"
+                     maxOccurs="unbounded"
+                     name="geoOhmCable"
+                     nillable="false"
+                     type="gmwcom:GeoOhmCableType"/>
+         <xs:element name="glue"
+                     type="gmwcom:GluePropertyType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="insertedPartDiameter"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="insertedPartLength"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="insertedPartMaterial"
+                     type="gmwcom:TubeMaterialPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="materialUsed"
+                     nillable="false"
+                     type="gmwcom:MaterialUsedType"/>
+         <xs:element name="numberOfGeoOhmCables"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="plainTubePart"
+                     nillable="false"
+                     type="gmwcom:PlainTubePartType"/>
+         <xs:element name="plainTubePartLength"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="screen"
+                     nillable="false"
+                     type="gmwcom:ScreenType"/>
+         <xs:element minOccurs="0"
+                     maxOccurs="1"
+                     name="sedimentSump"
+                     nillable="false"
+                     type="gmwcom:SedimentSumpType"/>
+         <xs:element name="sedimentSumpPresent"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeMaterial"
+                     type="gmwcom:TubeMaterialPropertyType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="tubeNumber"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeStatus"
+                     type="gmwcom:TubeStatusPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeTopDiameter"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="brocom:MeasureNillableType">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="tubeTopPosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeTopPositioningMethod"
+                     type="gmwcom:TubeTopPositioningMethodPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeType"
+                     type="gmwcom:TubeTypePropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="variableDiameter"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ScreenType">
+      <xs:sequence>
+         <xs:element name="screenLength"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="screenProtection"
+                     type="gmwcom:ScreenProtectionPropertyType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="sockMaterial"
+                     type="gmwcom:SockMaterialPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="GeoOhmCableType">
+      <xs:sequence>
+         <xs:element name="cableNumber"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element minOccurs="2"
+                     maxOccurs="unbounded"
+                     name="electrode"
+                     nillable="false"
+                     type="gmwcom:ElectrodeType"/>
+      </xs:sequence>
+   </xs:complexType>
+<xs:complexType name="WellHistoryType">
+      <xs:sequence>
+         <xs:element minOccurs="0"
+                     maxOccurs="unbounded"
+                     name="IntermediateEvent"
+                     nillable="false"
+                     type="dsgmw:IntermediateEventType"/>
+         <xs:element name="wellConstructionDate"
+                     type="xs:date"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="wellRemovalDate"
+                     type="xs:date"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="IntermediateEventType">
+      <xs:sequence>
+         <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="eventName"
+                     type="gmwcom:EventNamePropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element minOccurs="0"
+                     maxOccurs="1"
+                     name="intermediateEvent"
+                     nillable="false"
+                     type="dsgmw:EventDataPropertyType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EventType">
+      <xs:sequence>
+         <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="identificationDecision"
+                     type="xs:integer"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="name"
+                     type="gmwcom:EventNamePropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="sourceDocument"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="xs:string">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument dat ten gevolge van een gebeurtenis in de werkelijkheid is aangeleverd en heeft geleid tot de registratie van deze gebeurtenis. Dit gegeven wordt alleen uitgeleverd als de waarde van het attribuut dataToBeDelivered in het dispatchDataRequest gelijk is aan 'actueelHistorisch'.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="TubeDataType">
+      <xs:sequence>
+         <xs:element name="glue"
+                     type="gmwcom:GluePropertyType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="insertedPartDiameter"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="insertedPartLength"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="insertedPartMaterial"
+                     type="gmwcom:TubeMaterialPropertyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="plainTubePartLength"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="screenBottomPosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="screenTopPosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="tubeMaterial"
+                     type="gmwcom:TubeMaterialPropertyType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="tubeNumber" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="tubePartInserted"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeStatus"
+                     type="gmwcom:TubeStatusPropertyType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="tubeTopDiameter"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="brocom:MeasureNillableType">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="tubeTopPosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="tubeTopPositioningMethod"
+                     type="gmwcom:TubeTopPositioningMethodPropertyType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="variableDiameter"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+
+
+
+   <xs:complexType name="LocationHistoryType">
+      <xs:sequence>
+         <xs:element name="closureDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="unbounded"
+                     name="event"
+                     nillable="false"
+                     type="dsgmw:EventType"/>
       </xs:sequence>
    </xs:complexType>
    <xs:simpleType name="DataToBeDeliveredType">
@@ -434,51 +699,77 @@ Explanation: Een gebied bestaat uit een omsluitende rechthoek of een omsluitende
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="EventDataPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="dsgmw:EventData"/>
+   <xs:complexType name="ElectrodeDataType">
+      <xs:sequence>
+         <xs:element name="cableNumber"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="electrodeNumber"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="electrodePosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="electrodeStatus"
+                     type="gmwcom:ElectrodeStatusPropertyType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="tubeNumber"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
       </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-   <xs:element name="GeotechnicalCPTSurvey"
-               type="dsgmw:GeotechnicalCPTSurveyType"
+      <xs:element name="WellData"
+               type="dsgmw:WellDataType"
                substitutionGroup="gml:AbstractFeature"/>
-   <xs:complexType name="GeotechnicalCPTSurveyType">
+   <xs:complexType name="WellDataType">
       <xs:complexContent>
          <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="broId"
-                           type="brocom:RegistrationObjectCodeType"
-                           minOccurs="1"
+               <xs:element name="groundLevelPosition"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           nillable="true">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:extension base="brocom:MeasureNillableType">
+                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                        </xs:extension>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="groundLevelPositioningMethod"
+                           type="gmwcom:GroundLevelPositioningMethodPropertyType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="maintenanceResponsibleParty"
+                           type="brocom:ChamberOfCommerceNumberType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="owner" minOccurs="0" maxOccurs="1" nillable="true">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:extension base="brocom:ChamberOfCommerceNumberType">
+                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                        </xs:extension>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="wellHeadProtector"
+                           type="gmwcom:WellHeadProtectorTypePropertyType"
+                           minOccurs="0"
                            maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="GeotechnicalCPTSurveyPropertyType">
+   <xs:complexType name="WellDataPropertyType">
       <xs:sequence minOccurs="0">
-         <xs:element ref="dsgmw:GeotechnicalCPTSurvey"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-   </xs:complexType>
-   <xs:element name="GeotechnicalCPTSurveyData"
-               type="dsgmw:GeotechnicalCPTSurveyDataType"
-               substitutionGroup="gml:AbstractFeature"/>
-   <xs:complexType name="GeotechnicalCPTSurveyDataType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
-            <xs:sequence>
-               <xs:element name="broId"
-                           type="brocom:RegistrationObjectCodeType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GeotechnicalCPTSurveyDataPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="dsgmw:GeotechnicalCPTSurveyData"/>
+         <xs:element ref="dsgmw:WellData"/>
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
@@ -597,6 +888,55 @@ Explanation: Voor de attributen met materiële geschiedenis wordt de actuele waa
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
+   <xs:complexType name="EventDataPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="dsgmw:EventData"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:element name="GeotechnicalCPTSurvey"
+               type="dsgmw:GeotechnicalCPTSurveyType"
+               substitutionGroup="gml:AbstractFeature"/>
+   <xs:complexType name="GeotechnicalCPTSurveyType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="broId"
+                           type="brocom:RegistrationObjectCodeType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GeotechnicalCPTSurveyPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="dsgmw:GeotechnicalCPTSurvey"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:element name="GeotechnicalCPTSurveyData"
+               type="dsgmw:GeotechnicalCPTSurveyDataType"
+               substitutionGroup="gml:AbstractFeature"/>
+   <xs:complexType name="GeotechnicalCPTSurveyDataType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="broId"
+                           type="brocom:RegistrationObjectCodeType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GeotechnicalCPTSurveyDataPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="dsgmw:GeotechnicalCPTSurveyData"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   
    <xs:element name="GMW_PO_DP"
                type="dsgmw:GMW_PO_DPType"
                substitutionGroup="brocom:RegistrationObject">
@@ -785,56 +1125,6 @@ Explanation: Het registratieobject bevat niet de actuele gegevens, maar de gegev
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-   <xs:element name="WellData"
-               type="dsgmw:WellDataType"
-               substitutionGroup="gml:AbstractFeature"/>
-   <xs:complexType name="WellDataType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
-            <xs:sequence>
-               <xs:element name="groundLevelPosition"
-                           minOccurs="0"
-                           maxOccurs="1"
-                           nillable="true">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:extension base="brocom:MeasureNillableType">
-                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                     </xs:simpleContent>
-                  </xs:complexType>
-               </xs:element>
-               <xs:element name="groundLevelPositioningMethod"
-                           type="gmwcom:GroundLevelPositioningMethodPropertyType"
-                           minOccurs="0"
-                           maxOccurs="1"/>
-               <xs:element name="maintenanceResponsibleParty"
-                           type="brocom:ChamberOfCommerceNumberType"
-                           minOccurs="0"
-                           maxOccurs="1"/>
-               <xs:element name="owner" minOccurs="0" maxOccurs="1" nillable="true">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:extension base="brocom:ChamberOfCommerceNumberType">
-                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                     </xs:simpleContent>
-                  </xs:complexType>
-               </xs:element>
-               <xs:element name="wellHeadProtector"
-                           type="gmwcom:WellHeadProtectorTypePropertyType"
-                           minOccurs="0"
-                           maxOccurs="1"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="WellDataPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="dsgmw:WellData"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-   </xs:complexType>
    <xs:complexType name="DeliveredLocationType">
       <xs:sequence>
          <xs:element name="coordinates"
@@ -883,18 +1173,6 @@ Explanation: Het registratieobject bevat niet de actuele gegevens, maar de gegev
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
-   <xs:complexType name="DiameterRangeType">
-      <xs:sequence>
-         <xs:element name="largestTubeTopDiameter"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="smallestTubeTopDiameter"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
    <xs:complexType name="ElectrodeType">
       <xs:sequence>
          <xs:element name="cableNumber"
@@ -923,31 +1201,7 @@ Explanation: Het registratieobject bevat niet de actuele gegevens, maar de gegev
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
-   <xs:complexType name="ElectrodeDataType">
-      <xs:sequence>
-         <xs:element name="cableNumber"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="electrodeNumber"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="electrodePosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="electrodeStatus"
-                     type="gmwcom:ElectrodeStatusPropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="tubeNumber"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="ElectrodeRangeType">
+      <xs:complexType name="ElectrodeRangeType">
       <xs:sequence>
          <xs:element name="deepestElectrodePosition"
                      type="brocom:MeasureNillableType"
@@ -957,19 +1211,6 @@ Explanation: Het registratieobject bevat niet de actuele gegevens, maar de gegev
                      type="brocom:MeasureNillableType"
                      minOccurs="0"
                      maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="GeoOhmCableType">
-      <xs:sequence>
-         <xs:element name="cableNumber"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element minOccurs="2"
-                     maxOccurs="unbounded"
-                     name="electrode"
-                     nillable="false"
-                     type="gmwcom:ElectrodeType"/>
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="InsertedPartType">
@@ -982,20 +1223,6 @@ Explanation: Het registratieobject bevat niet de actuele gegevens, maar de gegev
                      type="brocom:MeasureNillableType"
                      minOccurs="1"
                      maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="IntermediateEventType">
-      <xs:sequence>
-         <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
-         <xs:element name="eventName"
-                     type="gmwcom:EventNamePropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element minOccurs="0"
-                     maxOccurs="1"
-                     name="intermediateEvent"
-                     nillable="false"
-                     type="dsgmw:EventDataPropertyType"/>
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="MaterialUsedType">
@@ -1014,138 +1241,9 @@ Explanation: Het registratieobject bevat niet de actuele gegevens, maar de gegev
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
-   <xs:complexType name="MonitoringTubeType">
-      <xs:sequence>
-         <xs:element name="artesianWellCapPresent"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element minOccurs="0"
-                     maxOccurs="unbounded"
-                     name="geoOhmCable"
-                     nillable="false"
-                     type="gmwcom:GeoOhmCableType"/>
-         <xs:element name="glue"
-                     type="gmwcom:GluePropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="insertedPartDiameter"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="insertedPartLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="insertedPartMaterial"
-                     type="gmwcom:TubeMaterialPropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element minOccurs="1"
-                     maxOccurs="1"
-                     name="materialUsed"
-                     nillable="false"
-                     type="gmwcom:MaterialUsedType"/>
-         <xs:element name="numberOfGeoOhmCables"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element minOccurs="1"
-                     maxOccurs="1"
-                     name="plainTubePart"
-                     nillable="false"
-                     type="gmwcom:PlainTubePartType"/>
-         <xs:element name="plainTubePartLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element minOccurs="1"
-                     maxOccurs="1"
-                     name="screen"
-                     nillable="false"
-                     type="gmwcom:ScreenType"/>
-         <xs:element minOccurs="0"
-                     maxOccurs="1"
-                     name="sedimentSump"
-                     nillable="false"
-                     type="gmwcom:SedimentSumpType"/>
-         <xs:element name="sedimentSumpPresent"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubeMaterial"
-                     type="gmwcom:TubeMaterialPropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="tubeNumber"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubeStatus"
-                     type="gmwcom:TubeStatusPropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubeTopDiameter"
-                     minOccurs="0"
-                     maxOccurs="1"
-                     nillable="true">
-            <xs:complexType>
-               <xs:simpleContent>
-                  <xs:extension base="brocom:MeasureNillableType">
-                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                  </xs:extension>
-               </xs:simpleContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="tubeTopPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubeTopPositioningMethod"
-                     type="gmwcom:TubeTopPositioningMethodPropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubeType"
-                     type="gmwcom:TubeTypePropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="variableDiameter"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
    <xs:complexType name="PlainTubePartType">
       <xs:sequence>
          <xs:element name="plainTubePartLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="ScreenType">
-      <xs:sequence>
-         <xs:element name="screenLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="screenProtection"
-                     type="gmwcom:ScreenProtectionPropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="sockMaterial"
-                     type="gmwcom:SockMaterialPropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="ScreenPositionRangeType">
-      <xs:sequence>
-         <xs:element name="deepestScreenTopPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="shallowestScreenTopPosition"
                      type="brocom:MeasureNillableType"
                      minOccurs="1"
                      maxOccurs="1"/>
@@ -1156,100 +1254,6 @@ Explanation: Het registratieobject bevat niet de actuele gegevens, maar de gegev
          <xs:element name="sedimentSumpLength"
                      type="brocom:MeasureNillableType"
                      minOccurs="1"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="StatusOverviewType">
-      <xs:sequence>
-         <xs:element name="tubeStatus"
-                     type="gmwcom:TubeStatusPropertyType"
-                     minOccurs="1"
-                     maxOccurs="4"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="TubeDataType">
-      <xs:sequence>
-         <xs:element name="glue"
-                     type="gmwcom:GluePropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="insertedPartDiameter"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="insertedPartLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="insertedPartMaterial"
-                     type="gmwcom:TubeMaterialPropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="plainTubePartLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="screenBottomPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="screenTopPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="tubeMaterial"
-                     type="gmwcom:TubeMaterialPropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="tubeNumber" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-         <xs:element name="tubePartInserted"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubeStatus"
-                     type="gmwcom:TubeStatusPropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="tubeTopDiameter"
-                     minOccurs="0"
-                     maxOccurs="1"
-                     nillable="true">
-            <xs:complexType>
-               <xs:simpleContent>
-                  <xs:extension base="brocom:MeasureNillableType">
-                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                  </xs:extension>
-               </xs:simpleContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="tubeTopPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="tubeTopPositioningMethod"
-                     type="gmwcom:TubeTopPositioningMethodPropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="variableDiameter"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="WellHistoryType">
-      <xs:sequence>
-         <xs:element minOccurs="0"
-                     maxOccurs="unbounded"
-                     name="IntermediateEvent"
-                     nillable="false"
-                     type="dsgmw:IntermediateEventType"/>
-         <xs:element name="wellConstructionDate"
-                     type="xs:date"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="wellRemovalDate"
-                     type="xs:date"
-                     minOccurs="0"
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
@@ -1435,7 +1439,7 @@ Explanation: Het registratieobject bevat niet de actuele gegevens, maar de gegev
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-     <xs:complexType name="GMW_ConstructionType">
+   <xs:complexType name="GMW_ConstructionType">
       <xs:complexContent>
          <xs:extension base="gml:AbstractFeatureType"/>
       </xs:complexContent>
