@@ -4,8 +4,8 @@
            xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
            xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1"
            xmlns:dsgmw="http://www.broservices.nl/xsd/dsgmw/1.1"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="http://www.broservices.nl/xsd/dsgmw/1.1"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
            version="1.1.0-1">
@@ -32,15 +32,17 @@
               schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
               -->
               
-    <xs:element name="parseFault" type="brocom:ParseFaultType"/>
+       <xs:element name="parseFault" type="brocom:ParseFaultType"/>
+      <xs:element name="dispatchDataResponse" type="dsgmw:DispatchDataResponseType" substitutionGroup="brocom:DispatchResponse">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht DispatchDataResponse is een specialisatie van de abstract klasse DispatchResponse uit de package brocommon, waaraan het een dispatchDocument toevoegt. Met dit bericht worden, als response op een DispatchDataRequest, de gegevens over een specifiek bodemonderzoek registratieobject verzonden naar de aanvrager.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
       <xs:complexType name="DispatchDataResponseType">
       <xs:complexContent>
          <xs:extension base="brocom:DispatchResponseType">
             <xs:sequence>
-               <xs:element name="dispatchDocument"
-                           type="brocom:RegistrationObjectCodeType"
-                           minOccurs="0"
-                           maxOccurs="1">
+               <xs:element name="dispatchDocument" type="brocom:RegistrationObjectCodeType" minOccurs="0" maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het element dispatchDocument bevat de gegevens van een bodemonderzoek registratieobject. Vanwege het polymorfe karakter is het type óf een BRODO uit de package brocom, óf een SLDODP, óf een SLDO uit de package dssad. Deze drie types hebben allen als gemeenschappelijke vader het type AbstractRegistrationObject uit de package brocom.
 Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met het in het dispatchDataRequest opgegegeven broId. Het gegeven is aanwezig en van het type BROD_DO als het registratieobject met de opgegeven broId uit registratie is genomen. Het gegeven is aanwezig en van het type SLDODP als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer tevens bronhouder en/of dataleverancier is van het registratieobject. Het gegeven is aanwezig en van het type SLD_O als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer niet bronhouder of dataleverancier is van het registratieobject.</xs:documentation>
@@ -50,22 +52,7 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="DispatchDataResponsePropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="dsgmw:DispatchDataResponse"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-   </xs:complexType>
-      <xs:element name="DispatchDataResponse"
-               type="dsgmw:DispatchDataResponseType"
-               substitutionGroup="brocom:DispatchResponse">
-      <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht DispatchDataResponse is een specialisatie van de abstract klasse DispatchResponse uit de package brocommon, waaraan het een dispatchDocument toevoegt. Met dit bericht worden, als response op een DispatchDataRequest, de gegevens over een specifiek bodemonderzoek registratieobject verzonden naar de aanvrager.</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:element name="DispatchCharacteristicsRequest"
-               type="dsgmw:DispatchCharacteristicsRequestType"
-               substitutionGroup="gml:AbstractFeature">
+   <xs:element name="dispatchCharacteristicsRequest" type="dsgmw:DispatchCharacteristicsRequestType" substitutionGroup="gml:AbstractFeature">
       <xs:annotation>
          <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het DispatchCharacteristicsRequest is een specialisatie van de abstract klasse DispatchDataRequest in de package brocommon, waaraan het een element dataToBeDelivered toevoegt.</xs:documentation>
       </xs:annotation>
@@ -74,10 +61,7 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
       <xs:complexContent>
          <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="dataToBeDelivered"
-                           type="dsgmw:DataToBeDeliveredType"
-                           minOccurs="1"
-                           maxOccurs="1">
+               <xs:element name="dataToBeDelivered" type="dsgmw:DataToBeDeliveredType" minOccurs="1" maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding welke gegevens over het registratieobject worden opgevraagd: alleen de actuele gegevens (present object data) of de actuele gegevens en de volledige materiële geschiedenis (past and present object data).</xs:documentation>
                   </xs:annotation>
@@ -86,14 +70,12 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="DispatchCharacteristicsRequestPropertyType">
+   <xs:complexType name="dispatchCharacteristicsRequestPropertyType">
       <xs:sequence minOccurs="0">
-         <xs:element ref="dsgmw:DispatchCharacteristicsRequest"/>
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-      <xs:element name="dispatchDataRequest"
-               type="dsgmw:DispatchDataRequestType">
+      <xs:element name="dispatchDataRequest" type="dsgmw:DispatchDataRequestType">
       <xs:annotation>
          <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het DispatchDataRequest is een specialisatie van de abstract klasse DispatchDataRequest in de package brocommon, waaraan het een element dataToBeDelivered toevoegt.</xs:documentation>
       </xs:annotation>
@@ -102,10 +84,7 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
       <xs:complexContent>
          <xs:extension base="brocom:DispatchDataRequestType">
             <xs:sequence>
-               <xs:element name="dataToBeDelivered"
-                           type="dsgmw:DataToBeDeliveredType"
-                           minOccurs="1"
-                           maxOccurs="1">
+               <xs:element name="dataToBeDelivered" type="dsgmw:DataToBeDeliveredType" minOccurs="1" maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding welke gegevens over het registratieobject worden opgevraagd: alleen de actuele gegevens (present object data) of de actuele gegevens en de volledige materiële geschiedenis (past and present object data).</xs:documentation>
                   </xs:annotation>
@@ -120,9 +99,7 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-   <xs:element name="DispatchCharacteristicsResponse"
-               type="dsgmw:DispatchCharacteristicsResponseType"
-               substitutionGroup="gml:AbstractFeature">
+   <xs:element name="DispatchCharacteristicsResponse" type="dsgmw:DispatchCharacteristicsResponseType" substitutionGroup="gml:AbstractFeature">
       <xs:annotation>
          <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht DispatchDataResponse is een specialisatie van de abstract klasse DispatchResponse uit de package brocommon, waaraan het een dispatchDocument toevoegt. Met dit bericht worden, als response op een DispatchDataRequest, de gegevens over een specifiek bodemonderzoek registratieobject verzonden naar de aanvrager.</xs:documentation>
       </xs:annotation>
@@ -131,20 +108,13 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
       <xs:complexContent>
          <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="numberOfDocuments"
-                           type="xs:integer"
-                           minOccurs="0"
-                           maxOccurs="1">
+               <xs:element name="numberOfDocuments" type="xs:integer" minOccurs="0" maxOccurs="1">
                   <xs:annotation>
                      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het element dispatchDocument bevat de gegevens van een bodemonderzoek registratieobject. Vanwege het polymorfe karakter is het type óf een BRODO uit de package brocom, óf een SLDODP, óf een SLDO uit de package dssad. Deze drie types hebben allen als gemeenschappelijke vader het type AbstractRegistrationObject uit de package brocom.
 Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met het in het dispatchDataRequest opgegegeven broId. Het gegeven is aanwezig en van het type BROD_DO als het registratieobject met de opgegeven broId uit registratie is genomen. Het gegeven is aanwezig en van het type SLDODP als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer tevens bronhouder en/of dataleverancier is van het registratieobject. Het gegeven is aanwezig en van het type SLD_O als het registratieobject met de opgegeven broId niet uit registratie is genomen en de afnemer niet bronhouder of dataleverancier is van het registratieobject.</xs:documentation>
                   </xs:annotation>
                </xs:element>
-               <xs:element minOccurs="0"
-                           maxOccurs="unbounded"
-                           name="dispatchDocument"
-                           nillable="false"
-                           type="brocom:AbstractRegistrationObjectPropertyType"/>
+               <xs:element minOccurs="0" maxOccurs="unbounded" name="dispatchDocument" nillable="false" type="brocom:AbstractRegistrationObjectPropertyType"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -155,9 +125,7 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-   <xs:element name="Fault"
-               type="dsgmw:FaultType"
-               substitutionGroup="gml:AbstractFeature"/>
+   <xs:element name="Fault" type="dsgmw:FaultType" substitutionGroup="gml:AbstractFeature"/>
    <xs:complexType name="FaultType">
       <xs:complexContent>
          <xs:extension base="gml:AbstractFeatureType">

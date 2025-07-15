@@ -33,8 +33,7 @@
               -->
    <xs:element name="intakeResponse" type="brocom:IntakeResponseType"/>
    <xs:element name="parseFault" type="brocom:ParseFaultType"/>
-       <xs:element name="RegistrationRequest"
-               type="isgmw:RegistrationRequestType">
+       <xs:element name="registrationRequest" type="isgmw:RegistrationRequestType">
       <xs:annotation>
          <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
 Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
@@ -44,10 +43,78 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="brocom:RegistrationRequestType">
             <xs:sequence>
-               <xs:element name="sourceDocument"
-                           type="isgmw:SourceDocumentPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="replaceRequest" type="isgmw:ReplaceRequestType">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
+Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="ReplaceRequestType">
+      <xs:complexContent>
+         <xs:extension base="brocom:CorrectionRequestType">
+            <xs:sequence>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   </xs:complexType> <xs:element name="registrationRequest" type="isgmw:RegistrationRequestType">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
+Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="registrationRequestType">
+      <xs:complexContent>
+         <xs:extension base="brocom:RegistrationRequestType">
+            <xs:sequence>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="registrationRequestPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="isgmw:RegistrationRequest"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+   <xs:element name="replaceRequest" type="isgmw:ReplaceRequestType">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
+Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="replaceRequestType">
+      <xs:complexContent>
+         <xs:extension base="brocom:CorrectionRequestType">
+            <xs:sequence>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="ReplaceRequestPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="isgmw:ReplaceRequest"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType> <xs:element name="registrationRequest" type="isgmw:RegistrationRequestType">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
+Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="registrationRequestType">
+      <xs:complexContent>
+         <xs:extension base="brocom:RegistrationRequestType">
+            <xs:sequence>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -58,144 +125,37 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-   <xs:element name="ReplaceRequest"
-               type="isgmw:ReplaceRequestType">
+   <xs:element name="replaceRequest" type="isgmw:ReplaceRequestType">
       <xs:annotation>
          <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
 Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
       </xs:annotation>
    </xs:element>
-   <xs:complexType name="ReplaceRequestType">
+   <xs:complexType name="replaceRequestType">
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
-               <xs:element name="sourceDocument"
-                           type="isgmw:SourceDocumentPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="ReplaceRequestPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:ReplaceRequest"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-   </xs:complexType> <xs:element name="RegistrationRequest"
-               type="isgmw:RegistrationRequestType">
-      <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
-Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="RegistrationRequestType">
-      <xs:complexContent>
-         <xs:extension base="brocom:RegistrationRequestType">
-            <xs:sequence>
-               <xs:element name="sourceDocument"
-                           type="isgmw:SourceDocumentPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="RegistrationRequestPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:RegistrationRequest"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-   </xs:complexType>
-   <xs:element name="ReplaceRequest"
-               type="isgmw:ReplaceRequestType">
-      <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
-Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="ReplaceRequestType">
-      <xs:complexContent>
-         <xs:extension base="brocom:CorrectionRequestType">
-            <xs:sequence>
-               <xs:element name="sourceDocument"
-                           type="isgmw:SourceDocumentPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="ReplaceRequestPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:ReplaceRequest"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-   </xs:complexType> <xs:element name="RegistrationRequest"
-               type="isgmw:RegistrationRequestType">
-      <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
-Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="RegistrationRequestType">
-      <xs:complexContent>
-         <xs:extension base="brocom:RegistrationRequestType">
-            <xs:sequence>
-               <xs:element name="sourceDocument"
-                           type="isgmw:SourceDocumentPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="RegistrationRequestPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:RegistrationRequest"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-   </xs:complexType>
-   <xs:element name="ReplaceRequest"
-               type="isgmw:ReplaceRequestType">
-      <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
-Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="ReplaceRequestType">
-      <xs:complexContent>
-         <xs:extension base="brocom:CorrectionRequestType">
-            <xs:sequence>
-               <xs:element name="sourceDocument"
-                           type="isgmw:SourceDocumentPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="ReplaceRequestPropertyType">
+   <xs:complexType name="replaceRequestPropertyType">
       <xs:sequence minOccurs="0">
          <xs:element ref="isgmw:ReplaceRequest"/>
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-   <xs:complexType name="DeleteRequestType">
+   <xs:complexType name="deleteRequestType">
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
-               <xs:element name="sourceDocument"
-                           type="isgmw:SourceDocumentPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-      </xs:complexType>
-   <xs:element name="MoveRequest"
-               type="isgmw:MoveRequestType">
+   <xs:element name="moveRequest" type="isgmw:MoveRequestType">
       <xs:annotation>
          <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
 Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
@@ -205,10 +165,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
-               <xs:element name="sourceDocument"
-                           type="isgmw:SourceDocumentPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -219,8 +176,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-      <xs:element name="DeleteRequest"
-               type="isgmw:DeleteRequestType">
+      <xs:element name="deleteRequest" type="isgmw:DeleteRequestType">
       <xs:annotation>
          <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Innameverzoek, dat een dataleverancier (ofwel tevens bronhouder danwel in opdracht van de bronhouder) aanbiedt bij de innameservice van het BRO systeem, waarmee nieuwe gegevens, die net beschikbaar zijn gekomen, aan de BRO worden overdragen.
 Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenmalig geregistreerd. Gegevens over een registratieobject met een levenscyclus worden eerst geregistreerd en vervolgens aangevuld en eventueel uiteindelijke beëindigd. Met een correctieverzoek kunnen fouten in geregistreerde gegevens in de BRO worden verbeterd. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.</xs:documentation>
@@ -232,16 +188,12 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-   <xs:element name="InsertRequest"
-               type="isgmw:InsertRequestType"/>
+   <xs:element name="insertRequest" type="isgmw:InsertRequestType"/>
    <xs:complexType name="InsertRequestType">
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
-               <xs:element name="sourceDocument"
-                           type="isgmw:SourceDocumentPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -250,11 +202,8 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:sequence minOccurs="0">
          <xs:element ref="isgmw:InsertRequest"/>
       </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-         <xs:element name="GroundwaterMonitoringWell"
-               type="isgmw:GroundwaterMonitoringWellType"
-               substitutionGroup="gml:AbstractFeature"/>
-   <xs:complexType name="GroundwaterMonitoringWellType">
+   </xs:complexType>
+         <xs:element name="GroundwaterMonitoringWell" type="isgmw:GroundwaterMonitoringWellType" substitutionGroup="gml:AbstractFeature"/>   <xs:complexType name="GroundwaterMonitoringWellType">
       <xs:complexContent>
          <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
