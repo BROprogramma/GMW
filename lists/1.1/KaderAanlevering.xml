@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<KaderAanlevering>
+		<Waarde>GBM</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van de wet gewasbeschermingsmiddelen en biociden.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>KRW</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van de Kaderrichtlijn water.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>monitoringBijDrinkwaterwinning</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van monitoring van grondwater door drinkwaterbedrijven.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>NBW</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van de wet natuurbescherming.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>NR</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van de nitraatrichtlijn.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>OGW</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van de ontgrondingenwet.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>OW</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van de omgevingswet.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>publiekeTaak</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van de publieke taakuitvoering.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>WW</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van de waterwet.</Omschrijving>
+	</KaderAanlevering>
+	<KaderAanlevering>
+		<Waarde>archiefoverdracht</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De gegevens zijn aangeleverd in het kader van archiefoverdracht.</Omschrijving>
+	</KaderAanlevering>
+</domeintabel>

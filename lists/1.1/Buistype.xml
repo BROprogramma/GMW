@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Buistype>
+		<Waarde>minifilter</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De monitoringbuis bestaat uit een zeer kort filterdeel en een stijgbuisdeel dat uit een flexibele slang bestaat. Het minifilter is daarom uitsluitend geschikt voor grondwatersamenstellingsonderzoek.</Omschrijving>
+	</Buistype>
+	<Buistype>
+		<Waarde>standaardbuis</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De monitoringbuis heeft de standaardopbouw van stijgbuisdeel, filterdeel en eventueel een zandvang.</Omschrijving>
+	</Buistype>
+	<Buistype>
+		<Waarde>volledigFilter</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De monitoringbuis is in zijn geheel een filter.</Omschrijving>
+	</Buistype>
+	<Buistype>
+		<Waarde>filterlozeBuis</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De monitoringbuis is in zijn geheel een stijgbuisdeel, met een open onderkant.</Omschrijving>
+	</Buistype>
+</domeintabel>

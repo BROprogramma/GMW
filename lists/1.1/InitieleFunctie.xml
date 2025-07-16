@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<InitieleFunctie>
+		<Waarde>brandput</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is initiëel ingericht voor het onttrekken van bluswater.</Omschrijving>
+	</InitieleFunctie>
+	<InitieleFunctie>
+		<Waarde>kwaliteit</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is initiëel ingericht voor het monitoring van de grondwatersamenstelling.</Omschrijving>
+	</InitieleFunctie>
+	<InitieleFunctie>
+		<Waarde>kwaliteitStand</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is initiëel ingericht voor het monitoren van zowel de grondwaterstand als de grondwatersamenstelling.</Omschrijving>
+	</InitieleFunctie>
+	<InitieleFunctie>
+		<Waarde>onttrekking</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is initiëel ingericht voor grondwateronttrekking.</Omschrijving>
+	</InitieleFunctie>
+	<InitieleFunctie>
+		<Waarde>stand</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is initiëel ingericht voor het monitoring van de grondwaterstand.</Omschrijving>
+	</InitieleFunctie>
+	<InitieleFunctie>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend voor welke functie de put initi&amp;#235;el is ingericht.</Omschrijving>
+	</InitieleFunctie>
+</domeintabel>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Buisstatus>
+		<Waarde>gebruiksklaar</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis is bruikbaar voor grondwatermonitoring.</Omschrijving>
+	</Buisstatus>
+	<Buisstatus>
+		<Waarde>nietGebruiksklaar</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis is niet bruikbaar voor grondwatermonitoring.</Omschrijving>
+	</Buisstatus>
+	<Buisstatus>
+		<Waarde>onbruikbaar</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis is nooit meer bruikbaar voor grondwatermonitoring.</Omschrijving>
+	</Buisstatus>
+	<Buisstatus>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend wat de status van de buis is.</Omschrijving>
+	</Buisstatus>
+</domeintabel>

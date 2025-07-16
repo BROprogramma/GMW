@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<NaamGebeurtenis>
+		<Waarde>beschermconstructieVeranderd</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het aanbrengen van een beschermconstructie of het vervangen van de bestaande door een ander type.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>buisdeelIngeplaatst</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het repareren van één of meer monitoringbuizen door het inplaatsen van een stijgbuisdeel met een kleinere diameter.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>buisIngekort</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De lengte van het stijgbuisdeel van één of meer monitoringbuizen is gewijzigd door het inkorten ervan, eventueel in combinatie met het aanbrengen van een beschermconstructie of het vervangen van de bestaande door een ander type.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>buisOpgelengd</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De lengte van het stijgbuisdeel van één of meer monitoringbuizen is gewijzigd door het oplengen ervan, eventueel in combinatie met het aanbrengen van een beschermconstructie of het vervangen van de bestaande door een ander type.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>buisstatusVeranderd</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Van één of meer buizen in een grondwatermonitoringput is vastgesteld dat de (fysieke) status veranderd is.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>eigenaarVeranderd</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De eigenaar van de grondwatermonitoringput is veranderd.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>elektrodestatusVeranderd</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Van één of meer elektrodes is vastgesteld dat de (fysieke) status veranderd is.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>maaiveldVerlegd</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het maaiveld bij de put is gewijzigd door ophoging of afgraving, en is daarom opnieuw vastgesteld.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>nieuweBepalingMaaiveld</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De maaiveldpositie bij de put is mogelijk veranderd door een natuurlijk proces en is daarom opnieuw vastgesteld.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>nieuweBepalingPosities</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De posities van de put en het maaiveld zijn mogelijk veranderd door een natuurlijk proces en zijn daarom opnieuw vastgesteld.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>nieuweInmetingMaaiveld</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De maaiveldpositie bij de put is tijdens een meetronde opnieuw gemeten (nagemeten) en is daarom opnieuw vastgesteld. De posities van de put zelf zijn ongewijzigd omdat deze niet opnieuw zijn gemeten.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>nieuweInmetingPosities</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De posities van de bovenkant van de buizen en optioneel de positie van het maaiveld zijn tijdens een meetronde opnieuw gemeten (nagemeten) en zijn daarom opnieuw vastgesteld.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>onderhouderVeranderd</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De onderhoudende instantie van de grondwatermonitoringput is gewijzigd.</Omschrijving>
+	</NaamGebeurtenis>
+	<NaamGebeurtenis>
+		<Waarde>verkenningenAchterafRegistreren</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Deze gebeurtenis maakt het mogelijk om achteraf een/meerdere verkenning(en) 'toe te voegen' aan de grondwatermonitoringput.</Omschrijving>
+	</NaamGebeurtenis>
+</domeintabel>

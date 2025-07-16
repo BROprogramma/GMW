@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Elektrodestatus>
+		<Waarde>gebruiksklaar</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De elektrode is klaar voor het doen van metingen.</Omschrijving>
+	</Elektrodestatus>
+	<Elektrodestatus>
+		<Waarde>nietGebruiksklaar</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De elektrode is niet klaar voor het doen van metingen.</Omschrijving>
+	</Elektrodestatus>
+	<Elektrodestatus>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend wat de status van de elektrode is.</Omschrijving>
+	</Elektrodestatus>
+</domeintabel>

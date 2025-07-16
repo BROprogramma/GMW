@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MethodeLocatiebepaling>
+		<Waarde>DGPS50tot200cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Differential Global Positioning System, afwijking tussen 50 en 200 centimeter.</Omschrijving>
+	</MethodeLocatiebepaling>
+	<MethodeLocatiebepaling>
+		<Waarde>GPS200tot1000cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Global Positioning System, afwijking tussen 200 en 1000 centimeter.</Omschrijving>
+	</MethodeLocatiebepaling>
+	<MethodeLocatiebepaling>
+		<Waarde>RTKGPS0tot2cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Real Time Kinematic GPS, ook wel als DGPS aangeduid, afwijking kleiner dan 2 centimeter.</Omschrijving>
+	</MethodeLocatiebepaling>
+	<MethodeLocatiebepaling>
+		<Waarde>RTKGPS2tot5cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Real Time Kinematic GPS, ook wel als DGPS aangeduid, afwijking tussen 2 en 5 centimeter.</Omschrijving>
+	</MethodeLocatiebepaling>
+	<MethodeLocatiebepaling>
+		<Waarde>RTKGPS5tot10cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Real Time Kinematic GPS, ook wel als DGPS aangeduid, afwijking tussen 5 en 10 centimeter.</Omschrijving>
+	</MethodeLocatiebepaling>
+	<MethodeLocatiebepaling>
+		<Waarde>RTKGPS10tot50cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Real Time Kinematic GPS, ook wel als DGPS aangeduid, zonder fix, afwijking tussen 10 en 50 centimeter.</Omschrijving>
+	</MethodeLocatiebepaling>
+	<MethodeLocatiebepaling>
+		<Waarde>tachymetrie0tot10cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. tachymetrie, ook wel als landmeting of Total Station aangeduid, vanaf een referentiepunt dat geen NAP-peilmerk is, afwijking kleiner dan 10 centimeter.</Omschrijving>
+	</MethodeLocatiebepaling>
+	<MethodeLocatiebepaling>
+		<Waarde>tachymetrie10tot50cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. tachymetrie, ook wel als landmeting of Total Station aangeduid, vanaf een referentiepunt dat geen NAP-peilmerk is, afwijking tussen 10 en 50 centimeter.</Omschrijving>
+	</MethodeLocatiebepaling>
+	<MethodeLocatiebepaling>
+		<Waarde>GBKNOnbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Locatie bepaald aan de hand van de grootschalige basiskaart van Nederland (tegenwoordig BGT), afwijking onbekend.</Omschrijving>
+	</MethodeLocatiebepaling>
+	<MethodeLocatiebepaling>
+		<Waarde>GPSOnbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Global Positioning System, afwijking onbekend.</Omschrijving>
+	</MethodeLocatiebepaling>
+	<MethodeLocatiebepaling>
+		<Waarde>kaartOnbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Locatie bepaald aan de hand van niet-digitale kaart, afwijking onbekend.</Omschrijving>
+	</MethodeLocatiebepaling>
+	<MethodeLocatiebepaling>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend op welke manier de locatie bepaald is.</Omschrijving>
+	</MethodeLocatiebepaling>
+</domeintabel>

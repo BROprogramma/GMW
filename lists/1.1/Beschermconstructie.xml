@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Beschermconstructie>
+		<Waarde>geen</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is niet voorzien van een beschermconstructie.</Omschrijving>
+	</Beschermconstructie>
+	<Beschermconstructie>
+		<Waarde>kokerDeelsMetaal</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is voorzien van een uitstekende beschermkoker die deels van metaal is. De mogelijkheid tot het gebruik van telemetrie zonder externe antennes is afhankelijk van de opbouw van de koker.</Omschrijving>
+	</Beschermconstructie>
+	<Beschermconstructie>
+		<Waarde>kokerMetaal</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is voorzien van een uitstekende beschermkoker die van metaal is. Het gebruik van telemetrie zonder externe antennes is niet mogelijk.</Omschrijving>
+	</Beschermconstructie>
+	<Beschermconstructie>
+		<Waarde>kokerNietMetaal</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is voorzien van een uitstekende beschermkoker die niet van metaal is. Het gebruik van telemetrie is mogelijk zonder externe antennes.</Omschrijving>
+	</Beschermconstructie>
+	<Beschermconstructie>
+		<Waarde>potNietWaterdicht</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is voorzien van een vlakke beschermconstructie die nagenoeg samenvalt met het maaiveld en die niet water- of algemener gesteld vloeistofdicht is.</Omschrijving>
+	</Beschermconstructie>
+	<Beschermconstructie>
+		<Waarde>potWaterdicht</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is voorzien van een vlakke beschermconstructie die nagenoeg samenvalt met het maaiveld en die water- of algemener gesteld vloeistofdicht is.</Omschrijving>
+	</Beschermconstructie>
+	<Beschermconstructie>
+		<Waarde>koker</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is voorzien van een beschermkoker, waarbij onbekend is of deze van metaal is of niet.</Omschrijving>
+	</Beschermconstructie>
+	<Beschermconstructie>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend of de put voorzien is van een beschermconstructie.</Omschrijving>
+	</Beschermconstructie>
+	<Beschermconstructie>
+		<Waarde>pot</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is voorzien van een vlakke beschermconstructie die nagenoeg samenvalt met het maaiveld, waarbij onbekend is of deze waterdicht is of niet.</Omschrijving>
+	</Beschermconstructie>
+</domeintabel>

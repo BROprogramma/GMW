@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Kousmateriaal>
+		<Waarde>geen</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Er is geen filterkous aanwezig.</Omschrijving>
+	</Kousmateriaal>
+	<Kousmateriaal>
+		<Waarde>kopergaas</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het filter is voorzien van een filterkous van kopergaas.</Omschrijving>
+	</Kousmateriaal>
+	<Kousmateriaal>
+		<Waarde>nylon</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het filter is voorzien van een filterkous van nylon.</Omschrijving>
+	</Kousmateriaal>
+	<Kousmateriaal>
+		<Waarde>pp</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het filter is voorzien van een filterkous van polypropyleen.</Omschrijving>
+	</Kousmateriaal>
+	<Kousmateriaal>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend of een filterkous is gebruikt.</Omschrijving>
+	</Kousmateriaal>
+</domeintabel>

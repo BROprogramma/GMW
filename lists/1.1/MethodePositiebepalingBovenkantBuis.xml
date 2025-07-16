@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>afgeleidSbl</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De positie bovenkant buis is afgeleid van de lengtewijziging van het stijgbuisdeel.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>AHN2</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Positie bepaald d.m.v. Actueel Hoogtebestand Nederland, versie 2 van 2007-2012, in combinatie met de hoogte bovenkant buis ten opzichte van maaiveld.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>AHN3</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Positie bepaald m.b.v. Actueel Hoogtebestand Nederland, versie 3 van 2014-2019, in combinatie met de hoogte bovenkant buis ten opzichte van maaiveld.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>AHN4</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Positie bepaald m.b.v. Actueel Hoogtebestand Nederland, versie 4 van 2020-2022, in combinatie met de hoogte bovenkant buis ten opzichte van maaiveld.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>RTKGPS0tot4cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Real Time Kinematic GPS, ook wel als DGPS aangeduid, afwijking kleiner dan 4 centimeter.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>RTKGPS4tot10cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Real Time Kinematic GPS, ook wel als DGPS aangeduid, afwijking tussen 4 en 10 centimeter.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>RTKGPS10tot20cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Real Time Kinematic GPS, ook wel als DGPS aangeduid, zonder fix, afwijking tussen 10 en 20 centimeter.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>RTKGPS20tot100cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Real Time Kinematic GPS, ook wel als DGPS aangeduid, zonder fix, afwijking tussen 20 en 100 centimeter.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>tachymetrie0tot10cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. tachymetrie, ook wel als landmeting of Total Station aangeduid, vanaf een referentiepunt dat een NAP-peilmerk is, afwijking kleiner dan 10 centimeter.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>tachymetrie10tot50cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. tachymetrie, ook wel als landmeting of Total Station aangeduid, vanaf een referentiepunt dat geen NAP-peilmerk is, afwijking tussen 10 en 50 centimeter.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>waterpassing0tot2cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. waterpassing vanaf een NAP-peilmerk, afwijking kleiner dan 2 centimeter.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>waterpassing2tot4cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. waterpassing vanaf een NAP-peilmerk, afwijking tussen 2 en 4 centimeter.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>waterpassing4tot10cm</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. waterpassing vanaf een NAP-peilmerk, afwijking tussen 4 en 10 centimeter.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>AHN1</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Positie bepaald m.b.v. Actueel Hoogtebestand Nederland, versie 1 van 1996-2003, in combinatie met de hoogte bovenkant buis ten opzichte van maaiveld.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>GPSOnbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meting d.m.v. Global Positioning System, afwijking onbekend.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>kaartOnbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Positie bepaald aan de hand van niet-digitale kaart, afwijking onbekend, in combinatie met de hoogte bovenkant buis ten opzichte van maaiveld.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+	<MethodePositiebepalingBovenkantBuis>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend op welke manier de positie bovenkant buis bepaald is.</Omschrijving>
+	</MethodePositiebepalingBovenkantBuis>
+</domeintabel>

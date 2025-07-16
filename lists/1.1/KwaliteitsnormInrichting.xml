@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<KwaliteitsnormInrichting>
+		<Waarde>BWsb</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is ingericht conform de richtlijnen in het standaardbestek van Brabant Water.</Omschrijving>
+	</KwaliteitsnormInrichting>
+	<KwaliteitsnormInrichting>
+		<Waarde>geen</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Er is geen kwaliteitsnorm gebruikt bij inrichting van de put.</Omschrijving>
+	</KwaliteitsnormInrichting>
+	<KwaliteitsnormInrichting>
+		<Waarde>IBR</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is ingericht conform de richtlijnen van het Ingenieursbureau Rotterdam.</Omschrijving>
+	</KwaliteitsnormInrichting>
+	<KwaliteitsnormInrichting>
+		<Waarde>NEN5104</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is ingericht conform NEN5104.</Omschrijving>
+	</KwaliteitsnormInrichting>
+	<KwaliteitsnormInrichting>
+		<Waarde>NEN5744</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is ingericht conform NEN5744.</Omschrijving>
+	</KwaliteitsnormInrichting>
+	<KwaliteitsnormInrichting>
+		<Waarde>NEN5766</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is ingericht conform NEN5766.</Omschrijving>
+	</KwaliteitsnormInrichting>
+	<KwaliteitsnormInrichting>
+		<Waarde>RWSgwmon</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is ingericht volgens de richtlijn Rijkswaterstaat Normen voor grondwatermonitoring.</Omschrijving>
+	</KwaliteitsnormInrichting>
+	<KwaliteitsnormInrichting>
+		<Waarde>SIKB2001v6.0</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is ingericht conform SIKB protocol 2001 versie 6.0.</Omschrijving>
+	</KwaliteitsnormInrichting>
+	<KwaliteitsnormInrichting>
+		<Waarde>STOWAgwst</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is ingericht conform het STOWA Handboek meten van grondwaterstanden in peilbuizen.</Omschrijving>
+	</KwaliteitsnormInrichting>
+	<KwaliteitsnormInrichting>
+		<Waarde>VKB2001</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is ingericht conform VKB protocol 2001.</Omschrijving>
+	</KwaliteitsnormInrichting>
+	<KwaliteitsnormInrichting>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend of een kwaliteitsnorm is gebruikt bij inrichting van de put.</Omschrijving>
+	</KwaliteitsnormInrichting>
+</domeintabel>
