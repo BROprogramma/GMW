@@ -73,6 +73,12 @@
 		<Omschrijving>De buis bestaat uit polyvinylchloride.</Omschrijving>
 	</Buismateriaal>
 	<Buismateriaal>
+		<Waarde>pvcKoper</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De buis bestaat uit polyvinylchloride en koper.</Omschrijving>
+	</Buismateriaal>
+	<Buismateriaal>
 		<Waarde>staal</Waarde>
 		<IMBRO>v</IMBRO>
 		<IMBROA>v</IMBROA>
