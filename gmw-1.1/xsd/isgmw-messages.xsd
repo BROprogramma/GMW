@@ -43,7 +43,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="brocom:RegistrationRequestType">
             <xs:sequence>
-               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -58,7 +58,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
-               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -73,7 +73,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
-               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -88,7 +88,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
-               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -98,7 +98,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
-               <xs:element name="sourceDocument" type="isgmw:SourceDocumentPropertyType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="sourceDocument" type="isgmw:SourceDocumentType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -1246,219 +1246,27 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
    </xs:complexType>
    <xs:element name="SourceDocument" type="isgmw:SourceDocumentType"/>
    <xs:complexType name="SourceDocumentType">
-      <xs:sequence>
-         <xs:element name="GMW_Construction" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_Construction"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_ConstructionWithHistory" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_ConstructionWithHistory"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_ElectrodeStatus" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_ElectrodeStatus"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_GroundLevel" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_GroundLevel"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_GroundLevelMeasuring" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_GroundLevelMeasuring"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_Insertion" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_Insertion"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_Lengthening" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_Lengthening"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_Maintainer" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_Maintainer"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_Owner" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_Owner"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_Positions" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_Positions"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_PositionsMeasuring" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_PositionsMeasuring"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_Removal" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_Removal"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_Shift" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_Shift"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_Shortening" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_Shortening"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_SubsequentAdditionSurveys" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_SubsequentAdditionSurveys"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_TubeStatus" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_TubeStatus"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="GMW_WellHeadProtector" minOccurs="1" maxOccurs="1">
-            <xs:complexType>
-               <xs:complexContent>
-                  <xs:extension base="gml:AbstractFeatureType">
-                     <xs:sequence>
-                        <xs:element ref="isgmw:GMW_WellHeadProtector"/>
-                     </xs:sequence>
-                     <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-                  </xs:extension>
-               </xs:complexContent>
-            </xs:complexType>
-         </xs:element>
-      </xs:sequence>
+      <xs:choice minOccurs="1" maxOccurs="1">
+            <xs:element ref="isgmw:GMW_Construction"/>
+            <xs:element ref="isgmw:GMW_ConstructionWithHistory"/>
+            <xs:element ref="isgmw:GMW_ElectrodeStatus"/>
+            <xs:element ref="isgmw:GMW_GroundLevel"/>
+            <xs:element ref="isgmw:GMW_GroundLevelMeasuring"/>
+            <xs:element ref="isgmw:GMW_Insertion"/>
+            <xs:element ref="isgmw:GMW_Lengthening"/>
+            <xs:element ref="isgmw:GMW_Maintainer"/>
+            <xs:element ref="isgmw:GMW_Owner"/>
+            <xs:element ref="isgmw:GMW_Positions"/>
+            <xs:element ref="isgmw:GMW_PositionsMeasuring"/>
+            <xs:element ref="isgmw:GMW_Removal"/>
+            <xs:element ref="isgmw:GMW_Shift"/>
+            <xs:element ref="isgmw:GMW_Shortening"/>
+            <xs:element ref="isgmw:GMW_SubsequentAdditionSurveys"/>
+            <xs:element ref="isgmw:GMW_TubeStatus"/>
+            <xs:element ref="isgmw:GMW_WellHeadProtector"/>
+      </xs:choice>
    </xs:complexType>
-   <xs:complexType name="SourceDocumentPropertyType">
-      <xs:sequence>
-         <xs:element ref="isgmw:SourceDocument"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:element name="Survey" type="isgmw:SurveyType"/>
+<xs:element name="Survey" type="isgmw:SurveyType"/>
    <xs:complexType name="SurveyType">
       <xs:sequence>
          <xs:element name="boreholeResearch" minOccurs="1" maxOccurs="1">
@@ -1485,11 +1293,6 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                </xs:complexContent>
             </xs:complexType>
          </xs:element>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="SurveyPropertyType">
-      <xs:sequence>
-         <xs:element ref="isgmw:Survey"/>
       </xs:sequence>
    </xs:complexType>
 </xs:schema>
