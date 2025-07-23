@@ -54,4 +54,10 @@
 		<IMBROA>v</IMBROA>
 		<Omschrijving>De put is voorzien van een vlakke beschermconstructie die nagenoeg samenvalt met het maaiveld, waarbij onbekend is of deze waterdicht is of niet.</Omschrijving>
 	</Beschermconstructie>
+		<Beschermconstructie>
+		<Waarde>stoeptegel</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De put is voorzien van een stoeptegel.</Omschrijving>
+	</Beschermconstructie>
 </domeintabel>
