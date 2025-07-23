@@ -48,4 +48,10 @@
 		<IMBROA>v</IMBROA>
 		<Omschrijving>Het is onbekend welk type aanvulmateriaal is gebruikt.</Omschrijving>
 	</AanvulmateriaalBuis>
+		<AanvulmateriaalBuis>
+		<Waarde>geen</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Er is geen aanvulmateriaal gebruikt.</Omschrijving>
+	</AanvulmateriaalBuis>
 </domeintabel>
