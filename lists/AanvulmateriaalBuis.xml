@@ -43,15 +43,15 @@
 		<Omschrijving>Het aanvulmateriaal is vastgelegd in het booronderzoek van de gerelateerde verkenning(en).</Omschrijving>
 	</AanvulmateriaalBuis>
 	<AanvulmateriaalBuis>
-		<Waarde>onbekend</Waarde>
-		<IMBRO> </IMBRO>
-		<IMBROA>v</IMBROA>
-		<Omschrijving>Het is onbekend welk type aanvulmateriaal is gebruikt.</Omschrijving>
-	</AanvulmateriaalBuis>
-		<AanvulmateriaalBuis>
 		<Waarde>geen</Waarde>
 		<IMBRO>v</IMBRO>
 		<IMBROA>v</IMBROA>
 		<Omschrijving>Er is geen aanvulmateriaal gebruikt.</Omschrijving>
+	</AanvulmateriaalBuis>
+	<AanvulmateriaalBuis>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend welk type aanvulmateriaal is gebruikt.</Omschrijving>
 	</AanvulmateriaalBuis>
 </domeintabel>
