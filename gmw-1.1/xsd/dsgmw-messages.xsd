@@ -921,12 +921,12 @@ Explanation: Voor de attributen met materiële geschiedenis wordt de actuele waa
                            type="gmwcom:ConstructionStandardPropertyType"
                            minOccurs="1"
                            maxOccurs="1"/>
-               <xs:element minOccurs="1"
+               <xs:element minOccurs="0"
                            maxOccurs="1"
                            name="deliveredLocation"
                            nillable="false"
                            type="gmwcom:DeliveredLocationType"/>
-               <xs:element minOccurs="1"
+               <xs:element minOccurs="0"
                            maxOccurs="1"
                            name="deliveredVerticalPosition"
                            nillable="false"
@@ -995,7 +995,7 @@ Explanation: De wetgever stipuleert dat het gegeven moet zijn vastgelegd om inzi
                            type="brocom:IndicationYesNoType"
                            minOccurs="1"
                            maxOccurs="1"/>
-               <xs:element minOccurs="1"
+               <xs:element minOccurs="0"
                            maxOccurs="1"
                            name="standardizedLocation"
                            nillable="false"

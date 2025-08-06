@@ -118,7 +118,7 @@
                      maxOccurs="1"/>
          <xs:element name="insertedPartLength"
                      type="brocom:MeasureNillableType"
-                     minOccurs="1"
+                     minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="insertedPartMaterial"
                      type="gmwcom:TubeMaterialPropertyType"
@@ -130,7 +130,7 @@
       <xs:sequence>
          <xs:element name="sedimentSumpLength"
                      type="brocom:MeasureNillableType"
-                     minOccurs="1"
+                     minOccurs="0"
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
@@ -138,7 +138,7 @@
       <xs:sequence>
          <xs:element name="plainTubePartLength"
                      type="brocom:MeasureNillableType"
-                     minOccurs="1"
+                     minOccurs="0"
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
@@ -647,11 +647,11 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
          </xs:element>
          <xs:element name="tubeTopPosition"
                      type="brocom:MeasureNillableType"
-                     minOccurs="1"
+                     minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPositioningMethod"
                      type="gmwcom:TubeTopPositioningMethodPropertyType"
-                     minOccurs="1"
+                     minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="tubeType"
                      type="gmwcom:TubeTypePropertyType"
@@ -783,11 +783,11 @@ Explanation: Wanneer een object in onderzoek is genomen betekent dit dat er bij 
       <xs:sequence>
          <xs:element name="screenBottomPosition"
                      type="brocom:MeasureNillableType"
-                     minOccurs="1"
+                     minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="screenLength"
                      type="brocom:MeasureNillableType"
-                     minOccurs="1"
+                     minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="screenProtection"
                      type="gmwcom:ScreenProtectionPropertyType"
@@ -795,7 +795,7 @@ Explanation: Wanneer een object in onderzoek is genomen betekent dit dat er bij 
                      maxOccurs="1"/>
          <xs:element name="screenTopPosition"
                      type="brocom:MeasureNillableType"
-                     minOccurs="1"
+                     minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="sockMaterial"
                      type="gmwcom:SockMaterialPropertyType"
