@@ -1039,10 +1039,6 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
          <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
                <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
-               <xs:element name="survey"
-                           type="gmwcom:SurveyPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
                <xs:element name="IsRelatedTo"
                            type="gmwcom:SurveyPropertyType"
                            minOccurs="1"
