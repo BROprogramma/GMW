@@ -10,7 +10,7 @@
          <brocom:dispatchTime>2017-12-18T15:41:44+01:00</brocom:dispatchTime>
          <numberOfDocuments>4</numberOfDocuments>
          <dispatchDocument>
-            <GMW_C>
+            <GMW_C gml:id="BRO_0001">
                <brocom:broId>BRO_000000072749</brocom:broId>
                <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
@@ -29,11 +29,7 @@
                <wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">kokerMetaal</wellHeadProtector>
                <wellCode>GMW07F018701</wellCode>
                <statusOverview>
-                  <tubeStatus>
-                     <tubeNumber>1</tubeNumber>
-                     <status>gebruiksklaar</status>
-                     <date>2017-12-15</date>
-                  </tubeStatus>
+                  <tubeStatus codeSpace="urn:bro:gmw:TubeStatus">gebruiksklaar</tubeStatus>
                </statusOverview>
                <diameterRange>
                   <smallestTubeTopDiameter uom="mm">32</smallestTubeTopDiameter>
@@ -46,11 +42,11 @@
             </GMW_C>
          </dispatchDocument>
          <dispatchDocument>
-            <GMW_C>
+            <GMW_C gml:id="BRO_0002">
                <brocom:broId>BRO_000000072725</brocom:broId>
+               <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
                <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
-               <brocom:deregistered>nee</brocom:deregistered>
                <brocom:objectRegistrationTime>2017-12-15T09:59:45+01:00</brocom:objectRegistrationTime>
                <brocom:underReview>nee</brocom:underReview>
                <withPrehistory>nee</withPrehistory>
@@ -65,11 +61,7 @@
                <wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">kokerMetaal</wellHeadProtector>
                <wellCode>GMW07F018701</wellCode>
                <statusOverview>
-                  <tubeStatus>
-                     <tubeNumber>1</tubeNumber>
-                     <status>gebruiksklaar</status>
-                     <date>2017-12-15</date>
-                  </tubeStatus>
+                  <tubeStatus codeSpace="urn:bro:gmw:TubeStatus">gebruiksklaar</tubeStatus>
                </statusOverview>
                <diameterRange>
                   <smallestTubeTopDiameter uom="mm">32</smallestTubeTopDiameter>
@@ -82,11 +74,11 @@
             </GMW_C>
          </dispatchDocument>
          <dispatchDocument>
-            <GMW_C>
+            <GMW_C gml:id="BRO_0003">
                <brocom:broId>BRO_000000072723</brocom:broId>
+               <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
                <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
-               <brocom:deregistered>nee</brocom:deregistered>
                <brocom:objectRegistrationTime>2017-12-15T09:59:45+01:00</brocom:objectRegistrationTime>
                <brocom:underReview>nee</brocom:underReview>
                <withPrehistory>nee</withPrehistory>
@@ -101,11 +93,7 @@
                <wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">kokerMetaal</wellHeadProtector>
                <wellCode>GMW07F018701</wellCode>
                <statusOverview>
-                  <tubeStatus>
-                     <tubeNumber>1</tubeNumber>
-                     <status>gebruiksklaar</status>
-                     <date>2017-12-15</date>
-                  </tubeStatus>
+                  <tubeStatus codeSpace="urn:bro:gmw:TubeStatus">gebruiksklaar</tubeStatus>
                </statusOverview>
                <diameterRange>
                   <smallestTubeTopDiameter uom="mm">32</smallestTubeTopDiameter>
@@ -118,7 +106,7 @@
             </GMW_C>
          </dispatchDocument>
          <dispatchDocument>
-            <GMW_C>
+            <GMW_C gml:id="BRO_0004">
                <brocom:broId>BRO_000000072732</brocom:broId>
                <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
