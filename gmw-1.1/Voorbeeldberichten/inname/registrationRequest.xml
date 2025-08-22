@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <registrationRequest 
 		xmlns="http://www.broservices.nl/xsd/isgmw/1.1" 
-		xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcom/1.1" 
+		xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1" 
 		xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
 		xmlns:gml="http://www.opengis.net/gml/3.2" 
 		xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -19,11 +19,11 @@
 			<initialFunction codeSpace="urn:bro:gmw:InitialFunction">stand</initialFunction>
 			<numberOfMonitoringTubes>1</numberOfMonitoringTubes>
 			<groundLevelStable>ja</groundLevelStable>
+			<wellStability codeSpace="urn:bro:gmw:WellStability">onbekend</wellStability>
+            <nitgCode>B07F0076</nitgCode>
 			<owner>27376655</owner>
 			<!-- NITGCode is alleen aanwezig wanneer de grondwatermonitoringput voor opname in de BRO geregistreerd was in de registratie DINO.-->
-            <nitgCode>B07F0076</nitgCode>
 			<maintenanceResponsibleParty>27376655</maintenanceResponsibleParty>
-			<wellStability codeSpace="urn:bro:gmw:WellStability">onbekend</wellStability>
 			<wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">geen</wellHeadProtector>
 
 			<wellConstructionDate>

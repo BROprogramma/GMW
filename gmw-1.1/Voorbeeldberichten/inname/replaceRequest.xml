@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <replaceRequest 
     xmlns="http://www.broservices.nl/xsd/isgmw/1.1" 
-    xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcom/1.1" 
+    xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1" 
     xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
     xmlns:gml="http://www.opengis.net/gml/3.2" 
     xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -10,22 +10,23 @@
     
     <brocom:requestReference>replace - GMW_Construction - 999. IMBRO - fictieve wijziging</brocom:requestReference>
     <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
-    <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
     <brocom:broId>GMW000000012345</brocom:broId>
+    <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+    <brocom:correctionReason codeSpace="urn:bro:gmw:CorrectionReason">eigenCorrectie</brocom:correctionReason>
     
     <sourceDocument>
         <GMW_Construction>
             <objectIdAccountableParty>B07F0076</objectIdAccountableParty>
-            <!-- NITGCode is alleen aanwezig wanneer de grondwatermonitoringput voor opname in de BRO geregistreerd was in de registratie DINO.-->
-            <nitgCode>B07F0076</nitgCode>
             <deliveryContext codeSpace="urn:bro:gmw:DeliveryContext">publiekeTaak</deliveryContext>
             <constructionStandard codeSpace="urn:bro:gmw:ConstructionStandard">RWSgwmon</constructionStandard>
             <initialFunction codeSpace="urn:bro:gmw:InitialFunction">stand</initialFunction>
             <numberOfMonitoringTubes>1</numberOfMonitoringTubes>
             <groundLevelStable>ja</groundLevelStable>
+            <wellStability codeSpace="urn:bro:gmw:WellStability">onbekend</wellStability>
+            <nitgCode>B07F0076</nitgCode>
+            <!-- NITGCode is alleen aanwezig wanneer de grondwatermonitoringput voor opname in de BRO geregistreerd was in de registratie DINO.-->
             <owner>27376655</owner>
             <maintenanceResponsibleParty>27376655</maintenanceResponsibleParty>
-            <wellStability codeSpace="urn:bro:gmw:WellStability">onbekend</wellStability>
             <wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">geen</wellHeadProtector>
 
             <wellConstructionDate>
