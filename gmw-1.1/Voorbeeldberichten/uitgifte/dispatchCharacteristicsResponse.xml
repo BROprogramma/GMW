@@ -11,7 +11,7 @@
          <numberOfDocuments>4</numberOfDocuments>
          <dispatchDocument>
             <GMW_C gml:id="BRO_0001">
-               <brocom:broId>BRO_000000072749</brocom:broId>
+               <brocom:broId>GMW000000072749</brocom:broId>
                <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
                <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
@@ -43,7 +43,7 @@
          </dispatchDocument>
          <dispatchDocument>
             <GMW_C gml:id="BRO_0002">
-               <brocom:broId>BRO_000000072725</brocom:broId>
+               <brocom:broId>GMW000000072725</brocom:broId>
                <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
                <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
@@ -75,7 +75,7 @@
          </dispatchDocument>
          <dispatchDocument>
             <GMW_C gml:id="BRO_0003">
-               <brocom:broId>BRO_000000072723</brocom:broId>
+               <brocom:broId>GMW000000072723</brocom:broId>
                <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
                <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
@@ -107,7 +107,7 @@
          </dispatchDocument>
          <dispatchDocument>
             <GMW_C gml:id="BRO_0004">
-               <brocom:broId>BRO_000000072732</brocom:broId>
+               <brocom:broId>GMW000000072732</brocom:broId>
                <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
                <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
