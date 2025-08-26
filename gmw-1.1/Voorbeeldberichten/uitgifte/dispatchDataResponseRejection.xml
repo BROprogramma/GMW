@@ -5,32 +5,33 @@
         xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
     <soap:Body>
         <dispatchDataResponse
-                xmlns="http://www.broservices.nl/xsd/dsgmw/1.1"
-                xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1" 
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:schemaLocation="http://www.broservices.nl/xsd/dsgmw/1.1 ../../XSD/dsgmw-messages.xsd">
+                xmlns:xlink="http://www.w3.org/1999/xlink" 
+      xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0" 
+      xmlns:gmwcommon="http://www.broservices.nl/xsd/gmwcommon/1.1" 
+      xmlns:gml="http://www.opengis.net/gml/3.2" 
+      xmlns="http://www.broservices.nl/xsd/dsgmw/1.1">
             <!--Disclaimer: dit voorbeeldbericht is gemaakt voor versie 1.1 van de gmw en valideert tegen de XSD van de uitgifteservice.
                 Het is niet gevalideerd door de uitgifteservice en de inhoud is fictief en vaktechnisch/inhoudelijk niet voorbeeldig.
                 xsi:schemaLocation="http://www.broservices.nl/xsd/dsgmw/1.1 https://schema.broservices.nl/xsd/dsgmw/1.1/dsgmw-messages.xsd"/>
             -->
-            <gmwcom:responseType>rejection</gmwcom:responseType>
-            <gmwcom:requestReference>gmw uitgifte 1</gmwcom:requestReference>
+            <brocom:responseType>rejection</brocom:responseType>
+            <gmwcommon:requestReference>gmw uitgifte 1</gmwcommon:requestReference>
             <!-- optional. Alleen aanwezig als responseType = rejection. -->
-            <gmwcom:rejectionTime>2023-08-15T13:16:17+02:00</gmwcom:rejectionTime>
+            <gmwcommon:rejectionTime>2023-08-15T13:16:17+02:00</gmwcommon:rejectionTime>
             <!-- optional. Alleen aanwezig als responseType = dispatch.
-            <gmwcom:dispatchTime>2023-01-14T10:55:00+01:00</gmwcom:dispatchTime>
+            <gmwcommon:dispatchTime>2023-01-14T10:55:00+01:00</gmwcommon:dispatchTime>
             -->
             <!-- optional. Alleen aanwezig als responseType = rejection. -->
-            <gmwcom:rejectionReason>Dit registratieobject bestaat niet.</gmwcom:rejectionReason>
+            <gmwcommon:rejectionReason>Dit registratieobject bestaat niet.</gmwcommon:rejectionReason>
             <!-- 0 or more repetitions: Optioneel alleen aanwezig als responseType = rejection.
-            <gmwcom:criterionError>
-              <gmwcom:sequenceNumber>1</gmwcom:sequenceNumber>
-              <gmwcom:specification>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</gmwcom:specification>
-            </gmwcom:criterionError>
-            <gmwcom:criterionError>
-                <gmwcom:sequenceNumber>2</gmwcom:sequenceNumber>
-                <gmwcom:specification>Vestibulum eget ultrices metus, eu interdum urna.</gmwcom:specification>
-            </gmwcom:criterionError>
+            <gmwcommon:criterionError>
+              <gmwcommon:sequenceNumber>1</gmwcommon:sequenceNumber>
+              <gmwcommon:specification>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</gmwcommon:specification>
+            </gmwcommon:criterionError>
+            <gmwcommon:criterionError>
+                <gmwcommon:sequenceNumber>2</gmwcommon:sequenceNumber>
+                <gmwcommon:specification>Vestibulum eget ultrices metus, eu interdum urna.</gmwcommon:specification>
+            </gmwcommon:criterionError>
             -->
             <!-- optional. Alleen aanwezig als responseType = dispatch.
             <gmn:dispatchDocument>...</gmn:dispatchDocument>
