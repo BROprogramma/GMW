@@ -1,192 +1,119 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
-  <soap:Body>
-    <dispatchDataResponse xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0" xmlns:gmwcommon="http://www.broservices.nl/xsd/gmwcommon/1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.broservices.nl/xsd/dsgmw/1.1" xsi:schemaLocation="http://www.broservices.nl/xsd/dsgmw/1.1 https://raw.githubusercontent.com/BROprogramma/GMW/.../dsgmw-messages.xsd">
-      <!--Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de innameservice.
-                Het is niet gevalideert door de innameservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
-                xsi:schemaLocation="http://www.broservices.nl/xsd/dsGMW/1.0 https://schema.broservices.nl/xsd/dsGMW/1.0/dsGMW-messages.xsd">
-            -->
-      <brocom:responseType>dispatch</brocom:responseType>
-      <brocom:requestReference>uitgifteGMW</brocom:requestReference>
-      <!-- Optional: only present if responseType is rejection.
-            <brocom:rejectionTime></brocom:rejectionTime>
-            -->
-      <!-- Optional: only present if responseType is dispatch. -->
-      <brocom:dispatchTime>2022-08-05T09:58:21+02:00</brocom:dispatchTime>
-      <!-- Optional: only present if responseType is rejection.
-            <brocom:rejectionReason>...</brocom:rejectionReason>
-            -->
-      <dispatchDocument>
-        <GMW_PPO_DP_001 gml:id="id_0001">
-          <brocom:broId>GMW123456789012</brocom:broId>
-          <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
-          <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
-          <owner>
-            <!-- You have a CHOICE of the next 2 items at this level
-                        <brocom:chamberOfCommerceNumber>?</brocom:chamberOfCommerceNumber>
-                        <brocom:europeanCompanyRegistrationNumber>?</brocom:europeanCompanyRegistrationNumber>
-                        -->
-            <brocom:chamberOfCommerceNumber>55667372</brocom:chamberOfCommerceNumber>
-          </owner>
-          <sourceReference>
-            <!-- You have a CHOICE of the next 2 items at this level
-                        <brocom:chamberOfCommerceNumber>?</brocom:chamberOfCommerceNumber>
-                        <brocom:europeanCompanyRegistrationNumber>?</brocom:europeanCompanyRegistrationNumber>
-                        -->
-            <brocom:chamberOfCommerceNumber>55667372</brocom:chamberOfCommerceNumber>
-          </sourceReference>
-          <registrationHistory>
-            <brocom:objectRegistrationTime>2021-12-23T16:57:49+02:00</brocom:objectRegistrationTime>
-            <brocom:registrationStatus codeSpace="urn:bro:RegistrationStatus">voltooid</brocom:registrationStatus>
-            <brocom:latestAdditionTime>2025-10-17T09:19:21+01:00</brocom:latestAdditionTime>
-            <brocom:registrationCompletionTime>2025-11-05T09:19:21+01:00</brocom:registrationCompletionTime>
-            <brocom:corrected>nee</brocom:corrected>
-            <brocom:underReview>nee</brocom:underReview>
-            <brocom:deregistered>nee</brocom:deregistered>
-            <brocom:reregistered>nee</brocom:reregistered>
-          </registrationHistory>
-          <lifespan>
-            <startDate>
-              <!-- You have a CHOICE of the next 4 items at this level
-                            <brocom:date>2021-11-29</brocom:date>
-                            <brocom:yearMonth>2021-11</brocom:yearMonth>
-                            <brocom:year>2021</brocom:year>
-                            <brocom:voidReason>onbekend</brocom:voidReason>
-                            -->
-              <brocom:date>2021-11-29</brocom:date>
-            </startDate>
-            <!-- Optional: value set by event with name mijnbouwconstructieBeeindigd. -->
-            <endDate>
-              <!-- You have a CHOICE of the next 4 items at this level
-                            <brocom:date>2025-11-05</brocom:date>
-                            <brocom:yearMonth>2025-11</brocom:yearMonth>
-                            <brocom:year>2025</brocom:year>
-                            <brocom:voidReason>onbekend</brocom:voidReason>
-                            -->
-              <brocom:date>2025-11-05</brocom:date>
-            </endDate>
-          </lifespan>
-          <constructionHistory>
-            <!-- 1 or more repetitions: -->
-            <event>
-              <date>
-                <brocom:date>2021-11-29</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">beschermconstructieVeranderd</name>
-            </event>
-            <event>
-              <date>
-              <brocom:date>2022-01-05</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">buisdeelIngeplaatst</name>
-              <!-- Optional: present with sourceDocument GMW_ -->
-              <identifier>2</identifier>
-            </event>
-            <event>
-              <date>
-              <brocom:date>2022-06-01</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">buisIngekort</name>
-            </event>
-            <event>
-              <date>
-                <brocom:date>2025-10-17</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">buisOpgelengd</name>
-            </event>
-            <event>
-              <date>
-                <brocom:date>2025-11-05</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">buisstatusVeranderd</name>
-            </event>
-            <event>
-              <date>
-                <brocom:date>2022-06-01</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">eigenaarVeranderd</name>
-            </event>
-            <event>
-              <date>
-                <brocom:date>2025-10-17</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">elektrodestatusVeranderd</name>
-            </event>
-            <event>
-              <date>
-                <brocom:date>2025-11-05</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">maaiveldVerlegd</name>
-            </event>
-            <event>
-              <date>
-                <brocom:date>2025-10-17</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">nieuweBepalingMaaiveld</name>
-            </event>
-            <event>
-              <date>
-                <brocom:date>2025-11-05</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">nieuweBepalingPosities</name>
-            </event>
-            <event>
-              <date>
-                <brocom:date>2025-10-17</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">nieuweInmetingMaaiveld</name>
-            </event>
-            <event>
-              <date>
-                              <brocom:date>2025-11-05</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">nieuweInmetingPosities</name>
-            </event>
-            <event>
-              <date>
-                <brocom:date>2025-10-17</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">onderhouderVeranderd</name>
-            </event>
-            <event>
-              <date>
-                <brocom:date>2025-11-05</brocom:date>
-              </date>
-              <name codeSpace="urn:bro:gmw:EventName">verkenningenAchterafRegistreren</name>
-            </event>
-          </constructionHistory>
-          <location>
-            <gml:Point gml:id="id_0002" srsDimension="2" srsName="urn:ogc:def:crs:EPSG::28992">
-              <gml:pos>193050.0 320700.0</gml:pos>
-            </gml:Point>
-          </location>
-          <horizontalPositioning>
-            <!-- Optional: -->
-            <gmwcommon:horizontalPositioningDate>2021-11-18</gmwcommon:horizontalPositioningDate>
-            <!-- Optional: -->
-            <gmwcommon:horizontalPositioningMethod codeSpace="urn:bro:gmw:HorizontalPositioningMethod">DGPS50tot200cm</gmwcommon:horizontalPositioningMethod>
-            <!-- Optional: not present in dispatchDocument GMW_PPO_xxx or GMW_PO_xxx
-                        -->
-          </horizontalPositioning>
-          <standardizedLocation>
-            <location>
-              <gml:Point gml:id="id_0003" srsDimension="2" srsName="urn:ogc:def:crs:EPSG::4258">
-                <gml:pos>50.8748396 5.9277707</gml:pos>
-              </gml:Point>
-            </location>
-            <coordinateTransformation codeSpace="urn:bro:gmw:CoordinateTransformation">RDNAPTRANS2018</coordinateTransformation>
-          </standardizedLocation>
-          <deliveredVerticalPosition>
-            <gmwcommon:localVerticalReferencePoint codeSpace="urn:bro:gmw:LocalVerticalReferencePoint">NAP</gmwcommon:localVerticalReferencePoint>
-            <gmwcommon:offset uom="m">0.000</gmwcommon:offset>
-            <gmwcommon:verticalDatum codeSpace="urn:bro:gmw:VerticalDatum">NAP</gmwcommon:verticalDatum>
-            <!-- Optional: -->
-            <gmwcommon:verticalPositioningDate>2021-11-19</gmwcommon:verticalPositioningDate>
-            <gmwcommon:originalOffset uom="m">86.123</gmwcommon:originalOffset>
-            <gmwcommon:originalVerticalReferencePoint codeSpace="urn:bro:gmw:OriginalVerticalReferencePoint">maaiveld</gmwcommon:originalVerticalReferencePoint>
-          </deliveredVerticalPosition>
-        </GMW_PPO_DP_001>
-      </dispatchDocument>
-    </dispatchDataResponse>
-  </soap:Body>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <dispatchDataResponse xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0" xmlns:gmwcommon="http://www.broservices.nl/xsd/gmwcommon/1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.broservices.nl/xsd/dsgmw/1.1">
+         <brocom:responseType>dispatch</brocom:responseType>
+         <brocom:requestReference>?</brocom:requestReference>
+         <brocom:dispatchTime>2017-12-18T15:26:14+01:00</brocom:dispatchTime>
+         <dispatchDocument>
+            <GMW_PPO_DP gml:id="BRO_0003">
+               <brocom:broId>GMW000000003660</brocom:broId>
+               <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
+               <brocom:objectIdAccountableParty>B07F0076</brocom:objectIdAccountableParty>
+               <brocom:deliveryResponsibleParty>27376655</brocom:deliveryResponsibleParty>
+               <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+               <withPrehistory>nee</withPrehistory>
+               <deliveryContext codeSpace="urn:bro:gmw:DeliveryContext">publiekeTaak</deliveryContext>
+               <constructionStandard codeSpace="urn:bro:gmw:ConstructionStandard">RWSgwmon</constructionStandard>
+               <initialFunction codeSpace="urn:bro:gmw:InitialFunction">stand</initialFunction>
+               <removed>nee</removed>
+               <numberOfMonitoringTubes>1</numberOfMonitoringTubes>
+               <groundLevelStable>ja</groundLevelStable>
+               <nitgCode>B07F0076</nitgCode>
+               <owner>27376655</owner>
+               <maintenanceResponsibleParty>27376655</maintenanceResponsibleParty>
+               <wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">geen</wellHeadProtector>
+               <deliveredLocation>
+                  <gmwcommon:location srsName="urn:ogc:def:crs:EPSG::28992" gml:id="BRO_0001">
+                     <gml:pos>134750.000 477800.000</gml:pos>
+                  </gmwcommon:location>
+                  <gmwcommon:horizontalPositioningMethod codeSpace="urn:bro:gmw:HorizontalPositioningMethod">DGPS50tot200cm</gmwcommon:horizontalPositioningMethod>
+               </deliveredLocation>
+               <deliveredVerticalPosition>
+                  <gmwcommon:localVerticalReferencePoint codeSpace="urn:bro:gmw:LocalVerticalReferencePoint">NAP</gmwcommon:localVerticalReferencePoint>
+                  <gmwcommon:offset uom="m">0.000</gmwcommon:offset>
+                  <gmwcommon:verticalDatum codeSpace="urn:bro:gmw:VerticalDatum">NAP</gmwcommon:verticalDatum>
+                  <gmwcommon:groundLevelPosition uom="m">3.180</gmwcommon:groundLevelPosition>
+                  <gmwcommon:groundLevelPositioningMethod codeSpace="urn:bro:gmw:GroundLevelPositioningMethod">RTKGPS10tot20cm</gmwcommon:groundLevelPositioningMethod>
+               </deliveredVerticalPosition>
+               <standardizedLocation>
+                  <brocom:location srsName="urn:ogc:def:crs:EPSG::4258" gml:id="BRO_0002">
+                     <gml:pos>52.287820210 5.090415500</gml:pos>
+                  </brocom:location>
+                  <brocom:coordinateTransformation codeSpace="urn:bro:CoordinateTransformation">RDNAPTRANS2008</brocom:coordinateTransformation>
+               </standardizedLocation>
+               <registrationHistory>
+                  <brocom:objectRegistrationTime>2017-06-22T12:07:22+01:00</brocom:objectRegistrationTime>
+                  <brocom:registrationStatus codeSpace="urn:bro:RegistrationStatus">voltooid</brocom:registrationStatus>
+                  <brocom:registrationCompletionTime>2017-06-22T12:07:23+01:00</brocom:registrationCompletionTime>
+                  <brocom:corrected>nee</brocom:corrected>
+                  <brocom:underReview>nee</brocom:underReview>
+                  <brocom:deregistered>nee</brocom:deregistered>
+                  <brocom:reregistered>nee</brocom:reregistered>
+               </registrationHistory>
+               <wellHistory>
+                  <wellConstructionDate>
+                     <brocom:date>2015-02-08</brocom:date>
+                  </wellConstructionDate>
+                  <wellRemovalDate>
+                     <brocom:date>2017-03-01</brocom:date>
+                  </wellRemovalDate>
+                  <intermediateEvent>
+                     <eventName codeSpace="urn:bro:gmw:EventName">putOpgeruimd</eventName>
+                     <eventDate>
+                        <brocom:date>2017-03-01</brocom:date>
+                     </eventDate>
+                     <eventData/>
+                  </intermediateEvent>
+               </wellHistory>
+               <monitoringTube>
+                  <tubeNumber>1</tubeNumber>
+                  <tubeType codeSpace="urn:bro:gmw:TubeType">standaardbuis</tubeType>
+                  <artesianWellCapPresent>nee</artesianWellCapPresent>
+                  <sedimentSumpPresent>ja</sedimentSumpPresent>
+                  <numberOfGeoOhmCables>1</numberOfGeoOhmCables>
+                  <tubeTopDiameter uom="mm">32</tubeTopDiameter>
+                  <variableDiameter>nee</variableDiameter>
+                  <tubeStatus codeSpace="urn:bro:gmw:TubeStatus">gebruiksklaar</tubeStatus>
+                  <tubeTopPosition uom="m">3.420</tubeTopPosition>
+                  <tubeTopPositioningMethod codeSpace="urn:bro:gmw:TubeTopPositioningMethod">RTKGPS10tot20cm</tubeTopPositioningMethod>
+                  <tubePartInserted>nee</tubePartInserted>
+                  <tubeInUse>onbekend</tubeInUse>
+                  <materialUsed>
+                     <gmwcommon:tubePackingMaterial codeSpace="urn:bro:gmw:TubePackingMaterial">bentoniet</gmwcommon:tubePackingMaterial>
+                     <gmwcommon:tubeMaterial codeSpace="urn:bro:gmw:TubeMaterial">peHighDensity</gmwcommon:tubeMaterial>
+                     <gmwcommon:glue codeSpace="urn:bro:gmw:Glue">geen</gmwcommon:glue>
+                  </materialUsed>
+                  <screen>
+                     <screenLength uom="m">1.000</screenLength>
+                     <sockMaterial codeSpace="urn:bro:gmw:SockMaterial">geen</sockMaterial>
+                     <screenTopPosition uom="m">-3.220</screenTopPosition>
+                     <screenBottomPosition uom="m">-4.220</screenBottomPosition>
+                  </screen>
+                  <plainTubePart>
+                     <gmwcommon:plainTubePartLength uom="m">6.640</gmwcommon:plainTubePartLength>
+                  </plainTubePart>
+                  <sedimentSump>
+                     <gmwcommon:sedimentSumpLength uom="m">0.500</gmwcommon:sedimentSumpLength>
+                  </sedimentSump>
+                  <geoOhmCable>
+                     <cableNumber>1</cableNumber>
+                     <cableInUse>onbekend</cableInUse>
+                     <electrode>
+                        <gmwcommon:electrodeNumber>1</gmwcommon:electrodeNumber>
+                        <gmwcommon:electrodePackingMaterial codeSpace="urn:bro:gmw:ElectrodePackingMaterial">zand</gmwcommon:electrodePackingMaterial>
+                        <gmwcommon:electrodeStatus codeSpace="urn:bro:gmw:ElectrodeStatus">gebruiksklaar</gmwcommon:electrodeStatus>
+                        <gmwcommon:electrodePosition uom="m">-3.980</gmwcommon:electrodePosition>
+                     </electrode>
+                     <electrode>
+                        <gmwcommon:electrodeNumber>2</gmwcommon:electrodeNumber>
+                        <gmwcommon:electrodePackingMaterial codeSpace="urn:bro:gmw:ElectrodePackingMaterial">zand</gmwcommon:electrodePackingMaterial>
+                        <gmwcommon:electrodeStatus codeSpace="urn:bro:gmw:ElectrodeStatus">gebruiksklaar</gmwcommon:electrodeStatus>
+                        <gmwcommon:electrodePosition uom="m">-3.980</gmwcommon:electrodePosition>
+                     </electrode>
+                  </geoOhmCable>
+               </monitoringTube>
+            </GMW_PPO_DP>
+         </dispatchDocument>
+      </dispatchDataResponse>
+   </soap:Body>
 </soap:Envelope>

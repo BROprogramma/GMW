@@ -1,30 +1,22 @@
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
    <soap:Body>
-      <dispatchCharacteristicsResponse xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0" xmlns:gmwcommon="http://www.broservices.nl/xsd/gmwcommon/1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.broservices.nl/xsd/dsgmw/1.1">
+      <dispatchCharacteristicsResponse xmlns:xlink="http://www.w3.org/1999/xlink" 
+      xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0" 
+      xmlns:gmwcommon="http://www.broservices.nl/xsd/gmwcommon/1.1" 
+      xmlns:gml="http://www.opengis.net/gml/3.2" 
+      xmlns="http://www.broservices.nl/xsd/dsgmw/1.1">
          <brocom:responseType>dispatch</brocom:responseType>
          <brocom:requestReference>id_12132</brocom:requestReference>
          <brocom:dispatchTime>2017-12-18T15:41:44+01:00</brocom:dispatchTime>
          <numberOfDocuments>4</numberOfDocuments>
          <dispatchDocument>
-            <GMW_C>
-               <brocom:broId>GMW000000072729</brocom:broId>
+            <GMW_C gml:id="BRO_0001">
+               <brocom:broId>GMW000000072749</brocom:broId>
+               <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
                <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
-               <brocom:deregistered>nee</brocom:deregistered>
                <brocom:objectRegistrationTime>2017-12-15T09:59:45+01:00</brocom:objectRegistrationTime>
                <brocom:underReview>nee</brocom:underReview>
-               <wellLocation>
-               <brocom:standardizedLocation srsName="urn:ogc:def:crs:EPSG::4258" gml:id="BRO_0001">
-                  <gml:pos>52.155172900 5.387203660</gml:pos>
-               </brocom:standardizedLocation>
-               <brocom:deliveredLocation srsName="urn:ogc:def:crs:EPSG::28992" gml:id="BRO_0002">
-                  <gml:pos>155000.000 463000.000</gml:pos>
-               </brocom:deliveredLocation>
-               <localVerticalReferencePoint codeSpace="urn:bro:gmw:LocalVerticalReferencePoint">NAP</localVerticalReferencePoint>
-               <offset uom="m">0.000</offset>
-               <verticalDatum codeSpace="urn:bro:gmw:VerticalDatum">NAP</verticalDatum>
-               <groundLevelPosition uom="m">0.000</groundLevelPosition>
-               </wellLocation>
                <withPrehistory>nee</withPrehistory>
                <owner>27376655</owner>
                <constructionStandard codeSpace="urn:bro:gmw:ConstructionStandard">NEN5104</constructionStandard>
@@ -37,11 +29,7 @@
                <wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">kokerMetaal</wellHeadProtector>
                <wellCode>GMW07F018701</wellCode>
                <statusOverview>
-                  <tubeStatus>
-                     <tubeNumber>1</tubeNumber>
-                     <status>gebruiksklaar</status>
-                     <date>2017-12-15</date>
-                  </tubeStatus>
+                  <tubeStatus codeSpace="urn:bro:gmw:TubeStatus">gebruiksklaar</tubeStatus>
                </statusOverview>
                <diameterRange>
                   <smallestTubeTopDiameter uom="mm">32</smallestTubeTopDiameter>
@@ -54,25 +42,13 @@
             </GMW_C>
          </dispatchDocument>
          <dispatchDocument>
-            <GMW_C>
+            <GMW_C gml:id="BRO_0002">
                <brocom:broId>GMW000000072725</brocom:broId>
+               <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
                <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
-               <brocom:deregistered>nee</brocom:deregistered>
                <brocom:objectRegistrationTime>2017-12-15T09:59:45+01:00</brocom:objectRegistrationTime>
                <brocom:underReview>nee</brocom:underReview>
-               <wellLocation>
-               <brocom:standardizedLocation srsName="urn:ogc:def:crs:EPSG::4258" gml:id="BRO_0001">
-                  <gml:pos>52.155172900 5.387203660</gml:pos>
-               </brocom:standardizedLocation>
-               <brocom:deliveredLocation srsName="urn:ogc:def:crs:EPSG::28992" gml:id="BRO_0002">
-                  <gml:pos>155000.000 463000.000</gml:pos>
-               </brocom:deliveredLocation>
-               <localVerticalReferencePoint codeSpace="urn:bro:gmw:LocalVerticalReferencePoint">NAP</localVerticalReferencePoint>
-               <offset uom="m">0.000</offset>
-               <verticalDatum codeSpace="urn:bro:gmw:VerticalDatum">NAP</verticalDatum>
-               <groundLevelPosition uom="m">0.000</groundLevelPosition>
-               </wellLocation>
                <withPrehistory>nee</withPrehistory>
                <owner>27376655</owner>
                <constructionStandard codeSpace="urn:bro:gmw:ConstructionStandard">NEN5104</constructionStandard>
@@ -85,11 +61,7 @@
                <wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">kokerMetaal</wellHeadProtector>
                <wellCode>GMW07F018701</wellCode>
                <statusOverview>
-                  <tubeStatus>
-                     <tubeNumber>1</tubeNumber>
-                     <status>gebruiksklaar</status>
-                     <date>2017-12-15</date>
-                  </tubeStatus>
+                  <tubeStatus codeSpace="urn:bro:gmw:TubeStatus">gebruiksklaar</tubeStatus>
                </statusOverview>
                <diameterRange>
                   <smallestTubeTopDiameter uom="mm">32</smallestTubeTopDiameter>
@@ -102,25 +74,13 @@
             </GMW_C>
          </dispatchDocument>
          <dispatchDocument>
-            <GMW_C>
+            <GMW_C gml:id="BRO_0003">
                <brocom:broId>GMW000000072723</brocom:broId>
+               <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
                <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
-               <brocom:deregistered>nee</brocom:deregistered>
                <brocom:objectRegistrationTime>2017-12-15T09:59:45+01:00</brocom:objectRegistrationTime>
                <brocom:underReview>nee</brocom:underReview>
-               <wellLocation>
-               <brocom:standardizedLocation srsName="urn:ogc:def:crs:EPSG::4258" gml:id="BRO_0001">
-                  <gml:pos>52.155172900 5.387203660</gml:pos>
-               </brocom:standardizedLocation>
-               <brocom:deliveredLocation srsName="urn:ogc:def:crs:EPSG::28992" gml:id="BRO_0002">
-                  <gml:pos>155000.000 463000.000</gml:pos>
-               </brocom:deliveredLocation>
-               <localVerticalReferencePoint codeSpace="urn:bro:gmw:LocalVerticalReferencePoint">NAP</localVerticalReferencePoint>
-               <offset uom="m">0.000</offset>
-               <verticalDatum codeSpace="urn:bro:gmw:VerticalDatum">NAP</verticalDatum>
-               <groundLevelPosition uom="m">0.000</groundLevelPosition>
-               </wellLocation>
                <withPrehistory>nee</withPrehistory>
                <owner>27376655</owner>
                <constructionStandard codeSpace="urn:bro:gmw:ConstructionStandard">NEN5104</constructionStandard>
@@ -133,11 +93,7 @@
                <wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">kokerMetaal</wellHeadProtector>
                <wellCode>GMW07F018701</wellCode>
                <statusOverview>
-                  <tubeStatus>
-                     <tubeNumber>1</tubeNumber>
-                     <status>gebruiksklaar</status>
-                     <date>2017-12-15</date>
-                  </tubeStatus>
+                  <tubeStatus codeSpace="urn:bro:gmw:TubeStatus">gebruiksklaar</tubeStatus>
                </statusOverview>
                <diameterRange>
                   <smallestTubeTopDiameter uom="mm">32</smallestTubeTopDiameter>
@@ -150,7 +106,7 @@
             </GMW_C>
          </dispatchDocument>
          <dispatchDocument>
-            <GMW_C>
+            <GMW_C gml:id="BRO_0004">
                <brocom:broId>GMW000000072732</brocom:broId>
                <brocom:deregistered>nee</brocom:deregistered>
                <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>

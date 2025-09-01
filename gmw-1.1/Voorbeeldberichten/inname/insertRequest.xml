@@ -2,19 +2,35 @@
 <insertRequest
     xmlns="http://www.broservices.nl/xsd/isgmw/1.1"
     xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1"
+    xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw/1.1 https://schema.broservices.nl/xsd/isgmw/1.1/isgmw-messages.xsd">
     
-    <gmwcom:requestReference>verzoek_1c</gmwcom:requestReference>
-    <gmwcom:deliveryAccountableParty>789654123</gmwcom:deliveryAccountableParty>
-    <gmwcom:qualityRegime>IMBRO</gmwcom:qualityRegime>
+    <brocom:requestReference>verzoek_1c</brocom:requestReference>
+    <brocom:deliveryAccountableParty>789654123</brocom:deliveryAccountableParty>
+    <brocom:broId>gmw000000012345</brocom:broId>
+    <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+    <correctionReason codeSpace="urn:bro:gmw:CorrectionReason">eigenCorrectie</correctionReason>
+
     <sourceDocument>
-        <gmwcom:GMW_ElectrodeStatus>
-                <!-- Fictieve voorbeelddata, moet inhoudelijk juist ingevuld worden -->
-            <gmwcom:numberOfElectrodesChanged>1</gmwcom:numberOfElectrodesChanged>
-            <gmwcom:broId>gmw000000012345</gmwcom:broId>
-            <gmwcom:deliveryContext>nieuw</gmwcom:deliveryContext>
-            <gmwcom:eventDate>2024-02-06</gmwcom:eventDate>
-        </gmwcom:GMW_ElectrodeStatus>
+        <GMW_ElectrodeStatus>
+            <!-- Fictieve voorbeelddata, moet inhoudelijk juist ingevuld worden -->
+            <numberOfElectrodesChanged>2</numberOfElectrodesChanged>
+            <eventDate>
+                <brocom:date>2024-02-06</brocom:date>
+            </eventDate>
+            <electrode>
+                <isgmw:cableNumber>1</isgmw:cableNumber> 
+                <isgmw:electrodeNumber>123</isgmw:electrodeNumber>
+                <isgmw:tubeNumber>1</isgmw:tubeNumber>
+                <isgmw:electrodeStatus codeSpace="urn:bro:gmw:ElectrodeStatus">gebruiksklaar</isgmw:electrodeStatus>
+            </electrode>
+            <electrode>
+                <cableNumber>2</cableNumber> 
+                <electrodeNumber>1234</electrodeNumber>
+                <tubeNumber>1</tubeNumber>
+                <electrodeStatus codeSpace="urn:bro:gmw:ElectrodeStatus">gebruiksklaar</electrodeStatus>
+            </electrode>
+        </GMW_ElectrodeStatus>
     </sourceDocument>
 </insertRequest>

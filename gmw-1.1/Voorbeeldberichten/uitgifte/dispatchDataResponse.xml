@@ -16,27 +16,18 @@
                     <brocom:objectIdAccountableParty>B07F0076</brocom:objectIdAccountableParty>
                     <brocom:deliveryResponsibleParty>27376655</brocom:deliveryResponsibleParty>
                     <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
-                    <brocom:deregistered>nee</brocom:deregistered>
-                    <brocom:objectRegistrationTime>2017-06-22T12:07:22+01:00</brocom:objectRegistrationTime>
-                    <brocom:underReview>nee</brocom:underReview>
+
                     <withPrehistory>nee</withPrehistory>
-                    <owner>27376655</owner>
+                    <deliveryContext codeSpace="urn:bro:gmw:DeliveryContext">publiekeTaak</deliveryContext>
                     <constructionStandard codeSpace="urn:bro:gmw:ConstructionStandard">RWSgwmon</constructionStandard>
                     <initialFunction codeSpace="urn:bro:gmw:InitialFunction">stand</initialFunction>
                     <removed>nee</removed>
                     <numberOfMonitoringTubes>1</numberOfMonitoringTubes>
-                    <wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">geen</wellHeadProtector>
-                    <deliveryContext codeSpace="urn:bro:gmw:DeliveryContext">publiekeTaak</deliveryContext>
-                    <nitgCode>B07F0076</nitgCode>
-                    <maintenanceResponsibleParty>27376655</maintenanceResponsibleParty>
                     <groundLevelStable>ja</groundLevelStable>
-                    <standardizedLocation>
-                        <brocom:location srsName="urn:ogc:def:crs:EPSG::4258"
-                                        gml:id="BRO_0002">
-                            <gml:pos>52.287820210 5.090415500</gml:pos>
-                        </brocom:location>
-                        <brocom:coordinateTransformation codeSpace="urn:bro:CoordinateTransformation">RDNAPTRANS2008</brocom:coordinateTransformation>
-                    </standardizedLocation>
+                    <nitgCode>B07F0076</nitgCode>
+                    <owner>27376655</owner>
+                    <maintenanceResponsibleParty>27376655</maintenanceResponsibleParty>
+                    <wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">geen</wellHeadProtector>
                     <deliveredLocation>
                         <gmwcommon:location srsName="urn:ogc:def:crs:EPSG::28992"
                                             gml:id="BRO_0001">
@@ -51,10 +42,20 @@
                         <gmwcommon:groundLevelPosition uom="m">3.180</gmwcommon:groundLevelPosition>
                         <gmwcommon:groundLevelPositioningMethod codeSpace="urn:bro:gmw:GroundLevelPositioningMethod">RTKGPS10tot20cm</gmwcommon:groundLevelPositioningMethod>
                     </deliveredVerticalPosition>
+                    <standardizedLocation>
+                        <brocom:location srsName="urn:ogc:def:crs:EPSG::4258"
+                                        gml:id="BRO_0002">
+                            <gml:pos>52.287820210 5.090415500</gml:pos>
+                        </brocom:location>
+                        <brocom:coordinateTransformation codeSpace="urn:bro:CoordinateTransformation">RDNAPTRANS2008</brocom:coordinateTransformation>
+                    </standardizedLocation>
                     <registrationHistory>
+                        <brocom:objectRegistrationTime>2017-06-22T12:07:22+01:00</brocom:objectRegistrationTime>
                         <brocom:registrationStatus codeSpace="urn:bro:RegistrationStatus">voltooid</brocom:registrationStatus>
                         <brocom:registrationCompletionTime>2017-06-22T12:07:23+01:00</brocom:registrationCompletionTime>
                         <brocom:corrected>nee</brocom:corrected>
+                        <brocom:underReview>nee</brocom:underReview>
+                        <brocom:deregistered>nee</brocom:deregistered>
                         <brocom:reregistered>nee</brocom:reregistered>
                     </registrationHistory>
                     <wellHistory>

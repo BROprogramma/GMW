@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<soap:Envelope 
-        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
    <soap:Body>
-      <dispatchCharacteristicsRequest
-                xmlns:dsgmw ="http://www.broservices.nl/xsd/dsgmw/1.1"
-                xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1"
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
-                xmlns:gml="http://www.opengis.net/gml/3.2"
-                xsi:schemaLocation="http://www.broservices.nl/xsd/dsgmw/1.1 ../../XSD/dsgmw-messages.xsd">
+      <dsgmw:dispatchCharacteristicsRequest xmlns:xlink="http://www.w3.org/1999/xlink" 
+      xmlns:dsgmw="http://www.broservices.nl/xsd/dsgmw/1.1"
+      xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0" 
+      xmlns:gmwcommon="http://www.broservices.nl/xsd/gmwcommon/1.1" 
+      xmlns:gml="http://www.opengis.net/gml/3.2" 
+      xmlns="http://www.broservices.nl/xsd/dsgmw/1.1">
          <dsgmw:requestReference>?</dsgmw:requestReference>
          <dsgmw:criteria>
             <!--Optional:-->
@@ -20,7 +16,7 @@
                   <brocom:radius uom="km">1</brocom:radius>
                </brocom:enclosingCircle>
             </brocom:area>
-          </dsgmw:criteria>
-      </dispatchCharacteristicsRequest>
+         </dsgmw:criteria>
+      </dsgmw:dispatchCharacteristicsRequest>
    </soap:Body>
 </soap:Envelope>
