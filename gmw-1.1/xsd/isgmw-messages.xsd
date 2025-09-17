@@ -20,17 +20,14 @@
               schemaLocation="brocommon.xsd"/>
    <xs:import namespace="http://www.opengis.net/gml/3.2"
               schemaLocation="gml-profile.xsd"/>
-   <!-- <xs:import namespace="http://www.broservices.nl/xsd/gmwcommon/1.1"
-              schemaLocation="https://schema.broservices.nl/xsd/gmwcommon/1.2/gmwcommon.xsd"/>
-   <xs:import namespace="http://www.broservices.nl/xsd/brocommon//3.0"
-              schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
+<!--   <xs:import namespace="http://www.broservices.nl/xsd/gmwcommon/1.1"
+              schemaLocation="https://schema.broservices.nl/xsd/gmwcommon/1.1/gmwcommon.xsd"/>
    <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0"
               schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
-   <xs:import namespace="http://www.broservices.nl/xsd/dsgmw-messages/1.0"
-              schemaLocation="https://schema.broservices.nl/xsd/dsgmw/1.1/dsgmw-messages.xsd"/>
    <xs:import namespace="http://www.opengis.net/gml/3.2"
               schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
               -->
+              
    <xs:element name="intakeResponse" type="brocom:IntakeResponseType"/>
    <xs:element name="parseFault" type="brocom:ParseFaultType"/>
    <xs:element name="registrationRequest" type="isgmw:RegistrationRequestType">
@@ -58,6 +55,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
+               <xs:element name="correctionReason" type="isgmw:CorrectionReasonType" minOccurs="1" maxOccurs="1"/>
                <xs:element name="sourceDocument" type="isgmw:SourceDocumentType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
@@ -73,7 +71,9 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
+               <xs:element name="correctionReason" type="isgmw:CorrectionReasonType" minOccurs="1" maxOccurs="1"/>
                <xs:element name="sourceDocument" type="isgmw:SourceDocumentType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="dateToBeCorrected" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1" />
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -88,6 +88,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
+               <xs:element name="correctionReason" type="isgmw:CorrectionReasonType" minOccurs="1" maxOccurs="1"/>
                <xs:element name="sourceDocument" type="isgmw:SourceDocumentType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
@@ -98,6 +99,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="brocom:CorrectionRequestType">
             <xs:sequence>
+               <xs:element name="correctionReason" type="isgmw:CorrectionReasonType" minOccurs="1" maxOccurs="1"/>
                <xs:element name="sourceDocument" type="isgmw:SourceDocumentType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
          </xs:extension>
@@ -108,7 +110,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
          <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
                <xs:element name="constructionStandard"
-                           type="gmwcom:ConstructionStandardPropertyType"
+                           type="gmwcom:ConstructionStandardType"
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element minOccurs="1"
@@ -122,7 +124,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
                            nillable="false"
                            type="gmwcom:DeliveredVerticalPositionType"/>
                <xs:element name="deliveryContext"
-                           type="gmwcom:DeliveryContextPropertyType"
+                           type="gmwcom:DeliveryContextType"
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element name="geometricDataPubliclyAvailable"
@@ -130,7 +132,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
                            minOccurs="0"
                            maxOccurs="1"/>
                <xs:element name="initialFunction"
-                           type="gmwcom:InitialFunctionPropertyType"
+                           type="gmwcom:InitialFunctionType"
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element name="isAbroad"
@@ -178,7 +180,7 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
                            minOccurs="0"
                            maxOccurs="1"/>
                <xs:element name="wellHeadProtector"
-                           type="gmwcom:WellHeadProtectorTypePropertyType"
+                           type="gmwcom:WellHeadProtectorType"
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element minOccurs="1"
@@ -197,14 +199,65 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
    <xs:element name="GMW_Construction"
-               type="isgmw:GMW_ConstructionType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_ConstructionType"/>
    <xs:complexType name="GMW_ConstructionType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
+               <xs:element name="objectIdAccountableParty"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="xs:string">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
+Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de bronhouder of dataleverancier te vergemakkelijken.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="deliveryContext"
+                           type="gmwcom:DeliveryContextType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
                <xs:element name="constructionStandard"
-                           type="gmwcom:ConstructionStandardPropertyType"
+                           type="gmwcom:ConstructionStandardType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="initialFunction"
+                           type="gmwcom:InitialFunctionType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="numberOfMonitoringTubes"
+                           type="xs:integer"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="groundLevelStable"
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="wellStability"
+                           type="gmwcom:WellStabilityType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="nitgCode"
+                           type="xs:string"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="owner" minOccurs="1" maxOccurs="1" nillable="true">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:extension base="brocom:ChamberOfCommerceNumberType">
+                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                        </xs:extension>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="maintenanceResponsibleParty"
+                           type="brocom:ChamberOfCommerceNumberType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="wellHeadProtector"
+                           type="gmwcom:WellHeadProtectorType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="wellConstructionDate"
+                           type="brocom:PartialDateType"
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element minOccurs="1"
@@ -217,114 +270,41 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
                            name="deliveredVerticalPosition"
                            nillable="false"
                            type="gmwcom:DeliveredVerticalPositionType"/>
-               <xs:element name="deliveryContext"
-                           type="gmwcom:DeliveryContextPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="unbounded"
+                           name="monitoringTube"
+                           nillable="false"
+                           type="isgmw:MonitoringTubeType"/>
                <xs:element name="geometricDataPubliclyAvailable"
                            type="brocom:IndicationYesNoType"
                            minOccurs="0"
                            maxOccurs="1"/>
-               <xs:element name="groundLevelStable"
-                           type="brocom:IndicationYesNoType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-               <xs:element name="initialFunction"
-                           type="gmwcom:InitialFunctionPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
                <xs:element name="isAbroad"
                            type="brocom:IndicationYesNoType"
-                           minOccurs="0"
-                           maxOccurs="1"/>
-               <xs:element name="maintenanceResponsibleParty"
-                           type="brocom:ChamberOfCommerceNumberType"
                            minOccurs="0"
                            maxOccurs="1"/>
                <xs:element name="mapSheetCode"
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:string"/>
-               <xs:element minOccurs="1"
-                           maxOccurs="unbounded"
-                           name="monitoringTube"
-                           nillable="false"
-                           type="isgmw:MonitoringTubeType"/>
-               <xs:element name="nitgCode"
-                           type="xs:string"
-                           minOccurs="0"
-                           maxOccurs="1"/>
-               <xs:element name="numberOfMonitoringTubes"
-                           type="xs:integer"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-               <xs:element name="objectIdAccountableParty"
-                           minOccurs="1"
-                           maxOccurs="1"
-                           type="xs:string">
-                  <xs:annotation>
-                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
-Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de bronhouder of dataleverancier te vergemakkelijken.</xs:documentation>
-                  </xs:annotation>
-               </xs:element>
-               <xs:element name="owner" minOccurs="1" maxOccurs="1" nillable="true">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:extension base="brocom:ChamberOfCommerceNumberType">
-                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                     </xs:simpleContent>
-                  </xs:complexType>
-               </xs:element>
-               <xs:element name="wellConstructionDate"
-                           type="xs:date"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-               <xs:element name="wellHeadProtector"
-                           type="gmwcom:WellHeadProtectorTypePropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-               <xs:element name="wellStability"
-                           type="gmwcom:WellStabilityPropertyType"
-                           minOccurs="0"
-                           maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_ConstructionPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_Construction"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
    <xs:element name="GMW_ConstructionWithHistory"
-               type="isgmw:GMW_ConstructionWithHistoryType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_ConstructionWithHistoryType"/>
    <xs:complexType name="GMW_ConstructionWithHistoryType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
                <xs:element minOccurs="1"
                            maxOccurs="1"
                            name="construction"
                            nillable="false"
                            type="isgmw:ConstructionType"/>
-               <xs:element minOccurs="1"
-                           maxOccurs="1"
+               <xs:element minOccurs="0"
+                           maxOccurs="unbounded"
                            name="intermediateEvent"
                            nillable="false"
                            type="isgmw:IntermediateEventType"/>
-               <xs:element name="removal" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="removal" type="isgmw:GMW_RemovalType" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_ConstructionWithHistoryPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_ConstructionWithHistory"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
       <xs:complexType name="GeoOhmCableType">
       <xs:sequence>
@@ -341,49 +321,24 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
    </xs:complexType>
 <xs:complexType name="MonitoringTubeType">
       <xs:sequence>
-         <xs:element name="artesianWellCapPresent"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element minOccurs="0"
-                     maxOccurs="unbounded"
-                     name="geoOhmCable"
-                     nillable="false"
-                     type="gmwcom:GeoOhmCableType"/>
-         <xs:element minOccurs="1"
-                     maxOccurs="1"
-                     name="materialUsed"
-                     nillable="false"
-                     type="gmwcom:MaterialUsedType"/>
-         <xs:element name="numberOfGeoOhmCables"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element minOccurs="1"
-                     maxOccurs="1"
-                     name="plainTubePart"
-                     nillable="false"
-                     type="gmwcom:PlainTubePartType"/>
-         <xs:element minOccurs="1"
-                     maxOccurs="1"
-                     name="screen"
-                     nillable="false"
-                     type="gmwcom:ScreenType"/>
-         <xs:element minOccurs="0"
-                     maxOccurs="1"
-                     name="sedimentSump"
-                     nillable="false"
-                     type="gmwcom:SedimentSumpType"/>
-         <xs:element name="sedimentSumpPresent"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
          <xs:element name="tubeNumber"
                      type="xs:integer"
                      minOccurs="1"
                      maxOccurs="1"/>
-         <xs:element name="tubeStatus"
-                     type="gmwcom:TubeStatusPropertyType"
+         <xs:element name="tubeType"
+                     type="gmwcom:TubeTypeType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="artesianWellCapPresent"
+                     type="brocom:IndicationYesNoUnknownType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="sedimentSumpPresent"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="numberOfGeoOhmCables"
+                     type="xs:integer"
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopDiameter"
@@ -398,33 +353,62 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                </xs:simpleContent>
             </xs:complexType>
          </xs:element>
+         <xs:element name="variableDiameter"
+                     type="brocom:IndicationYesNoUnknownType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="tubeStatus"
+                     type="gmwcom:TubeStatusType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
          <xs:element name="tubeTopPosition"
                      type="brocom:MeasureNillableType"
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPositioningMethod"
-                     type="gmwcom:TubeTopPositioningMethodPropertyType"
+                     type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="1"
                      maxOccurs="1"/>
-         <xs:element name="tubeType"
-                     type="gmwcom:TubeTypePropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="variableDiameter"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="materialUsed"
+                     nillable="false"
+                     type="gmwcom:MaterialUsedType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="screen"
+                     nillable="false"
+                     type="isgmw:ScreenType"/>
+         <xs:element minOccurs="1"
+                     maxOccurs="1"
+                     name="plainTubePart"
+                     nillable="false"
+                     type="gmwcom:PlainTubePartType"/>
+         <xs:element minOccurs="0"
+                     maxOccurs="1"
+                     name="sedimentSump"
+                     nillable="false"
+                     type="gmwcom:SedimentSumpType"/>
+         <xs:element minOccurs="0"
+                     maxOccurs="unbounded"
+                     name="geoOhmCable"
+                     nillable="false"
+                     type="isgmw:GeoOhmCableType"/>
       </xs:sequence>
    </xs:complexType>
       <xs:complexType name="ScreenType">
       <xs:sequence>
-         <xs:element name="screenBottomPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
          <xs:element name="screenLength"
                      type="brocom:MeasureNillableType"
                      minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="sockMaterial"
+                     type="gmwcom:SockMaterialType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="screenBottomPosition"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="screenProtection"
                      type="gmwcom:ScreenProtectionPropertyType"
@@ -432,22 +416,15 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      maxOccurs="1"/>
          <xs:element name="screenTopPosition"
                      type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="sockMaterial"
-                     type="gmwcom:SockMaterialPropertyType"
-                     minOccurs="1"
+                     minOccurs="0"
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
 <xs:element name="GMW_Owner"
-               type="isgmw:GMW_OwnerType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_OwnerType"/>
    <xs:complexType name="GMW_OwnerType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
                <xs:element name="owner" minOccurs="1" maxOccurs="1" nillable="true">
                   <xs:complexType>
                      <xs:simpleContent>
@@ -458,82 +435,40 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                   </xs:complexType>
                </xs:element>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_OwnerPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_Owner"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
 <xs:element name="GMW_WellHeadProtector"
-               type="isgmw:GMW_WellHeadProtectorType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_WellHeadProtectorType"/>
    <xs:complexType name="GMW_WellHeadProtectorType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
                <xs:element name="wellHeadProtector"
-                           type="gmwcom:WellHeadProtectorTypePropertyType"
+                           type="gmwcom:WellHeadProtectorType"
                            minOccurs="1"
                            maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_WellHeadProtectorPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_WellHeadProtector"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
    <xs:element name="GMW_Lengthening"
-               type="isgmw:GMW_LengtheningType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_LengtheningType"/>
    <xs:complexType name="GMW_LengtheningType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="wellHeadProtector"
+                           type="gmwcom:WellHeadProtectorType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="numberOfTubesLengthened"
+                           type="xs:integer"
+                           minOccurs="1"
+                           maxOccurs="1"/>
                <xs:element minOccurs="1"
                            maxOccurs="unbounded"
                            name="monitoringTube"
                            nillable="false"
                            type="isgmw:MonitoringTubeLengtheningType"/>
-               <xs:element name="numberOfTubesLengthened"
-                           type="xs:integer"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-               <xs:element name="wellHeadProtector"
-                           type="gmwcom:WellHeadProtectorTypePropertyType"
-                           minOccurs="0"
-                           maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_LengtheningPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_Lengthening"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
 <xs:complexType name="MonitoringTubeLengtheningType">
       <xs:sequence>
-         <xs:element name="glue"
-                     type="gmwcom:GluePropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="plainTubePartLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubeMaterial"
-                     type="gmwcom:TubeMaterialPropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
          <xs:element name="tubeNumber"
                      type="xs:integer"
                      minOccurs="1"
@@ -550,68 +485,66 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                </xs:simpleContent>
             </xs:complexType>
          </xs:element>
+         <xs:element name="variableDiameter"
+                     type="brocom:IndicationYesNoType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
          <xs:element name="tubeTopPosition"
                      type="brocom:MeasureNillableType"
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPositioningMethod"
-                     type="gmwcom:TubeTopPositioningMethodPropertyType"
+                     type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="1"
                      maxOccurs="1"/>
-         <xs:element name="variableDiameter"
-                     type="brocom:IndicationYesNoType"
+         <xs:element name="tubeMaterial"
+                     type="gmwcom:TubeMaterialType"
                      minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="glue"
+                     type="gmwcom:GlueType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="plainTubePartLength"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
    <xs:element name="GMW_GroundLevel"
-               type="isgmw:GMW_GroundLevelType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_GroundLevelType"/>
    <xs:complexType name="GMW_GroundLevelType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
-               <xs:element name="groundLevelPosition"
-                           minOccurs="1"
-                           maxOccurs="1"
-                           nillable="true">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:extension base="brocom:MeasureNillableType">
-                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                     </xs:simpleContent>
-                  </xs:complexType>
-               </xs:element>
-               <xs:element name="groundLevelPositioningMethod"
-                           type="gmwcom:GroundLevelPositioningMethodPropertyType"
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="wellStability"
+                           type="gmwcom:WellStabilityType"
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element name="groundLevelStable"
                            type="brocom:IndicationYesNoType"
                            minOccurs="1"
                            maxOccurs="1"/>
-               <xs:element name="wellStability"
-                           type="gmwcom:WellStabilityPropertyType"
+               <xs:element name="groundLevelPosition"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           nillable="true">
+                  <xs:complexType>
+                     <xs:simpleContent>
+                        <xs:extension base="brocom:MeasureNillableType">
+                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                        </xs:extension>
+                     </xs:simpleContent>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="groundLevelPositioningMethod"
+                           type="gmwcom:GroundLevelPositioningMethodType"
                            minOccurs="1"
                            maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_GroundLevelPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_GroundLevel"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
    <xs:element name="GMW_GroundLevelMeasuring"
-               type="isgmw:GMW_GroundLevelMeasuringType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_GroundLevelMeasuringType"/>
    <xs:complexType name="GMW_GroundLevelMeasuringType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
                <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
                <xs:element name="groundLevelPosition"
@@ -627,50 +560,33 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                   </xs:complexType>
                </xs:element>
                <xs:element name="groundLevelPositioningMethod"
-                           type="gmwcom:GroundLevelPositioningMethodPropertyType"
+                           type="gmwcom:GroundLevelPositioningMethodType"
                            minOccurs="1"
                            maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_GroundLevelMeasuringPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_GroundLevelMeasuring"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
    <xs:element name="GMW_Shortening"
-               type="isgmw:GMW_ShorteningType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_ShorteningType"/>
    <xs:complexType name="GMW_ShorteningType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="wellHeadProtector"
+                           type="gmwcom:WellHeadProtectorType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="numberOfTubesShortened"
+                           type="xs:integer"
+                           minOccurs="1"
+                           maxOccurs="1"/>
                <xs:element minOccurs="1"
                            maxOccurs="unbounded"
                            name="monitoringTube"
                            nillable="false"
                            type="isgmw:MonitoringTubeShorteningType"/>
-               <xs:element name="numberOfTubesShortened"
-                           type="xs:integer"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-               <xs:element name="wellHeadProtector"
-                           type="gmwcom:WellHeadProtectorTypePropertyType"
-                           minOccurs="0"
-                           maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="MonitoringTubeShorteningType">
       <xs:sequence>
-         <xs:element name="plainTubePartLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
          <xs:element name="tubeNumber"
                      type="xs:integer"
                      minOccurs="1"
@@ -680,34 +596,37 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPositioningMethod"
-                     type="gmwcom:TubeTopPositioningMethodPropertyType"
+                     type="gmwcom:TubeTopPositioningMethodType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="plainTubePartLength"
+                     type="brocom:MeasureNillableType"
                      minOccurs="1"
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
    <xs:element name="GMW_ElectrodeStatus"
-               type="isgmw:GMW_ElectrodeStatusType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_ElectrodeStatusType"/>
    <xs:complexType name="GMW_ElectrodeStatusType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element minOccurs="2"
-                           maxOccurs="unbounded"
-                           name="electrode"
-                           nillable="false"
-                           type="isgmw:ElectrodeType"/>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
                <xs:element name="numberOfElectrodesChanged"
                            type="xs:integer"
                            minOccurs="1"
                            maxOccurs="1"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="unbounded"
+                           name="electrode"
+                           nillable="false"
+                           type="isgmw:ElectrodeType"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ElectrodeType">
       <xs:sequence>
+         <xs:element name="tubeNumber"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
          <xs:element name="cableNumber"
                      type="xs:integer"
                      minOccurs="1"
@@ -717,23 +636,28 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="electrodeStatus"
-                     type="gmwcom:ElectrodeStatusPropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubeNumber"
-                     type="xs:integer"
+                     type="gmwcom:ElectrodeStatusType"
                      minOccurs="1"
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
    <xs:element name="GMW_Positions"
-               type="isgmw:GMW_PositionsType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_PositionsType"/>
    <xs:complexType name="GMW_PositionsType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="wellStability"
+                           type="gmwcom:WellStabilityType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="groundLevelStable"
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="numberOfMonitoringTubes"
+                           type="xs:integer"
+                           minOccurs="1"
+                           maxOccurs="1"/>
                <xs:element name="groundLevelPosition"
                            minOccurs="1"
                            maxOccurs="1"
@@ -747,11 +671,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                   </xs:complexType>
                </xs:element>
                <xs:element name="groundLevelPositioningMethod"
-                           type="gmwcom:GroundLevelPositioningMethodPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-               <xs:element name="groundLevelStable"
-                           type="brocom:IndicationYesNoType"
+                           type="gmwcom:GroundLevelPositioningMethodType"
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element minOccurs="1"
@@ -759,23 +679,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            name="monitoringTube"
                            nillable="false"
                            type="isgmw:MonitoringTubePositionsType"/>
-               <xs:element name="numberOfMonitoringTubes"
-                           type="xs:integer"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-               <xs:element name="wellStability"
-                           type="gmwcom:WellStabilityPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_PositionsPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_Positions"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
 <xs:complexType name="MonitoringTubePositionsType">
       <xs:sequence>
@@ -788,7 +692,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPositioningMethod"
-                     type="gmwcom:TubeTopPositioningMethodPropertyType"
+                     type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="1"
                      maxOccurs="1"/>
       </xs:sequence>
@@ -804,17 +708,14 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPositioningMethod"
-                     type="gmwcom:TubeTopPositioningMethodPropertyType"
+                     type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="1"
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
    <xs:element name="GMW_PositionsMeasuring"
-               type="isgmw:GMW_PositionsMeasuringType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_PositionsMeasuringType"/>
    <xs:complexType name="GMW_PositionsMeasuringType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
                <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
                <xs:element name="groundLevelPosition"
@@ -822,7 +723,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            minOccurs="0"
                            maxOccurs="1"/>
                <xs:element name="groundLevelPositioningMethod"
-                           type="gmwcom:GroundLevelPositioningMethodPropertyType"
+                           type="gmwcom:GroundLevelPositioningMethodType"
                            minOccurs="0"
                            maxOccurs="1"/>
                <xs:element minOccurs="1"
@@ -835,63 +736,33 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            minOccurs="1"
                            maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_PositionsMeasuringPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_PositionsMeasuring"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
 <xs:element name="GMW_Maintainer"
-               type="isgmw:GMW_MaintainerType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_MaintainerType"/>
    <xs:complexType name="GMW_MaintainerType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
                <xs:element name="maintenanceResponsibleParty"
                            type="brocom:ChamberOfCommerceNumberType"
                            minOccurs="0"
                            maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_MaintainerPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_Maintainer"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
 <xs:element name="GMW_TubeStatus"
-               type="isgmw:GMW_TubeStatusType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_TubeStatusType"/>
    <xs:complexType name="GMW_TubeStatusType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="numberOfTubesChanged"
+                           type="xs:integer"
+                           minOccurs="1"
+                           maxOccurs="1"/>
                <xs:element minOccurs="1"
                            maxOccurs="unbounded"
                            name="monitoringTube"
                            nillable="false"
                            type="isgmw:MonitoringTubeStatusType"/>
-               <xs:element name="numberOfTubesChanged"
-                           type="xs:integer"
-                           minOccurs="1"
-                           maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_TubeStatusPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_TubeStatus"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
    <xs:complexType name="MonitoringTubeStatusType">
       <xs:sequence>
@@ -900,33 +771,42 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeStatus"
-                     type="gmwcom:TubeStatusPropertyType"
+                     type="gmwcom:TubeStatusType"
                      minOccurs="1"
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
    <xs:element name="GMW_Insertion"
-               type="isgmw:GMW_InsertionType"
-               substitutionGroup="gml:AbstractFeature">
+               type="isgmw:GMW_InsertionType">
       <xs:annotation>
          <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: GMW_Insertion</xs:documentation>
       </xs:annotation>
    </xs:element>
    <xs:complexType name="GMW_InsertionType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
-               <xs:element name="insertedPartDiameter"
+               <xs:element name="tubeNumber"
+                           type="xs:integer"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="tubeTopPosition"
                            type="brocom:MeasureNillableType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="tubeTopPositioningMethod"
+                           type="gmwcom:TubeTopPositioningMethodType"
                            minOccurs="0"
                            maxOccurs="1"/>
                <xs:element name="insertedPartLength"
                            type="brocom:MeasureNillableType"
                            minOccurs="0"
                            maxOccurs="1"/>
+               <xs:element name="insertedPartDiameter"
+                           type="brocom:MeasureNillableType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
                <xs:element name="insertedPartMaterial"
-                           type="gmwcom:TubeMaterialPropertyType"
+                           type="gmwcom:TubeMaterialType"
                            minOccurs="0"
                            maxOccurs="1">
                   <xs:annotation>
@@ -940,44 +820,15 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            type="isgmw:MonitoringTubeInsertionType"/>
                <xs:element name="totalInsertedNumber"
                            type="xs:integer"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-               <xs:element name="tubeNumber"
-                           type="xs:integer"
-                           minOccurs="0"
-                           maxOccurs="1"/>
-               <xs:element name="tubeTopPosition"
-                           type="brocom:MeasureNillableType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-               <xs:element name="tubeTopPositioningMethod"
-                           type="gmwcom:TubeTopPositioningMethodPropertyType"
                            minOccurs="0"
                            maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_InsertionPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_Insertion"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-   </xs:complexType>
-   <xs:complexType name="GMW_ElectrodeStatusPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_ElectrodeStatus"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
    <xs:element name="GMW_Shift"
-               type="isgmw:GMW_ShiftType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_ShiftType"/>
    <xs:complexType name="GMW_ShiftType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
                <xs:element name="groundLevelPosition"
                            minOccurs="1"
                            maxOccurs="1"
@@ -991,67 +842,31 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                   </xs:complexType>
                </xs:element>
                <xs:element name="groundLevelPositioningMethod"
-                           type="gmwcom:GroundLevelPositioningMethodPropertyType"
+                           type="gmwcom:GroundLevelPositioningMethodType"
                            minOccurs="1"
                            maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_ShiftPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_Shift"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
    <xs:element name="GMW_Removal"
-               type="isgmw:GMW_RemovalType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_RemovalType"/>
    <xs:complexType name="GMW_RemovalType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
                <xs:element name="wellRemovalDate"
-                           type="xs:date"
+                           type="brocom:PartialDateType"
                            minOccurs="1"
                            maxOccurs="1"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_RemovalPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_Removal"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-   </xs:complexType>
-   <xs:complexType name="GMW_ShorteningPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_Shortening"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
    <xs:element name="GMW_SubsequentAdditionSurveys"
-               type="isgmw:GMW_SubsequentAdditionSurveysType"
-               substitutionGroup="gml:AbstractFeature"/>
+               type="isgmw:GMW_SubsequentAdditionSurveysType"/>
    <xs:complexType name="GMW_SubsequentAdditionSurveysType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
                <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
                <xs:element name="IsRelatedTo"
-                           type="gmwcom:SurveyPropertyType"
+                           type="gmwcom:SurveyType"
                            minOccurs="1"
                            maxOccurs="unbounded"/>
             </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GMW_SubsequentAdditionSurveysPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="isgmw:GMW_SubsequentAdditionSurveys"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
    <xs:element name="RegistrationObject"
                type="brocom:AbstractRegistrationObjectType"
@@ -1103,8 +918,66 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
    </xs:complexType>
    <xs:complexType name="ConstructionType">
       <xs:sequence>
+         <xs:element name="objectIdAccountableParty"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="xs:string">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
+Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de bronhouder of dataleverancier te vergemakkelijken.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="deliveryContext"
+                     type="gmwcom:DeliveryContextType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
          <xs:element name="constructionStandard"
-                     type="gmwcom:ConstructionStandardPropertyType"
+                     type="gmwcom:ConstructionStandardType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="initialFunction"
+                     type="gmwcom:InitialFunctionType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="numberOfMonitoringTubes"
+                     type="xs:integer"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="groundLevelStable"
+                     type="brocom:IndicationYesNoUnknownType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="wellStability"
+                     type="gmwcom:WellStabilityType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="nitgCode"
+                     type="xs:string"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="mapSheetCode"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="xs:string"/>
+         <xs:element name="owner" minOccurs="1" maxOccurs="1" nillable="true">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="brocom:ChamberOfCommerceNumberType">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="maintenanceResponsibleParty"
+                     type="brocom:ChamberOfCommerceNumberType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="wellHeadProtector"
+                     type="gmwcom:WellHeadProtectorType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="wellConstructionDate"
+                     type="brocom:PartialDateType"
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element minOccurs="1"
@@ -1117,87 +990,37 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
                      name="deliveredVerticalPosition"
                      nillable="false"
                      type="gmwcom:DeliveredVerticalPositionType"/>
-         <xs:element name="deliveryContext"
-                     type="gmwcom:DeliveryContextPropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="geometricDataPubliclyAvailable"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="groundLevelStable"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="initialFunction"
-                     type="gmwcom:InitialFunctionPropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="isAbroad"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="maintenanceResponsibleParty"
-                     type="brocom:ChamberOfCommerceNumberType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="mapSheetCode"
-                     minOccurs="0"
-                     maxOccurs="1"
-                     type="xs:string"/>
          <xs:element minOccurs="1"
                      maxOccurs="unbounded"
                      name="monitoringTube"
                      nillable="false"
                      type="isgmw:MonitoringTubeType"/>
-         <xs:element name="nitgCode"
-                     type="xs:string"
+         <xs:element name="geometricDataPubliclyAvailable"
+                     type="brocom:IndicationYesNoType"
                      minOccurs="0"
                      maxOccurs="1"/>
-         <xs:element name="numberOfMonitoringTubes"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="objectIdAccountableParty"
-                     minOccurs="1"
-                     maxOccurs="1"
-                     type="xs:string">
-            <xs:annotation>
-               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
-Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de bronhouder of dataleverancier te vergemakkelijken.</xs:documentation>
-            </xs:annotation>
-         </xs:element>
-         <xs:element name="owner" minOccurs="1" maxOccurs="1" nillable="true">
-            <xs:complexType>
-               <xs:simpleContent>
-                  <xs:extension base="brocom:ChamberOfCommerceNumberType">
-                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                  </xs:extension>
-               </xs:simpleContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="wellConstructionDate"
-                     type="xs:date"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="wellHeadProtector"
-                     type="gmwcom:WellHeadProtectorTypePropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="wellStability"
-                     type="gmwcom:WellStabilityPropertyType"
+         <xs:element name="isAbroad"
+                     type="brocom:IndicationYesNoType"
                      minOccurs="0"
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="IntermediateEventType">
-      <xs:sequence>
-         <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
-         <xs:element name="eventName"
-                     type="gmwcom:EventNamePropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-      </xs:sequence>
+      <xs:choice minOccurs="1" maxOccurs="1">
+         <xs:element name="owner" type="isgmw:GMW_OwnerType"/>
+         <xs:element name="lengthening" type="isgmw:GMW_LengtheningType"/>
+         <xs:element name="groundLevel" type="isgmw:GMW_GroundLevelType"/>
+         <xs:element name="shortening" type="isgmw:GMW_ShorteningType"/>
+         <xs:element name="positions" type="isgmw:GMW_PositionsType"/>
+         <xs:element name="electrodeStatus" type="isgmw:GMW_ElectrodeStatusType"/>
+         <xs:element name="maintainer" type="isgmw:GMW_MaintainerType"/>
+         <xs:element name="tubeStatus" type="isgmw:GMW_TubeStatusType"/>
+         <xs:element name="insertion" type="isgmw:GMW_InsertionType"/>
+         <xs:element name="shift" type="isgmw:GMW_ShiftType"/>
+         <xs:element name="wellHeadProtector" type="isgmw:GMW_WellHeadProtectorType"/>
+         <xs:element name="groundLevelMeasuring" type="isgmw:GMW_GroundLevelMeasuringType"/>
+         <xs:element name="positionsMeasuring" type="isgmw:GMW_PositionsMeasuringType"/>
+      </xs:choice>
    </xs:complexType>
    <xs:complexType name="MonitoringTubeInsertionType">
       <xs:sequence>
@@ -1210,7 +1033,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="insertedPartMaterial"
-                     type="gmwcom:TubeMaterialPropertyType"
+                     type="gmwcom:TubeMaterialType"
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeNumber"
@@ -1222,20 +1045,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPositioningMethod"
-                     type="gmwcom:TubeTopPositioningMethodPropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="WellHistoryType">
-      <xs:sequence>
-         <xs:element minOccurs="0"
-                     maxOccurs="unbounded"
-                     name="intermediateEvent"
-                     nillable="false"
-                     type="gmwcom:IntermediateEventType"/>
-         <xs:element name="wellConstructionDate"
-                     type="xs:date"
+                     type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="1"
                      maxOccurs="1"/>
       </xs:sequence>
@@ -1290,5 +1100,12 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
             </xs:complexType>
          </xs:element>
       </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="CorrectionReasonType">
+      <xs:simpleContent>
+         <xs:restriction base="gml:CodeWithAuthorityType">
+            <xs:attribute name="codeSpace" type="xs:anyURI" use="required" fixed="urn:bro:gmw:CorrectionReason" />
+         </xs:restriction>
+      </xs:simpleContent>
    </xs:complexType>
 </xs:schema>
