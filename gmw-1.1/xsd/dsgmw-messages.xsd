@@ -937,11 +937,11 @@ Explanation: Het gegeven staat niet in een brondocument. De gestandaardiseerde l
                            name="monitoringTube"
                            nillable="false"
                            type="dsgmw:MonitoringTubeType"/>
-               <xs:element name="geometricDataPubliclyAvailable"
+               <xs:element name="isAbroad"
                            type="brocom:IndicationYesNoType"
                            minOccurs="0"
                            maxOccurs="1"/>
-               <xs:element name="isAbroad"
+               <xs:element name="geometricDataPubliclyAvailable"
                            type="brocom:IndicationYesNoType"
                            minOccurs="0"
                            maxOccurs="1"/>

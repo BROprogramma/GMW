@@ -109,8 +109,16 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
       <xs:complexContent>
          <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
+               <xs:element name="deliveryContext"
+                           type="gmwcom:DeliveryContextType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
                <xs:element name="constructionStandard"
                            type="gmwcom:ConstructionStandardType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="initialFunction"
+                           type="gmwcom:InitialFunctionType"
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element minOccurs="1"
@@ -123,17 +131,9 @@ Explanation: Gegevens over een registratieobject zonder levenscyclus worden eenm
                            name="deliveredVerticalPosition"
                            nillable="false"
                            type="gmwcom:DeliveredVerticalPositionType"/>
-               <xs:element name="deliveryContext"
-                           type="gmwcom:DeliveryContextType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
                <xs:element name="geometricDataPubliclyAvailable"
                            type="brocom:IndicationYesNoType"
                            minOccurs="0"
-                           maxOccurs="1"/>
-               <xs:element name="initialFunction"
-                           type="gmwcom:InitialFunctionType"
-                           minOccurs="1"
                            maxOccurs="1"/>
                <xs:element name="isAbroad"
                            type="brocom:IndicationYesNoType"
@@ -995,11 +995,11 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      name="monitoringTube"
                      nillable="false"
                      type="isgmw:MonitoringTubeType"/>
-         <xs:element name="geometricDataPubliclyAvailable"
+         <xs:element name="isAbroad"
                      type="brocom:IndicationYesNoType"
                      minOccurs="0"
                      maxOccurs="1"/>
-         <xs:element name="isAbroad"
+         <xs:element name="geometricDataPubliclyAvailable"
                      type="brocom:IndicationYesNoType"
                      minOccurs="0"
                      maxOccurs="1"/>
