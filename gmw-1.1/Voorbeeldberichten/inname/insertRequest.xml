@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <insertRequest
-    xmlns="http://www.broservices.nl/xsd/isgmw/1.1"
-    xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1"
+
     xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+    xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw/1.1 https://schema.broservices.nl/xsd/isgmw/1.1/isgmw-messages.xsd">
+    xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw/1.1 ../../XSD/isgmw-messages.xsd">
     
     <brocom:requestReference>verzoek_1c</brocom:requestReference>
     <brocom:deliveryAccountableParty>789654123</brocom:deliveryAccountableParty>
@@ -15,7 +15,7 @@
     <sourceDocument>
         <GMW_ElectrodeStatus>
             <!-- Fictieve voorbeelddata, moet inhoudelijk juist ingevuld worden -->
-            <numberOfElectrodesChanged>2</numberOfElectrodesChanged>
+            <isgmw:numberOfElectrodesChanged>2</isgmw:numberOfElectrodesChanged>
             <eventDate>
                 <brocom:date>2024-02-06</brocom:date>
             </eventDate>
@@ -26,10 +26,10 @@
                 <isgmw:electrodeStatus codeSpace="urn:bro:gmw:ElectrodeStatus">gebruiksklaar</isgmw:electrodeStatus>
             </electrode>
             <electrode>
-                <cableNumber>2</cableNumber> 
-                <electrodeNumber>1234</electrodeNumber>
-                <tubeNumber>1</tubeNumber>
-                <electrodeStatus codeSpace="urn:bro:gmw:ElectrodeStatus">gebruiksklaar</electrodeStatus>
+                <isgmw:cableNumber>2</isgmw:cableNumber> 
+                <isgmw:electrodeNumber>1234</isgmw:electrodeNumber>
+                <isgmw:tubeNumber>1</isgmw:tubeNumber>
+                <isgmw:electrodeStatus codeSpace="urn:bro:gmw:ElectrodeStatus">gebruiksklaar</isgmw:electrodeStatus>
             </electrode>
         </GMW_ElectrodeStatus>
     </sourceDocument>

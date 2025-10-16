@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <replaceRequest 
     xmlns="http://www.broservices.nl/xsd/isgmw/1.1" 
-    xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1" 
     xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
-    xmlns:gml="http://www.opengis.net/gml/3.2" 
-    xmlns:xlink="http://www.w3.org/1999/xlink" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw-internal/1.1 ../../XSD/isgmw-internal-messages.xsd">
+    xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:isgmw="http://www.broservices.nl/xsd/isgmw/1.1"
+    xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw/1.1 ../../XSD/isgmw-messages.xsd">
     
     <brocom:requestReference>replace - GMW_Construction - 999. IMBRO - fictieve wijziging</brocom:requestReference>
     <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>

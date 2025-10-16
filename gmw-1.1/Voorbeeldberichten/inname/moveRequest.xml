@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<moveRequest xmlns="http://www.broservices.nl/xsd/isgmw/1.1" 
-    xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1" 
+<moveRequest 
+    xmlns="http://www.broservices.nl/xsd/isgmw/1.1" 
     xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
-    xmlns:gml="http://www.opengis.net/gml/3.2" 
-    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:gmwcom="http://www.broservices.nl/xsd/gmwcommon/1.1" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw-internal/1.1 ../../XSD/isgmw-internal-messages.xsd">
+    xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw/1.1 ../../XSD/isgmw-messages.xsd">
 
   <brocom:requestReference>corrigeren_verplaatsen_GMW_Construction</brocom:requestReference>
   <brocom:deliveryAccountableParty>52766179</brocom:deliveryAccountableParty>
@@ -101,5 +100,4 @@
   <dateToBeCorrected>
     <brocom:date>2015-02-08</brocom:date>
   </dateToBeCorrected>
-
 </moveRequest>
