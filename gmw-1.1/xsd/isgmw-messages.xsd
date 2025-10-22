@@ -287,6 +287,10 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:string"/>
+               <xs:element name="survey"
+                           type="gmwcom:SurveyPropertyType"
+                           minOccurs="1"
+                           maxOccurs="1"/>
             </xs:sequence>
    </xs:complexType>
    <xs:element name="GMW_ConstructionWithHistory"
@@ -303,7 +307,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            name="intermediateEvent"
                            nillable="false"
                            type="isgmw:IntermediateEventType"/>
-               <xs:element name="removal" type="isgmw:GMW_RemovalType" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="removal" type="isgmw:GMW_RemovalType" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
    </xs:complexType>
       <xs:complexType name="GeoOhmCableType">
@@ -334,7 +338,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="sedimentSumpPresent"
-                     type="brocom:IndicationYesNoType"
+                     type="brocom:IndicationYesNoUnknownType"
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="numberOfGeoOhmCables"
@@ -407,7 +411,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="screenProtection"
-                     type="gmwcom:ScreenProtectionPropertyType"
+                     type="gmwcom:ScreenProtectionType"
                      minOccurs="0"
                      maxOccurs="1"/>
       </xs:sequence>
@@ -538,7 +542,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                type="isgmw:GMW_GroundLevelMeasuringType"/>
    <xs:complexType name="GMW_GroundLevelMeasuringType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
                <xs:element name="groundLevelPosition"
                            minOccurs="1"
                            maxOccurs="1"
@@ -709,7 +713,14 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                type="isgmw:GMW_PositionsMeasuringType"/>
    <xs:complexType name="GMW_PositionsMeasuringType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" 
+                           type="brocom:PartialDateType" 
+                           minOccurs="1" 
+                           maxOccurs="1"/>
+               <xs:element name="numberOfMonitoringTubes"
+                           type="xs:integer"
+                           minOccurs="1"
+                           maxOccurs="1"/>
                <xs:element name="groundLevelPosition"
                            type="brocom:MeasureNillableType"
                            minOccurs="0"
@@ -723,10 +734,6 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            name="monitoringTube"
                            nillable="false"
                            type="isgmw:MonitoringTubePositionsMeasuringType"/>
-               <xs:element name="numberOfMonitoringTubes"
-                           type="xs:integer"
-                           minOccurs="1"
-                           maxOccurs="1"/>
             </xs:sequence>
    </xs:complexType>
 <xs:element name="GMW_Maintainer"
@@ -853,7 +860,10 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                type="isgmw:GMW_SubsequentAdditionSurveysType"/>
    <xs:complexType name="GMW_SubsequentAdditionSurveysType">
             <xs:sequence>
-               <xs:element name="eventDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eventDate" 
+                           type="brocom:PartialDateType" 
+                           minOccurs="1" 
+                           maxOccurs="1"/>
                <xs:element name="IsRelatedTo"
                            type="gmwcom:SurveyType"
                            minOccurs="1"
