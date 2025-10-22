@@ -262,7 +262,7 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="sedimentSumpPresent"
-                     type="brocom:IndicationYesNoType"
+                     type="brocom:IndicationYesNoUnknownType"
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="numberOfGeoOhmCables"
@@ -375,7 +375,7 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                      minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="screenProtection"
-                     type="gmwcom:ScreenProtectionPropertyType"
+                     type="gmwcom:ScreenProtectionType"
                      minOccurs="0"
                      maxOccurs="1"/>
       </xs:sequence>
@@ -724,7 +724,7 @@ Explanation: Voor de attributen met materiële geschiedenis wordt de actuele waa
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element name="wellRemovalDate"
-                           type="xs:date"
+                           type="brocom:PartialDateType"
                            minOccurs="0"
                            maxOccurs="1"/>
                <xs:element name="removed"
