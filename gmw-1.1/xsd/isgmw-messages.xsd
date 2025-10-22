@@ -406,16 +406,8 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      type="gmwcom:SockMaterialType"
                      minOccurs="1"
                      maxOccurs="1"/>
-         <xs:element name="screenBottomPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
          <xs:element name="screenProtection"
                      type="gmwcom:ScreenProtectionPropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="screenTopPosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
                      maxOccurs="1"/>
       </xs:sequence>
