@@ -301,7 +301,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            maxOccurs="1"
                            name="construction"
                            nillable="false"
-                           type="isgmw:ConstructionType"/>
+                           type="isgmw:GMW_ConstructionType"/>
                <xs:element minOccurs="0"
                            maxOccurs="unbounded"
                            name="intermediateEvent"
@@ -917,95 +917,6 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
          <xs:element ref="brocom:RegistrationObject"/>
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-   </xs:complexType>
-   <xs:complexType name="ConstructionType">
-      <xs:sequence>
-         <xs:element name="objectIdAccountableParty"
-                     minOccurs="1"
-                     maxOccurs="1"
-                     type="xs:string">
-            <xs:annotation>
-               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
-Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de bronhouder of dataleverancier te vergemakkelijken.</xs:documentation>
-            </xs:annotation>
-         </xs:element>
-         <xs:element name="deliveryContext"
-                     type="gmwcom:DeliveryContextType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="constructionStandard"
-                     type="gmwcom:ConstructionStandardType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="initialFunction"
-                     type="gmwcom:InitialFunctionType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="numberOfMonitoringTubes"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="groundLevelStable"
-                     type="brocom:IndicationYesNoUnknownType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="wellStability"
-                     type="gmwcom:WellStabilityType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="nitgCode"
-                     type="xs:string"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="mapSheetCode"
-                     minOccurs="0"
-                     maxOccurs="1"
-                     type="xs:string"/>
-         <xs:element name="owner" minOccurs="1" maxOccurs="1" nillable="true">
-            <xs:complexType>
-               <xs:simpleContent>
-                  <xs:extension base="brocom:ChamberOfCommerceNumberType">
-                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                  </xs:extension>
-               </xs:simpleContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="maintenanceResponsibleParty"
-                     type="brocom:ChamberOfCommerceNumberType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="wellHeadProtector"
-                     type="gmwcom:WellHeadProtectorType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="wellConstructionDate"
-                     type="brocom:PartialDateType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element minOccurs="1"
-                     maxOccurs="1"
-                     name="deliveredLocation"
-                     nillable="false"
-                     type="gmwcom:DeliveredLocationType"/>
-         <xs:element minOccurs="1"
-                     maxOccurs="1"
-                     name="deliveredVerticalPosition"
-                     nillable="false"
-                     type="gmwcom:DeliveredVerticalPositionType"/>
-         <xs:element minOccurs="1"
-                     maxOccurs="unbounded"
-                     name="monitoringTube"
-                     nillable="false"
-                     type="isgmw:MonitoringTubeType"/>
-         <xs:element name="isAbroad"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="geometricDataPubliclyAvailable"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-      </xs:sequence>
    </xs:complexType>
    <xs:complexType name="IntermediateEventType">
       <xs:choice minOccurs="1" maxOccurs="1">
