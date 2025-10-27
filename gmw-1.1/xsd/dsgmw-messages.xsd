@@ -947,8 +947,8 @@ Explanation: Het gegeven staat niet in een brondocument. De gestandaardiseerde l
                            maxOccurs="1"/>
                <xs:element name="survey"
                            type="gmwcom:SurveyPropertyType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
+                           minOccurs="0"
+                           maxOccurs="unbounded"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
