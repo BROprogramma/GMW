@@ -177,12 +177,12 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                            maxOccurs="1"
                            name="minimumTubeTopDiameter"
                            nillable="false"
-                           type="gmwcom:DiameterPropertyType"/>
+                           type="brocom:MeasureNillableType"/>
                <xs:element minOccurs="0"
                            maxOccurs="1"
                            name="maximumTubeTopDiameter"
                            nillable="false"
-                           type="gmwcom:DiameterPropertyType"/>
+                           type="brocom:MeasureNillableType"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>

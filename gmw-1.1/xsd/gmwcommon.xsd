@@ -126,31 +126,6 @@
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
-   <xs:complexType name="DiameterType">
-      <xs:complexContent>
-         <xs:extension base="gml:AbstractFeatureType">
-            <xs:sequence>
-               <xs:element name="largestTubeTopDiameter"
-                           type="brocom:MeasureNillableType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-               <xs:element name="smallestTubeTopDiameter"
-                           type="brocom:MeasureNillableType"
-                           minOccurs="1"
-                           maxOccurs="1"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="DiameterPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="gmwcom:Diameter"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
-   </xs:complexType>
-   <xs:element name="Diameter"
-               type="gmwcom:DiameterType"
-               substitutionGroup="gml:AbstractFeature"/>
    <xs:complexType name="TubePackingMaterialType">
       <xs:simpleContent>
          <xs:restriction base="gml:CodeWithAuthorityType">
