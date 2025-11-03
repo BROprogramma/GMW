@@ -310,19 +310,6 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                <xs:element name="removal" type="isgmw:GMW_RemovalType" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
    </xs:complexType>
-      <xs:complexType name="GeoOhmCableType">
-      <xs:sequence>
-         <xs:element name="cableNumber"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element minOccurs="2"
-                     maxOccurs="unbounded"
-                     name="electrode"
-                     nillable="false"
-                     type="gmwcom:ElectrodeType"/>
-      </xs:sequence>
-   </xs:complexType>
 <xs:complexType name="MonitoringTubeType">
       <xs:sequence>
          <xs:element name="tubeNumber"
@@ -397,7 +384,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      maxOccurs="unbounded"
                      name="geoOhmCable"
                      nillable="false"
-                     type="isgmw:GeoOhmCableType"/>
+                     type="gmwcom:GeoOhmCableType"/>
       </xs:sequence>
    </xs:complexType>
       <xs:complexType name="ScreenType">

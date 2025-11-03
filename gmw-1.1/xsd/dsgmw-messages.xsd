@@ -75,18 +75,12 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
             <xs:sequence>
                <xs:element name="dataToBeDelivered" type="dsgmw:DataToBeDeliveredType" minOccurs="1" maxOccurs="1">
                   <xs:annotation>
-                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding welke gegevens over het registratieobject worden opgevraagd: alleen de actuele gegevens (present object data) of de actuele gegevens en de volledige materiële geschiedenis (past and present object data).</xs:documentation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding welke gegevens over het registratieobject worden opgevraagd: alleen de actuele gegevens (present object data) of de actuele gegevens en de volledige materiële geschiedenis (past and present object data).</xs:documentation>
                   </xs:annotation>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="DispatchDataRequestPropertyType">
-      <xs:sequence minOccurs="0">
-         <xs:element ref="dsgmw:dispatchDataRequest"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
    <xs:element name="dispatchCharacteristicsResponse" type="dsgmw:DispatchCharacteristicsResponseType">
       <xs:annotation>
@@ -314,7 +308,7 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                      maxOccurs="1"
                      name="screen"
                      nillable="false"
-                     type="dsgmw:ScreenType"/>
+                     type="gmwcom:ScreenType"/>
          <xs:element minOccurs="1"
                      maxOccurs="1"
                      name="plainTubePart"
@@ -329,7 +323,7 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                      maxOccurs="unbounded"
                      name="geoOhmCable"
                      nillable="false"
-                     type="dsgmw:GeoOhmCableType"/>
+                     type="gmwcom:GeoOhmCableType"/>
          <xs:element name="glue"
                      type="gmwcom:GlueType"
                      minOccurs="0"
@@ -354,64 +348,6 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                      type="gmwcom:TubeMaterialType"
                      minOccurs="0"
                      maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="ScreenType">
-      <xs:sequence>
-         <xs:element name="screenLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="sockMaterial"
-                     type="gmwcom:SockMaterialType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="screenTopPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="screenBottomPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="screenProtection"
-                     type="gmwcom:ScreenProtectionType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="GeoOhmCableType">
-      <xs:sequence>
-         <xs:element name="cableNumber"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="cableInUse"
-                     type="brocom:IndicationYesNoUnknownType"
-                     minOccurs="0"
-                     maxOccurs="1" />
-         <xs:element minOccurs="2"
-                     maxOccurs="unbounded"
-                     name="electrode"
-                     nillable="false"
-                     type="gmwcom:ElectrodeType"/>
-      </xs:sequence>
-   </xs:complexType>
-<xs:complexType name="WellHistoryType">
-      <xs:sequence>
-         <xs:element name="wellConstructionDate"
-                     type="brocom:PartialDateType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="wellRemovalDate"
-                     type="brocom:PartialDateType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element minOccurs="0"
-                     maxOccurs="unbounded"
-                     name="intermediateEvent"
-                     nillable="false"
-                     type="dsgmw:IntermediateEventType"/>
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="IntermediateEventType">
@@ -925,7 +861,7 @@ Explanation: Het gegeven staat niet in een brondocument. De gestandaardiseerde l
                            maxOccurs="1"
                            name="wellHistory"
                            nillable="false"
-                           type="dsgmw:WellHistoryType"/>
+                           type="gmwcom:WellHistoryType"/>
                <xs:element minOccurs="1"
                            maxOccurs="unbounded"
                            name="monitoringTube"
@@ -1010,54 +946,6 @@ Explanation: Het registratieobject bevat niet de actuele gegevens, maar de gegev
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-   <xs:complexType name="DeliveredLocationType">
-      <xs:sequence>
-         <xs:element name="coordinates"
-                     type="gml:PointPropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="CRS"
-                     type="gmwcom:CRSPropertyType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="horizontalPositioningMethod"
-                     type="gmwcom:HorizontalPositioningMethodType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="DeliveredVerticalPositionType">
-      <xs:sequence>
-         <xs:element name="groundLevelPosition"
-                     minOccurs="1"
-                     maxOccurs="1"
-                     nillable="true">
-            <xs:complexType>
-               <xs:simpleContent>
-                  <xs:extension base="brocom:MeasureNillableType">
-                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                  </xs:extension>
-               </xs:simpleContent>
-            </xs:complexType>
-         </xs:element>
-         <xs:element name="groundLevelPositioningMethod"
-                     type="gmwcom:GroundLevelPositioningMethodType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="localVerticalReferencePoint"
-                     type="gmwcom:LocalVerticalReferencePointType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="offset"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="verticalDatum"
-                     type="gmwcom:VerticalDatumType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
    <xs:complexType name="ElectrodeRangeType">
       <xs:sequence>
          <xs:element name="deepestElectrodePosition"
@@ -1067,34 +955,6 @@ Explanation: Het registratieobject bevat niet de actuele gegevens, maar de gegev
          <xs:element name="shallowestElectrodePosition"
                      type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="InsertedPartType">
-      <xs:sequence>
-         <xs:element name="insertedPartDiameter"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="insertedPartLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="PlainTubePartType">
-      <xs:sequence>
-         <xs:element name="plainTubePartLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
-   <xs:complexType name="SedimentSumpType">
-      <xs:sequence>
-         <xs:element name="sedimentSumpLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
