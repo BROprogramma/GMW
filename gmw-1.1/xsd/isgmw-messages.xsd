@@ -306,7 +306,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            maxOccurs="unbounded"
                            name="intermediateEvent"
                            nillable="false"
-                           type="isgmw:IntermediateEventType"/>
+                           type="gmwcom:IntermediateEventType"/>
                <xs:element name="removal" type="isgmw:GMW_RemovalType" minOccurs="0" maxOccurs="1"/>
             </xs:sequence>
    </xs:complexType>
@@ -777,7 +777,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
                <xs:element name="tubeTopPosition"
                            type="brocom:MeasureNillableType"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"/>
                <xs:element name="tubeTopPositioningMethod"
                            type="gmwcom:TubeTopPositioningMethodType"

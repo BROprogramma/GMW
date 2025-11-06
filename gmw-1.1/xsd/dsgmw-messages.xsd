@@ -454,9 +454,6 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                      maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
-
-
-
    <xs:complexType name="LocationHistoryType">
       <xs:sequence>
          <xs:element name="closureDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
