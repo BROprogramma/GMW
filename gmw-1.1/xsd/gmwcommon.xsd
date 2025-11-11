@@ -98,7 +98,7 @@
       <xs:sequence>
          <xs:element name="insertedPartLength"
                      type="brocom:MeasureNillableType"
-                     minOccurs="0"
+                     minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="insertedPartDiameter"
                      type="brocom:MeasureNillableType"
