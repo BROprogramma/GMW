@@ -96,13 +96,13 @@
    </xs:complexType>
    <xs:complexType name="InsertedPartType">
       <xs:sequence>
-         <xs:element name="insertedPartDiameter"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
          <xs:element name="insertedPartLength"
                      type="brocom:MeasureNillableType"
                      minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element name="insertedPartDiameter"
+                     type="brocom:MeasureNillableType"
+                     minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="insertedPartMaterial"
                      type="gmwcom:TubeMaterialType"
