@@ -36,8 +36,8 @@
                   <largestTubeTopDiameter uom="mm">32</largestTubeTopDiameter>
                </diameterRange>
                <screenPositionRange>
-                  <shallowestScreenTopPosition uom="m">-3.220</shallowestScreenTopPosition>
                   <deepestScreenBottomPosition uom="m">-4.220</deepestScreenBottomPosition>
+                  <shallowestScreenTopPosition uom="m">-3.220</shallowestScreenTopPosition>
                </screenPositionRange>
             </GMW_C>
          </dispatchDocument>
@@ -68,8 +68,8 @@
                   <largestTubeTopDiameter uom="mm">32</largestTubeTopDiameter>
                </diameterRange>
                <screenPositionRange>
-                  <shallowestScreenTopPosition uom="m">-3.220</shallowestScreenTopPosition>
                   <deepestScreenBottomPosition uom="m">-4.220</deepestScreenBottomPosition>
+                  <shallowestScreenTopPosition uom="m">-3.220</shallowestScreenTopPosition>
                </screenPositionRange>
             </GMW_C>
          </dispatchDocument>
@@ -100,8 +100,8 @@
                   <largestTubeTopDiameter uom="mm">32</largestTubeTopDiameter>
                </diameterRange>
                <screenPositionRange>
-                  <shallowestScreenTopPosition uom="m">-3.220</shallowestScreenTopPosition>
                   <deepestScreenBottomPosition uom="m">-4.220</deepestScreenBottomPosition>
+                  <shallowestScreenTopPosition uom="m">-3.220</shallowestScreenTopPosition>
                </screenPositionRange>
             </GMW_C>
          </dispatchDocument>
@@ -142,8 +142,8 @@
                   <largestTubeTopDiameter uom="mm">32</largestTubeTopDiameter>
                </diameterRange>
                <screenPositionRange>
-                  <shallowestScreenTopPosition uom="m">-3.220</shallowestScreenTopPosition>
                   <deepestScreenBottomPosition uom="m">-4.220</deepestScreenBottomPosition>
+                  <shallowestScreenTopPosition uom="m">-3.220</shallowestScreenTopPosition>
                </screenPositionRange>
             </GMW_C>
          </dispatchDocument>

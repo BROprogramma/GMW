@@ -233,11 +233,11 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
    </xs:complexType>
    <xs:complexType name="ScreenPositionRangeType">
       <xs:sequence>
-         <xs:element name="shallowestScreenTopPosition"
+         <xs:element name="deepestScreenBottomPosition"
                      type="brocom:MeasureNillableType"
                      minOccurs="0"
                      maxOccurs="1"/>
-         <xs:element name="deepestScreenBottomPosition"
+         <xs:element name="shallowestScreenTopPosition"
                      type="brocom:MeasureNillableType"
                      minOccurs="0"
                      maxOccurs="1"/>
