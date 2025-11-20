@@ -81,7 +81,6 @@
 
                 <geoOhmCable>
                     <cableNumber>1</cableNumber>
-
                     <electrode>
                         <gmwcom:electrodeNumber>1</gmwcom:electrodeNumber>
                         <gmwcom:electrodePackingMaterial codeSpace="urn:bro:gmw:ElectrodePackingMaterial">zand</gmwcom:electrodePackingMaterial>

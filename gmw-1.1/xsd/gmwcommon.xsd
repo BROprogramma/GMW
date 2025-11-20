@@ -33,9 +33,20 @@
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="offset"
-                     type="brocom:MeasureNillableType"
                      minOccurs="1"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="verticalDatum"
                      type="gmwcom:VerticalDatumType"
                      minOccurs="1"
@@ -73,9 +84,20 @@
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="electrodePosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="1"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
       </xs:sequence>
    </xs:complexType>
       <xs:complexType name="MaterialUsedType">
@@ -97,13 +119,35 @@
    <xs:complexType name="InsertedPartType">
       <xs:sequence>
          <xs:element name="insertedPartLength"
-                     type="brocom:MeasureNillableType"
                      minOccurs="1"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="insertedPartDiameter"
-                     type="brocom:MeasureNillableType"
                      minOccurs="1"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="mm"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="insertedPartMaterial"
                      type="gmwcom:TubeMaterialType"
                      minOccurs="1"
@@ -113,17 +157,39 @@
    <xs:complexType name="SedimentSumpType">
       <xs:sequence>
          <xs:element name="sedimentSumpLength"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="PlainTubePartType">
       <xs:sequence>
          <xs:element name="plainTubePartLength"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="TubePackingMaterialType">
@@ -560,13 +626,16 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
                      minOccurs="1"
                      maxOccurs="1"
                      nillable="true">
-            <xs:complexType>
-               <xs:simpleContent>
-                  <xs:extension base="brocom:MeasureNillableType">
-                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                  </xs:extension>
-               </xs:simpleContent>
-            </xs:complexType>
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="mm"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
          </xs:element>
          <xs:element name="variableDiameter"
                      type="brocom:IndicationYesNoType"
@@ -577,9 +646,20 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="tubeTopPositioningMethod"
                      type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="0"
@@ -633,26 +713,56 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
    </xs:complexType>
       <xs:complexType name="ScreenType">
       <xs:sequence>
-         <xs:element name="screenBottomPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
          <xs:element name="screenLength"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="screenProtection"
                      type="gmwcom:ScreenProtectionPropertyType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="screenTopPosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="sockMaterial"
                      type="gmwcom:SockMaterialType"
                      minOccurs="1"
                      maxOccurs="1"/>
+         <xs:element name="screenTopPosition"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
+         <xs:element name="screenBottomPosition"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:extension base="brocom:MeasureNillableType">
+                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
+                  </xs:extension>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
       </xs:sequence>
    </xs:complexType>
       <xs:element name="ScreenProtection" type="gmwcom:ScreenProtectionType"/>
