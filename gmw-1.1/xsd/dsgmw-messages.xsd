@@ -140,8 +140,14 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                            type="brocom:DatePeriodType"
                            minOccurs="0"
                            maxOccurs="1"/>
-               <xs:element name="removalPeriod" type="brocom:DatePeriodType" minOccurs="0" maxOccurs="1"/>
-               <xs:element name="removed" type="brocom:IndicationYesNoType" minOccurs="0" maxOccurs="1"/>
+               <xs:element name="removalPeriod"
+                           type="brocom:DatePeriodType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
+               <xs:element name="removed"
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
                <xs:element name="tubeStatus"
                            type="gmwcom:TubeStatusType"
                            minOccurs="0"
@@ -220,27 +226,69 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
    <xs:complexType name="DiameterRangeType">
       <xs:sequence>
          <xs:element name="smallestTubeTopDiameter"
-                     type="brocom:MeasureNillableType"
                      nillable="true"
                      minOccurs="1"
-                     maxOccurs="1"/>
+                     maxOccurs="1">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="mm"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="largestTubeTopDiameter"
-                     type="brocom:MeasureNillableType"
                      nillable="true"
                      minOccurs="1"
-                     maxOccurs="1"/>
+                     maxOccurs="1">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="mm"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="ScreenPositionRangeType">
       <xs:sequence>
          <xs:element name="deepestScreenBottomPosition"
-                     type="brocom:MeasureNillableType"
+                     nillable="true"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="shallowestScreenTopPosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="mm"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
       </xs:sequence>
    </xs:complexType>
 <xs:complexType name="MonitoringTubeType">
@@ -307,18 +355,32 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                      minOccurs="0"
                      maxOccurs="1"
                      nillable="true">
-            <xs:complexType>
-               <xs:simpleContent>
-                  <xs:extension base="brocom:MeasureNillableType">
-                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                  </xs:extension>
-               </xs:simpleContent>
-            </xs:complexType>
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="mm"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
          </xs:element>
          <xs:element name="tubeTopPosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="1"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="tubeTopPositioningMethod"
                      type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="1"
@@ -375,13 +437,16 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                      minOccurs="0"
                      maxOccurs="1"
                      nillable="true">
-            <xs:complexType>
-               <xs:simpleContent>
-                  <xs:extension base="brocom:MeasureNillableType">
-                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                  </xs:extension>
-               </xs:simpleContent>
-            </xs:complexType>
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="mm"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
          </xs:element>
          <xs:element name="variableDiameter"
                      type="brocom:IndicationYesNoType"
@@ -392,9 +457,20 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                      minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="tubeTopPositioningMethod"
                      type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="0"
@@ -412,17 +488,50 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                      minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="screenTopPosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="screenBottomPosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="plainTubePartLength"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="insertedPart"
                      type="gmwcom:InsertedPartType"
                      minOccurs="0"
@@ -532,9 +641,20 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                      minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="electrodePosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="WellDataType">
@@ -555,15 +675,18 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                <xs:element name="groundLevelPosition"
                            minOccurs="0"
                            maxOccurs="1"
-                           nillable="true">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:extension base="brocom:MeasureNillableType">
-                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                     </xs:simpleContent>
-                  </xs:complexType>
-               </xs:element>
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
                <xs:element name="groundLevelPositioningMethod"
                            type="gmwcom:GroundLevelPositioningMethodType"
                            minOccurs="0"
@@ -591,9 +714,20 @@ Explanation: Voor de attributen met materiële geschiedenis wordt de actuele waa
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element name="offset"
-                           type="brocom:MeasureNillableType"
                            minOccurs="1"
-                           maxOccurs="1"/>
+                           maxOccurs="1"
+                           nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
                <xs:element name="verticalDatum"
                            type="gmwcom:VerticalDatumType"
                            minOccurs="1"
@@ -601,14 +735,17 @@ Explanation: Voor de attributen met materiële geschiedenis wordt de actuele waa
                <xs:element name="groundLevelPosition"
                            minOccurs="1"
                            maxOccurs="1"
-                           nillable="true">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:extension base="brocom:MeasureNillableType">
-                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                     </xs:simpleContent>
-                  </xs:complexType>
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
                </xs:element>
                <xs:element name="withPrehistory"
                            type="brocom:IndicationYesNoType"
@@ -921,13 +1058,35 @@ Explanation: Het registratieobject bevat niet de actuele gegevens, maar de gegev
    <xs:complexType name="ElectrodeRangeType">
       <xs:sequence>
          <xs:element name="deepestElectrodePosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
          <xs:element name="shallowestElectrodePosition"
-                     type="brocom:MeasureNillableType"
                      minOccurs="0"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+               <xs:complexType>
+                  <xs:simpleContent>
+                        <xs:restriction base="brocom:MeasureNillableType">
+                           <xs:attribute name="uom"
+                                          type="gml:UomIdentifier"
+                                          use="required"
+                                       fixed="m"/>
+                        </xs:restriction>
+                  </xs:simpleContent>
+               </xs:complexType>
+         </xs:element>
       </xs:sequence>
    </xs:complexType>
    <xs:element name="IntermediateEvents" type="dsgmw:IntermediateEventsType"/>
