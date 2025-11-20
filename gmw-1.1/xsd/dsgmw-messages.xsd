@@ -152,9 +152,9 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
                            type="gmwcom:TubeStatusType"
                            minOccurs="0"
                            maxOccurs="1"/>
-               <xs:element minOccurs="0"
+               <xs:element name="screenPositionRange"
+                           minOccurs="0"
                            maxOccurs="1"
-                           name="screenPositionRange"
                            nillable="false"
                            type="dsgmw:VerticalPositionRangeType"/>
                <xs:element name="initialFunction"
