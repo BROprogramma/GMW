@@ -291,110 +291,6 @@ Explanation: Het gegeven ontbreekt als de BRO geen registratieobject bevat met h
          </xs:element>
       </xs:sequence>
    </xs:complexType>
-<xs:complexType name="MonitoringTubeType">
-      <xs:sequence>
-         <xs:element name="artesianWellCapPresent"
-                     type="brocom:IndicationYesNoUnknownType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="geoOhmCable"
-                     minOccurs="0"
-                     maxOccurs="unbounded"
-                     nillable="false"
-                     type="gmwcom:GeoOhmCableType"/>
-         <xs:element name="insertedPart"
-                     minOccurs="0"
-                     maxOccurs="unbounded"
-                     nillable="false"
-                     type="gmwcom:InsertedPartType"/>
-         <xs:element name="materialUsed"
-                     minOccurs="1"
-                     maxOccurs="1"
-                     nillable="false"
-                     type="gmwcom:MaterialUsedType"/>
-         <xs:element name="numberOfGeoOhmCables"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="plainTubePart"
-                     minOccurs="1"
-                     maxOccurs="1"
-                     nillable="false"
-                     type="gmwcom:PlainTubePartType"/>
-         <xs:element name="screen"
-                     minOccurs="1"
-                     maxOccurs="1"
-                     nillable="false"
-                     type="gmwcom:ScreenType"/>
-         <xs:element minOccurs="0"
-                     maxOccurs="1"
-                     name="sedimentSump"
-                     nillable="false"
-                     type="gmwcom:SedimentSumpType"/>
-         <xs:element name="sedimentSumpPresent"
-                     type="brocom:IndicationYesNoUnknownType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubeInUse"
-                     type="brocom:IndicationYesNoUnknownType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="tubeNumber"
-                     type="xs:integer"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubePartInserted"
-                     type="brocom:IndicationYesNoType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-         <xs:element name="tubeStatus"
-                     type="gmwcom:TubeStatusType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubeTopDiameter"
-                     minOccurs="0"
-                     maxOccurs="1"
-                     nillable="true">
-               <xs:complexType>
-                  <xs:simpleContent>
-                        <xs:restriction base="brocom:MeasureNillableType">
-                           <xs:attribute name="uom"
-                                          type="gml:UomIdentifier"
-                                          use="required"
-                                       fixed="mm"/>
-                        </xs:restriction>
-                  </xs:simpleContent>
-               </xs:complexType>
-         </xs:element>
-         <xs:element name="tubeTopPosition"
-                     minOccurs="1"
-                     maxOccurs="1"
-                     nillable="true">
-               <xs:complexType>
-                  <xs:simpleContent>
-                        <xs:restriction base="brocom:MeasureNillableType">
-                           <xs:attribute name="uom"
-                                          type="gml:UomIdentifier"
-                                          use="required"
-                                       fixed="m"/>
-                        </xs:restriction>
-                  </xs:simpleContent>
-               </xs:complexType>
-         </xs:element>
-         <xs:element name="tubeTopPositioningMethod"
-                     type="gmwcom:TubeTopPositioningMethodType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="tubeType"
-                     type="gmwcom:TubeTypeType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="variableDiameter"
-                     type="brocom:IndicationYesNoUnknownType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
-      </xs:sequence>
-   </xs:complexType>
    <xs:complexType name="IntermediateEventType">
       <xs:sequence>
          <xs:element name="eventName"
@@ -975,7 +871,7 @@ Explanation: Het gegeven staat niet in een brondocument. De gestandaardiseerde l
                            maxOccurs="unbounded"
                            name="monitoringTube"
                            nillable="false"
-                           type="dsgmw:MonitoringTubeType"/>
+                           type="gmwcom:MonitoringTubeType"/>
                <xs:element name="isAbroad"
                            type="brocom:IndicationYesNoType"
                            minOccurs="0"
