@@ -425,7 +425,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      maxOccurs="1"
                      name="screen"
                      nillable="false"
-                     type="isgmw:ScreenType"/>
+                     type="gmwcom:ScreenType"/>
          <xs:element minOccurs="1"
                      maxOccurs="1"
                      name="plainTubePart"
@@ -441,22 +441,6 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      name="geoOhmCable"
                      nillable="false"
                      type="gmwcom:GeoOhmCableType"/>
-      </xs:sequence>
-   </xs:complexType>
-      <xs:complexType name="ScreenType">
-      <xs:sequence>
-         <xs:element name="screenLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="sockMaterial"
-                     type="gmwcom:SockMaterialType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
-         <xs:element name="screenProtection"
-                     type="gmwcom:ScreenProtectionType"
-                     minOccurs="0"
-                     maxOccurs="1"/>
       </xs:sequence>
    </xs:complexType>
 <xs:element name="GMW_Owner"
