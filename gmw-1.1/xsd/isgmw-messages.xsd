@@ -961,24 +961,7 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>
-   <xs:complexType name="IntermediateEventType">
-      <xs:choice minOccurs="1" maxOccurs="1">
-         <xs:element name="owner" type="isgmw:GMW_OwnerType"/>
-         <xs:element name="lengthening" type="isgmw:GMW_LengtheningType"/>
-         <xs:element name="groundLevel" type="isgmw:GMW_GroundLevelType"/>
-         <xs:element name="shortening" type="isgmw:GMW_ShorteningType"/>
-         <xs:element name="positions" type="isgmw:GMW_PositionsType"/>
-         <xs:element name="electrodeStatus" type="isgmw:GMW_ElectrodeStatusType"/>
-         <xs:element name="maintainer" type="isgmw:GMW_MaintainerType"/>
-         <xs:element name="tubeStatus" type="isgmw:GMW_TubeStatusType"/>
-         <xs:element name="insertion" type="isgmw:GMW_InsertionType"/>
-         <xs:element name="shift" type="isgmw:GMW_ShiftType"/>
-         <xs:element name="wellHeadProtector" type="isgmw:GMW_WellHeadProtectorType"/>
-         <xs:element name="groundLevelMeasuring" type="isgmw:GMW_GroundLevelMeasuringType"/>
-         <xs:element name="positionsMeasuring" type="isgmw:GMW_PositionsMeasuringType"/>
-      </xs:choice>
-   </xs:complexType>
-   <xs:complexType name="MonitoringTubeInsertionType">
+<xs:complexType name="MonitoringTubeInsertionType">
       <xs:sequence>
          <xs:element name="insertedPartDiameter"
                      type="brocom:MeasureNillableType"
