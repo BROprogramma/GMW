@@ -577,6 +577,10 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
                      type="xs:integer"
                      minOccurs="1"
                      maxOccurs="1"/>
+         <xs:element name="cableInUse"
+                     type="brocom:IndicationYesNoUnknownType"
+                     minOccurs="0"
+                     maxOccurs="1"/>
          <xs:element minOccurs="2"
                      maxOccurs="unbounded"
                      name="electrode"
