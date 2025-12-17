@@ -7,7 +7,7 @@
            targetNamespace="http://www.broservices.nl/xsd/gmwcommon/1.1"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
-           version="1.0.0-1">
+           version="1.1.0">
 
    <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0"
               schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
