@@ -761,11 +761,14 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
                      nillable="true">
             <xs:complexType>
                <xs:simpleContent>
-                  <xs:extension base="brocom:MeasureNillableType">
-                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                  </xs:extension>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
                </xs:simpleContent>
-            </xs:complexType>
+                     </xs:complexType>
          </xs:element>
       </xs:sequence>
    </xs:complexType>
