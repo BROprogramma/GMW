@@ -394,11 +394,14 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      nillable="true">
             <xs:complexType>
                <xs:simpleContent>
-                  <xs:extension base="brocom:MeasureNillableType">
-                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                  </xs:extension>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="mm" />
+                  </xs:restriction>
                </xs:simpleContent>
-            </xs:complexType>
+                     </xs:complexType>
          </xs:element>
          <xs:element name="variableDiameter"
                      type="brocom:IndicationYesNoUnknownType"
@@ -502,20 +505,34 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      nillable="true">
             <xs:complexType>
                <xs:simpleContent>
-                  <xs:extension base="brocom:MeasureNillableType">
-                     <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                  </xs:extension>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="mm" />
+                  </xs:restriction>
                </xs:simpleContent>
-            </xs:complexType>
+                     </xs:complexType>
          </xs:element>
          <xs:element name="variableDiameter"
                      type="brocom:IndicationYesNoType"
                      minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
+            minOccurs="1"
+            maxOccurs="1"
+            nillable="true">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
          <xs:element name="tubeTopPositioningMethod"
                      type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="1"
@@ -529,9 +546,20 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="plainTubePartLength"
-                     type="brocom:MeasureNillableType"
                      minOccurs="1"
-                     maxOccurs="1"/>
+                     maxOccurs="1"
+                     nillable="true">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+                  </xs:element>
       </xs:sequence>
    </xs:complexType>
    <xs:element name="GMW_GroundLevel"
@@ -551,14 +579,17 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            minOccurs="1"
                            maxOccurs="1"
                            nillable="true">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:extension base="brocom:MeasureNillableType">
-                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                     </xs:simpleContent>
-                  </xs:complexType>
-               </xs:element>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+                        </xs:element>
                <xs:element name="groundLevelPositioningMethod"
                            type="gmwcom:GroundLevelPositioningMethodType"
                            minOccurs="1"
@@ -574,13 +605,16 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            minOccurs="1"
                            maxOccurs="1"
                            nillable="true">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:extension base="brocom:MeasureNillableType">
-                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                     </xs:simpleContent>
-                  </xs:complexType>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+                           </xs:complexType>
                </xs:element>
                <xs:element name="groundLevelPositioningMethod"
                            type="gmwcom:GroundLevelPositioningMethodType"
@@ -615,17 +649,37 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
+            minOccurs="1"
+            maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
          <xs:element name="tubeTopPositioningMethod"
                      type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="plainTubePartLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
+            minOccurs="1"
+            maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
       </xs:sequence>
    </xs:complexType>
    <xs:element name="GMW_ElectrodeStatus"
@@ -685,13 +739,16 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            minOccurs="1"
                            maxOccurs="1"
                            nillable="true">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:extension base="brocom:MeasureNillableType">
-                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                     </xs:simpleContent>
-                  </xs:complexType>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+                           </xs:complexType>
                </xs:element>
                <xs:element name="groundLevelPositioningMethod"
                            type="gmwcom:GroundLevelPositioningMethodType"
@@ -711,9 +768,19 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
+            minOccurs="1"
+            maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
          <xs:element name="tubeTopPositioningMethod"
                      type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="1"
@@ -727,9 +794,19 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
+            minOccurs="1"
+            maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
          <xs:element name="tubeTopPositioningMethod"
                      type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="1"
@@ -748,10 +825,20 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            type="xs:integer"
                            minOccurs="1"
                            maxOccurs="1"/>
-               <xs:element name="groundLevelPosition"
-                           type="brocom:MeasureNillableType"
-                           minOccurs="0"
-                           maxOccurs="1"/>
+         <xs:element name="groundLevelPosition"
+            minOccurs="0"
+            maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
                <xs:element name="groundLevelPositioningMethod"
                            type="gmwcom:GroundLevelPositioningMethodType"
                            minOccurs="0"
@@ -815,22 +902,52 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            minOccurs="0"
                            maxOccurs="1"/>
                <xs:element name="eventDate" type="brocom:PartialDateType" minOccurs="1" maxOccurs="1"/>
-               <xs:element name="tubeTopPosition"
-                           type="brocom:MeasureNillableType"
-                           minOccurs="0"
-                           maxOccurs="1"/>
+         <xs:element name="tubeTopPosition"
+            minOccurs="0"
+            maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
                <xs:element name="tubeTopPositioningMethod"
                            type="gmwcom:TubeTopPositioningMethodType"
                            minOccurs="0"
                            maxOccurs="1"/>
-               <xs:element name="insertedPartLength"
-                           type="brocom:MeasureNillableType"
-                           minOccurs="0"
-                           maxOccurs="1"/>
-               <xs:element name="insertedPartDiameter"
-                           type="brocom:MeasureNillableType"
-                           minOccurs="0"
-                           maxOccurs="1"/>
+         <xs:element name="insertedPartLength"
+            minOccurs="0"
+            maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="insertedPartDiameter"
+            minOccurs="0"
+            maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="mm" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
                <xs:element name="insertedPartMaterial"
                            type="gmwcom:TubeMaterialType"
                            minOccurs="0"
@@ -859,13 +976,16 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            minOccurs="1"
                            maxOccurs="1"
                            nillable="true">
-                  <xs:complexType>
-                     <xs:simpleContent>
-                        <xs:extension base="brocom:MeasureNillableType">
-                           <xs:attribute name="nilReason" type="xs:string" use="optional"/>
-                        </xs:extension>
-                     </xs:simpleContent>
-                  </xs:complexType>
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+                           </xs:complexType>
                </xs:element>
                <xs:element name="groundLevelPositioningMethod"
                            type="gmwcom:GroundLevelPositioningMethodType"
@@ -948,13 +1068,33 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
 <xs:complexType name="MonitoringTubeInsertionType">
       <xs:sequence>
          <xs:element name="insertedPartDiameter"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
+            minOccurs="1"
+            maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="mm" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
          <xs:element name="insertedPartLength"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
+            minOccurs="1"
+            maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
          <xs:element name="insertedPartMaterial"
                      type="gmwcom:TubeMaterialType"
                      minOccurs="1"
@@ -964,9 +1104,19 @@ Explanation: Het gegeven is door de dataleverancier bij de overdracht meegegeven
                      minOccurs="1"
                      maxOccurs="1"/>
          <xs:element name="tubeTopPosition"
-                     type="brocom:MeasureNillableType"
-                     minOccurs="1"
-                     maxOccurs="1"/>
+            minOccurs="1"
+            maxOccurs="1">
+            <xs:complexType>
+               <xs:simpleContent>
+                  <xs:restriction base="brocom:MeasureNillableType">
+                     <xs:attribute name="uom"
+                        type="gml:UomIdentifier"
+                        use="required"
+                        fixed="m" />
+                  </xs:restriction>
+               </xs:simpleContent>
+            </xs:complexType>
+         </xs:element>
          <xs:element name="tubeTopPositioningMethod"
                      type="gmwcom:TubeTopPositioningMethodType"
                      minOccurs="1"
