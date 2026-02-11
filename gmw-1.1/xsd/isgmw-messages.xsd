@@ -228,7 +228,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element name="groundLevelStable"
-                           type="brocom:IndicationYesNoType"
+                           type="brocom:IndicationYesNoUnknownType"
                            minOccurs="1"
                            maxOccurs="1"/>
                <xs:element name="wellStability"
