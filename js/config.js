@@ -2,7 +2,7 @@ let respecConfig = {
   useLogo: true,
   useLabel: true,
   // title is verplicht! Neem hier de titel van het document op ----------------------
-  title: "Basisregistratie Ondergrond Catalogus Grondwatermonitoringput",
+  title: "Catalogus registratie ondergrond Grondwatermonitoringput",
   //subtitle: "Versie 1.09",
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   specStatus: "wv",                   // Werkversie
@@ -12,8 +12,8 @@ let respecConfig = {
   //specStatus: "basis",            // Basis Document
   //-- specType is verplicht bij alle andere dan BASIS ---------------------------------
   //specType: "NO",                 // Norm
-  //specType: "ST",                 // Standaard
-  specType: "IM",                 // Informatie Model
+  specType: "ST",                 // Standaard
+  //specType: "IM",                 // Informatie Model
   //specType: "PR",                 // Praktijkrichtlijn
   //specType: "HR",                 // HandReiking
   //specType: "WA",                 // Werkafspraak
@@ -33,32 +33,75 @@ let respecConfig = {
   //publishDate: "2024-04-12",
   //custom header lines  
   //eventueel is het mogelijk een versienummer mee te geven, maar bij Geonovum werken we gewoonlijk alleen met datum als onderdeel van de permanente URI.
-  //publishVersion: "0.0.2",
-  //previousVersion: "0.0.1",
+  publishVersion: "0.0.2",
+  previousVersion: "0.0.1",
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
   previousPublishDate: "2025-06-30",
   previousMaturity: "def",
-  //-- de namen van de Editor(s) / Redacteur(en)---------------------------------------
+    //-- de namen van de Editor(s) / Redacteur(en)---------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
-  editors:
-    [
-      { name: "Geonovum",
-        company: "Geonovum",
-        companyURL: "https://www.geonovum.nl",
-      }
-    ],
+  editors: [
+    {
+      name: "Geonovum",
+      company: "Geonovum",
+      companyURL: "https://www.geonovum.nl",
+    },
+  ],
   //-- de namen van de auteur(s) ------------------------------------------------------
   //-- vul in: per auteur: name:, company:, companyURL: -------------------------------
-  authors:
-    [
+  authors: [
+    {
+      name: "Geonovum",
+      company: "Geonovum",
+      companyURL: "https://www.geonovum.nl",
+    },
+  ],
+  otherLinks: [
       {
-        name: "Geonovum",
-        company: "Geonovum",
-        companyURL: "https://www.geonovum.nl",
-      }
-     ],
+        key: "Contact:",
+        data: [
+          {
+            value: "BRO Servicedesk",
+            href: "https://basisregistratieondergrond.nl/service-contact/",
+          },
+          {
+            value: "support@broservicedesk.nl",
+            href: "mailto:support@broservicedesk.nl",
+          },
+          {
+            value: "088 - 8664 999",
+            href: "tel:+31888664999",
+          },
+        ],
+      },
+    ],
   //neem hier de URL van de github repository op waar het respec document in staat
-  github: "https://github.com/BROprogramma/GMW",
+  //github: "https://github.com/BROprogramma/GMN",
+  postProcess: [
+    ...(typeof organisationConfig !== "undefined" &&
+    Array.isArray(organisationConfig.postProcess)
+      ? organisationConfig.postProcess
+      : []),
+    () => {
+      const headDl = document.querySelector(".head dl");
+      if (!headDl) return;
+      const participateDt = [...headDl.querySelectorAll("dt")].find((dt) => {
+
+//        return dt.textContent && dt.textContent.trim().startsWith("Doe mee");
+      return dt.textContent && dt.textContent.trim().startsWith("Contact");
+      });
+      if (!participateDt || participateDt.querySelector("#logo_bro")) return;
+
+      const logo = document.createElement("img");
+      logo.id = "logo_bro";
+      logo.src = "https://docs.geostandaarden.nl/bro/gen/logo_bro.png";
+      logo.alt = "Basisregistratie Ondergrond";
+      logo.width = 223;
+      logo.height = 115;
+      logo.setAttribute("align", "right");
+      participateDt.prepend(logo);
+    },
+  ],
   // Create PDF and link to file in header (optional):
   //alternateFormats: [{label: "pdf", uri: "template.pdf",},],
 };
