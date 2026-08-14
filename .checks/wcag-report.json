@@ -10,7 +10,7 @@
         "target": [
           ".sidelabel"
         ],
-        "html": "<div class=\"sidelabel\">BRO Informatiemodel - Werkversie</div>",
+        "html": "<div class=\"sidelabel\">BRO Standaard - Werkversie</div>",
         "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.99 (foreground color: #ffffff, background color: #ff0000, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
       }
     ]
