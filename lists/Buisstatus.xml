@@ -24,4 +24,10 @@
 		<IMBROA>v</IMBROA>
 		<Omschrijving>Het is onbekend wat de status van de buis is.</Omschrijving>
 	</Buisstatus>
+	<Buisstatus>
+		<Waarde>afgestotenParticulier</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Put is afgestoten naar particulier.</Omschrijving>
+	</Buisstatus>
 </domeintabel>
