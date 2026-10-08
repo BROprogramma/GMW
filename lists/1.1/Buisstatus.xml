@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Buisstatus>
+		<Waarde>afgestotenParticulier</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Put is afgestoten naar particulier.</Omschrijving>
+	</Buisstatus>
+	<Buisstatus>
 		<Waarde>gebruiksklaar</Waarde>
 		<IMBRO>v</IMBRO>
 		<IMBROA>v</IMBROA>
@@ -23,11 +29,5 @@
 		<IMBRO> </IMBRO>
 		<IMBROA>v</IMBROA>
 		<Omschrijving>Het is onbekend wat de status van de buis is.</Omschrijving>
-	</Buisstatus>
-	<Buisstatus>
-		<Waarde>afgestotenParticulier</Waarde>
-		<IMBRO>v</IMBRO>
-		<IMBROA>v</IMBROA>
-		<Omschrijving>Put is afgestoten naar particulier.</Omschrijving>
 	</Buisstatus>
 </domeintabel>
